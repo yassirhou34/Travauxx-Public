@@ -122,7 +122,7 @@ export function HeroVideo() {
                   transition: 'transform 0.8s cubic-bezier(0.19, 1, 0.22, 1) 0.3s',
                 }}
               >
-                Rénovation Premium
+                Rénovation premium
               </span>
             </span>
             <span className="block overflow-hidden">
@@ -133,7 +133,7 @@ export function HeroVideo() {
                   transition: 'transform 0.8s cubic-bezier(0.19, 1, 0.22, 1) 0.5s',
                 }}
               >
-                Clé en Main
+                clé en main
               </span>
             </span>
           </h1>
