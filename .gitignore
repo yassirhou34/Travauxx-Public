@@ -1,0 +1,31 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files
+.env*
+
+# vercel
+.vercel
+
+# vidéos trop lourdes pour GitHub (>100 Mo)
+/public/Banquevideos/ACTIV TRAVAUX (EN COURS).mp4
+/public/Banquevideos/4K ST AT- DELPHINE PORTEU.mp4
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
