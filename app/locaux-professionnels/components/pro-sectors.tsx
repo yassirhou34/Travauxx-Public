@@ -17,8 +17,8 @@ const sectors = [
     shortTitle: 'Commerces',
     icon: Store,
     tagline: 'Créez des espaces attractifs et fonctionnels',
-    description: 'Aménagement de boutique, refonte de l\'agencement, création d\'espaces qui séduisent vos clients et optimisent votre activité commerciale.',
-    longDescription: 'De la vitrine au back-office, nous concevons des espaces commerciaux qui racontent votre histoire, mettent en valeur vos produits et optimisent le parcours client.',
+    description: 'Restructuration de points de vente et ingénierie d\'agencement. Nous maximisons votre rentabilité par une gestion rigoureuse des volumes et des flux.',
+    longDescription: 'Maîtrise technique globale, de l\'interface commerciale aux zones logistiques. Nous intégrons les codes du merchandising pour transformer l\'espace en levier de croissance.',
     features: [
       'Agencement sur-mesure',
       'Mise en valeur produits',
@@ -31,6 +31,7 @@ const sectors = [
     image: '/Banqueimages/M7_01330.jpg',
     color: '#e83263',
     gradient: 'from-accent to-accent/80',
+    ctaLabel: 'Lancer mon étude retail',
   },
   {
     id: 'bureaux',
@@ -38,8 +39,8 @@ const sectors = [
     shortTitle: 'Bureaux',
     icon: Building2,
     tagline: 'Espaces de travail performants et inspirants',
-    description: 'Cloisonnement, open space, salles de réunion, accueil : nous créons des environnements de travail qui favorisent productivité et bien-être.',
-    longDescription: 'Confort acoustique, ergonomie, performance énergétique : chaque détail compte pour créer un cadre de travail optimal qui attire et retient les talents.',
+    description: 'Cloisonnement, open space, salles de conférence : restructuration de vos environnements de travail. Nous pilotons l\'agencement de vos plateaux pour garantir une efficience opérationnelle immédiate.',
+    longDescription: 'Ingénierie acoustique et ergonomie structurelle : nous pilotons des aménagements à haute valeur ajoutée technique. Sécurisez un cadre d\'exploitation performant et pérenne pour votre actif.',
     features: [
       'Open space & flex office',
       'Salles de réunion',
@@ -52,6 +53,7 @@ const sectors = [
     image: '/Banqueimages/M7_01331.jpg',
     color: '#a39383',
     gradient: 'from-secondary to-secondary/80',
+    ctaLabel: 'Lancer mon audit tertiaire',
   },
   {
     id: 'chr',
@@ -60,7 +62,7 @@ const sectors = [
     icon: Coffee,
     tagline: 'Design d\'ambiance et conformité garantie',
     description: 'Mise aux normes, design d\'ambiance, ergonomie des flux : des espaces qui respectent les réglementations tout en créant une expérience client mémorable.',
-    longDescription: 'Conformité hygiène et sécurité, extraction, accessibilité PMR : nous maîtrisons toutes les contraintes réglementaires du secteur CHR pour vous libérer l\'esprit.',
+    longDescription: 'Audit sanitaire, déploiement aéraulique et accessibilité PMR. Nous sécurisons votre investissement en neutralisant les risques de non-conformité liés aux spécificités de votre métier.',
     features: [
       'Design d\'ambiance',
       'Normes hygiène & sécurité',
@@ -73,6 +75,7 @@ const sectors = [
     image: '/Banqueimages/M7_01335.jpg',
     color: '#e83263',
     gradient: 'from-accent/90 to-accent/70',
+    ctaLabel: 'Solliciter un audit CHR',
   },
   {
     id: 'residences',
@@ -80,7 +83,7 @@ const sectors = [
     shortTitle: 'Résidences',
     icon: Home,
     tagline: 'Espaces de vie partagés et confortables',
-    description: 'Aménagement d\'espaces partagés, studios, zones de vie commune pour étudiants, seniors ou coliving. Des lieux où il fait bon vivre ensemble.',
+    description: 'Configuration d\'unités d\'habitation et de zones de flux partagés. Nous structurons des environnements à haute valeur d\'usage pour sécuriser la pérennité de votre modèle d\'exploitation.',
     longDescription: 'Espaces communs conviviaux, studios fonctionnels, services adaptés : nous créons des résidences qui répondent aux attentes de leurs occupants.',
     features: [
       'Studios optimisés',
@@ -94,6 +97,7 @@ const sectors = [
     image: '/Banqueimages/M7_01319.jpg',
     color: '#a39383',
     gradient: 'from-secondary to-secondary/80',
+    ctaLabel: 'Lancer mon étude d\'actif',
   },
 ]
 
@@ -111,28 +115,43 @@ export function ProSectors() {
   }
 
   return (
-    <section id="pro-sectors" className="relative py-20 sm:py-28 lg:py-36 bg-background overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-radial from-blue-500/5 to-transparent opacity-50" />
-      <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-radial from-amber-500/5 to-transparent opacity-50" />
+    <section id="pro-sectors" className="relative py-20 sm:py-28 lg:py-36 bg-[#050308] overflow-hidden">
+      {/* Fond sombre inspiré de la page Architecture */}
+      <div className="absolute inset-0 bg-gradient-to-b from-secondary/10 via-[#050308] to-[#050308]" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Décor lumineux discret */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-10 left-10 w-72 h-72 bg-[#a39383]/15 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent/12 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+      </div>
+
+      {/* Trame de fond légère */}
+      <div
+        className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+          backgroundSize: '60px 60px',
+        }}
+      />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <ScrollReveal direction="up">
           <div className="text-center mb-16 lg:mb-20">
-            <span className="inline-block text-blue-500 text-sm font-semibold tracking-wider uppercase mb-4">
+            <span className="inline-block text-[#a39383] text-sm font-semibold tracking-wider uppercase mb-4">
               Nos secteurs d&apos;intervention
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               4 domaines d&apos;expertise
             </h2>
-            <p className="text-foreground/60 text-lg max-w-2xl mx-auto">
-              Chaque secteur a ses contraintes spécifiques. Notre méthode reste la même : rigueur, qualité, résultat.
+            <p className="text-white/70 text-lg max-w-2xl mx-auto">
+              Chaque secteur a ses contraintes propres. Notre méthode reste la même : rigueur, qualité, résultat mesurable.
             </p>
           </div>
         </ScrollReveal>
 
-        {/* Sector selector - Large interactive cards */}
+        {/* Sélecteur de secteur – grandes cartes interactives */}
         <ScrollReveal direction="up" delay={0.1}>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
             {sectors.map((sector) => {
@@ -142,39 +161,44 @@ export function ProSectors() {
                 <button
                   key={sector.id}
                   onClick={() => handleSectorChange(sector)}
+                  onMouseEnter={() => handleSectorChange(sector)}
                   className={`group relative p-5 lg:p-6 rounded-2xl text-left transition-all duration-500 overflow-hidden ${
-                    isActive 
-                      ? 'shadow-2xl scale-[1.02]' 
-                      : 'bg-muted/30 hover:bg-muted/50'
+                    isActive
+                      ? 'shadow-2xl scale-[1.02]'
+                      : 'bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/20'
                   }`}
                 >
-                  {/* Active gradient background */}
-                  {isActive && (
-                    <div className={`absolute inset-0 bg-gradient-to-br ${sector.gradient}`} />
-                  )}
-                  
+                  {/* Fond dégradé actif */}
+                  {isActive && <div className={`absolute inset-0 bg-gradient-to-br ${sector.gradient} opacity-90`} />}
+
                   <div className="relative z-10">
-                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-all ${
-                      isActive ? 'bg-white/20' : `bg-gradient-to-br ${sector.gradient}`
-                    }`}>
+                    <div
+                      className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-all ${
+                        isActive ? 'bg-white/15' : `bg-gradient-to-br ${sector.gradient}`
+                      }`}
+                    >
                       <Icon className="w-6 h-6 text-white" />
                     </div>
-                    
-                    <h3 className={`text-lg font-bold mb-1 transition-colors ${
-                      isActive ? 'text-white' : 'text-primary'
-                    }`}>
+
+                    <h3
+                      className={`text-lg font-bold mb-1 transition-colors ${
+                        isActive ? 'text-white' : 'text-white'
+                      }`}
+                    >
                       {sector.shortTitle}
                     </h3>
-                    <p className={`text-xs transition-colors ${
-                      isActive ? 'text-white/70' : 'text-foreground/50'
-                    }`}>
+                    <p
+                      className={`text-xs transition-colors ${
+                        isActive ? 'text-white/80' : 'text-white/60'
+                      }`}
+                    >
                       {sector.tagline}
                     </p>
 
-                    {/* Active indicator */}
+                    {/* Indicateur actif */}
                     {isActive && (
                       <div className="absolute top-4 right-4">
-                        <CheckCircle2 className="w-5 h-5 text-white/60" />
+                        <CheckCircle2 className="w-5 h-5 text-white/70" />
                       </div>
                     )}
                   </div>
@@ -184,9 +208,13 @@ export function ProSectors() {
           </div>
         </ScrollReveal>
 
-        {/* Active sector detailed content */}
-        <div className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-start transition-all duration-500 ${isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}>
-          {/* Image side */}
+        {/* Détail du secteur actif */}
+        <div
+          className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-start transition-all duration-500 ${
+            isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
+          }`}
+        >
+          {/* Visuel */}
           <ScrollReveal direction="left" delay={0.2}>
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden group">
               <Image
@@ -195,23 +223,11 @@ export function ProSectors() {
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              
-              {/* Badge */}
-              <div 
-                className="absolute top-6 left-6 px-4 py-2 rounded-full backdrop-blur-md text-white font-semibold text-sm flex items-center gap-2"
-                style={{ backgroundColor: `${activeSector.color}dd` }}
-              >
-                {(() => {
-                  const Icon = activeSector.icon
-                  return <Icon className="w-4 h-4" />
-                })()}
-                {activeSector.shortTitle}
-              </div>
 
-              {/* For who badges */}
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
+
+              {/* Pour qui ? */}
               <div className="absolute bottom-6 left-6 right-6">
                 <p className="text-white/60 text-xs uppercase tracking-wider mb-2">Pour qui ?</p>
                 <div className="flex flex-wrap gap-2">
@@ -225,49 +241,45 @@ export function ProSectors() {
             </div>
           </ScrollReveal>
 
-          {/* Content side */}
+          {/* Contenu */}
           <ScrollReveal direction="right" delay={0.3}>
             <div>
-              <div 
+              <div
                 className="inline-block w-12 h-1 rounded-full mb-6"
                 style={{ backgroundColor: activeSector.color }}
               />
-              
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-4">
+
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
                 {activeSector.title}
               </h3>
-              
-              <p className="text-lg text-foreground/70 mb-4 leading-relaxed">
-                {activeSector.description}
-              </p>
-              
-              <p className="text-base text-foreground/60 mb-6 leading-relaxed">
-                {activeSector.longDescription}
-              </p>
 
-              {/* Features grid */}
+              <p className="text-lg text-white/75 mb-4 leading-relaxed">{activeSector.description}</p>
+
+              <p className="text-base text-white/60 mb-6 leading-relaxed">{activeSector.longDescription}</p>
+
+              {/* Atouts */}
               <div className="grid grid-cols-2 gap-3 mb-8">
                 {activeSector.features.map((feature, i) => (
-                  <div 
+                  <div
                     key={i}
-                    className="flex items-center gap-2 p-3 rounded-xl bg-muted/30 border border-border/50 hover:border-blue-500/30 transition-colors group"
+                    className="flex items-center gap-2 p-3 rounded-xl bg-white/5 border border-white/10 hover:border-[#a39383]/60 transition-colors group"
                   >
-                    <div 
+                    <div
                       className="w-2 h-2 rounded-full flex-shrink-0"
                       style={{ backgroundColor: activeSector.color }}
                     />
-                    <span className="text-sm font-medium text-foreground/80">{feature}</span>
+                    <span className="text-sm font-medium text-white/80">{feature}</span>
                   </div>
                 ))}
               </div>
 
               {/* CTA */}
-              <Link 
+              <Link
                 href="/concevoir-mon-projet"
                 className="group inline-flex items-center gap-3 px-6 py-4 rounded-xl font-semibold text-white transition-all duration-300 hover:shadow-xl hover:scale-105"
                 style={{ backgroundColor: activeSector.color }}
               >
-                Projet {activeSector.shortTitle.toLowerCase()}
+                {activeSector.ctaLabel}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>

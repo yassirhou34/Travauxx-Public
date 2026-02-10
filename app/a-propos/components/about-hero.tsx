@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { ArrowRight, Users, MapPin, Award, Sparkles } from 'lucide-react'
+import { ArrowRight, ChevronDown, Users, MapPin, Award, Sparkles } from 'lucide-react'
 
 export function AboutHero() {
   return (
@@ -37,17 +37,7 @@ export function AboutHero() {
       {/* Main content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
-        <ScrollReveal direction="fade" delay={0.1}>
-          <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/5 backdrop-blur-md border border-white/10 mb-8">
-            <Sparkles className="w-4 h-4 text-accent" />
-            <span className="text-white/80 text-sm font-medium tracking-wide">Réseau National</span>
-            <span className="flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-accent opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
-            </span>
-          </div>
-        </ScrollReveal>
-
+      
         {/* Main title */}
         <ScrollReveal direction="up" delay={0.2}>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-[0.95] mb-6">
@@ -68,25 +58,6 @@ export function AboutHero() {
           </p>
         </ScrollReveal>
 
-        {/* Key stats */}
-        <ScrollReveal direction="up" delay={0.4}>
-          <div className="flex flex-wrap justify-center gap-8 sm:gap-12 md:gap-16 mb-12">
-            {[
-              { value: '20+', label: 'ans d\'expérience', suffix: 'ans' },
-              { value: '75+', label: 'activateurs en France', suffix: '' },
-              { value: '100%', label: 'projets maîtrisés', suffix: '' },
-            ].map((stat, i) => (
-              <div key={i} className="text-center">
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-1">
-                  {stat.value}
-                  {stat.suffix && <span className="text-accent text-xl ml-1">{stat.suffix}</span>}
-                </div>
-                <div className="text-xs sm:text-sm text-white/50 uppercase tracking-wider">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </ScrollReveal>
-
         {/* CTAs */}
         <ScrollReveal direction="up" delay={0.5}>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -96,13 +67,15 @@ export function AboutHero() {
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <Link href="#mission">
-              <Button 
-                variant="outline" 
-                className="border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-6 text-base sm:text-lg rounded-full transition-all duration-300 bg-transparent"
-              >
+            <Link
+              href="#mission"
+              className="group inline-flex items-center justify-center gap-2 min-w-[260px] h-[56px] px-8 relative border-2 border-white/70 text-white hover:bg-white/20 font-bold rounded-full text-base sm:text-lg transition-all duration-300 bg-white/10 backdrop-blur-md hover:border-white hover:scale-105 shadow-xl shadow-white/20 whitespace-nowrap"
+            >
+              <span className="relative z-10 flex items-center gap-2 whitespace-nowrap">
                 Découvrir notre mission
-              </Button>
+                <ChevronDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
+              </span>
+              <div className="absolute -inset-2 bg-white/15 rounded-full blur-2xl opacity-50 pointer-events-none" />
             </Link>
           </div>
         </ScrollReveal>

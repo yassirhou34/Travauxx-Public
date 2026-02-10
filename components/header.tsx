@@ -44,8 +44,8 @@ export function Header({ variant = 'solid' }: HeaderProps) {
     { label: 'À propos', href: '/a-propos' },
   ]
 
-  // Pour la variante 'solid' ou quand on a scrollé sur 'transparent': fond blanc, texte noir
-  // Pour la variante 'transparent' sans scroll: fond transparent, texte blanc
+  // On garde la logique de scroll si besoin,
+  // mais on veut un header noir avec écriture blanche partout.
   const isAtTop = isTransparent && !scrolled
   const showSolidBg = !isTransparent || scrolled
 
@@ -53,13 +53,7 @@ export function Header({ variant = 'solid' }: HeaderProps) {
   const logoSrc = '/Banqueimages/LOGO ACTIV TRAVAUX SANS ARRIERE PLAN.png'
 
   return (
-    <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        showSolidBg
-          ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-border'
-          : 'bg-transparent'
-      }`}
-    >
+    <header className="sticky top-0 z-50 w-full transition-all duration-300 bg-[#050308]/95 backdrop-blur-md shadow-sm border-b border-[#241a19]">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
           {/* Logo */}
@@ -83,7 +77,7 @@ export function Header({ variant = 'solid' }: HeaderProps) {
                 key={item.href}
                 href={item.href}
                 className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 hover:text-accent group ${
-                  isAtTop ? 'text-white' : 'text-foreground'
+                  'text-white'
                 }`}
                 style={{
                   animation: `fadeInUp 0.6s ease-out ${idx * 0.05}s both`,
@@ -107,9 +101,7 @@ export function Header({ variant = 'solid' }: HeaderProps) {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className={`md:hidden inline-flex items-center justify-center p-2 rounded-md transition-colors duration-300 ${
-                isAtTop
-                  ? 'text-white hover:bg-white/10' 
-                  : 'text-foreground hover:bg-muted'
+                'text-white hover:bg-white/10'
               }`}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}

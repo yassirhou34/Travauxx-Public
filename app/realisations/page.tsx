@@ -11,53 +11,40 @@ export const metadata: Metadata = {
 
 const projects = [
   {
-    category: 'Rénovation globale',
-    title: 'Rénovation complète d’une maison de famille',
+    category: 'Rénovation',
+    title: 'Rénovation complète d’une maison familiale ',
     location: 'Proche de Tours (37)',
     surface: '140 m²',
     description:
-      'Réfection complète de l’enveloppe et des pièces de vie : isolation, menuiseries, cuisine, salle de bains, électricité et sols.',
+      'Remise à neuf complète : isolation haute performance, menuiseries neuves et rénovation totale des réseaux (électricité et fluides). Réagencement complet de la cuisine, des pièces d\’eau et des espaces de vie.',
   },
   {
     category: 'Extension',
-    title: 'Extension bois pour agrandir le séjour',
-    location: 'Agglomération tourangelle',
+    title: 'Agrandissement du séjour pour un gain de volume et de lumière',
+    location: 'Secteur Tours (37) ',
     surface: '28 m²',
     description:
-      'Création d’un volume lumineux avec grandes baies vitrées, continuité de toiture et reprise des façades existantes.',
+      'Création d\'une extension bois parfaitement intégrée au bâti existant. Pose de larges baies vitrées pour maximiser l\'apport solaire, reprise complète des façades et continuité de la toiture pour une harmonie architecturale totale.',
   },
   {
     category: 'Aménagement intérieur',
     title: 'Réagencement cuisine / salon',
-    location: 'Centre-ville',
+    location: 'Secteur centre-ville Tours (37)',
     surface: '55 m²',
     description:
-      'Ouverture de cloisons, redistribution des circulations, création d’une cuisine conviviale ouverte sur le séjour.',
+      'Ouverture de cloisons pour fluidifier les passages et apporter de la perspective. Conception d\'une cuisine sur-mesure totalement intégrée au séjour, transformant deux pièces séparées en un seul grand volume de réception.',
   },
-  {
-    category: 'Locaux professionnels',
-    title: 'Modernisation de bureaux',
-    location: 'Zone d’activités',
-    surface: '210 m²',
-    description:
-      'Mise aux normes, création de salles de réunion, optimisation de l’éclairage et traitement acoustique.',
-  },
+  
+  
   {
     category: 'Rénovation énergétique',
-    title: 'Amélioration thermique d’un pavillon',
-    location: 'Périphérie de Tours',
+    title: 'Optimisation thermique d’un pavillon',
+    location: 'Périphérie Tourangelle',
     surface: '120 m²',
     description:
-      'Isolation par l’extérieur, remplacement des menuiseries, VMC et optimisation du système de chauffage.',
+      'Mise en œuvre d\'une isolation thermique par l\'extérieur (ITE) et installation de menuiseries haute performance. Refonte du système de ventilation et optimisation du chauffage pour une réduction drastique des déperditions énergétiques.',
   },
-  {
-    category: 'Salle de bains & suites',
-    title: 'Création d’une suite parentale',
-    location: 'Maison individuelle',
-    surface: '24 m²',
-    description:
-      'Création d’une chambre avec dressing et salle d’eau, optimisation des rangements et valorisation de la lumière naturelle.',
-  },
+  
 ]
 
 const editorialImages = [
@@ -83,7 +70,7 @@ export default function RealisationsPage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl space-y-6 animate-in fade-in slide-in-from-bottom-8 duration-700">
-              <p className="text-xs uppercase tracking-[0.25em] text-foreground/60">
+              <p className="text-xs uppercase tracking-[0.25em] text-accent">
                 Réalisations
               </p>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary leading-tight">
@@ -91,13 +78,15 @@ export default function RealisationsPage() {
                 <br />
                 des chantiers suivis de bout en bout.
               </h1>
-              <p className="text-base sm:text-lg text-foreground/75 leading-relaxed">
-                Voici une sélection de projets réalisés : rénovations globales, extensions, réagencements
-                intérieurs et modernisation de locaux professionnels, dans l’esprit du réseau Activ Travaux.
+              <p className="text-base sm:text-lg text-black leading-relaxed">
+              Consultez notre sélection de projets réalisés : réhabilitations lourdes, extensions structurelles et optimisation de parcs tertiaires. Chaque intervention reflète la rigueur et les standards d'excellence du réseau Activ Travaux 37.
+
               </p>
-              <p className="text-sm text-foreground/70 leading-relaxed">
-                Chaque chantier est piloté avec un contrat de contractant général : prix global défini,
-                délais planifiés, coordination des corps de métiers et garanties associées.
+              <p className="text-sm text-black leading-relaxed">
+               
+Tous nos chantiers sont encadrés par le statut de Contractant Général. Nous garantissons une sécurité juridique et financière totale par un prix ferme, un calendrier d’exécution verrouillé et une coordination stricte des corps d'état.
+
+
               </p>
             </div>
           </div>

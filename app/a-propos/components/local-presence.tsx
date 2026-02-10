@@ -24,9 +24,9 @@ const localFeatures = [
 
 export function LocalPresence() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 bg-background overflow-hidden">
+    <section className="relative py-20 sm:py-28 lg:py-36 bg-[#050308] overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#050308] via-[#050308] to-[#050308]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -36,10 +36,10 @@ export function LocalPresence() {
               <span className="inline-block text-accent text-sm font-semibold tracking-wider uppercase mb-4">
                 Votre interlocuteur local
               </span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 Activ Travaux 37
               </h2>
-              <p className="text-foreground/60 text-lg mb-8 leading-relaxed">
+            <p className="text-white/75 text-lg mb-8 leading-relaxed">
                 En Indre-et-Loire, votre activateur Activ Travaux vous apporte toute l&apos;expertise 
                 du réseau national avec la proximité et la réactivité d&apos;un interlocuteur local.
               </p>
@@ -50,12 +50,12 @@ export function LocalPresence() {
                   const Icon = feature.icon
                   return (
                     <div key={i} className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
-                        <Icon className="w-6 h-6 text-accent" />
+                      <div className="w-12 h-12 rounded-xl bg-secondary/25 flex items-center justify-center flex-shrink-0">
+                        <Icon className="w-6 h-6 text-secondary" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-primary mb-1">{feature.title}</h4>
-                        <p className="text-foreground/60 text-sm">{feature.description}</p>
+                        <h4 className="font-semibold text-white mb-1">{feature.title}</h4>
+                        <p className="text-white/70 text-sm">{feature.description}</p>
                       </div>
                     </div>
                   )
@@ -65,7 +65,7 @@ export function LocalPresence() {
               {/* CTA */}
               <Link 
                 href="/concevoir-mon-projet"
-                className="group inline-flex items-center gap-3 px-6 py-4 rounded-xl bg-accent hover:bg-accent/90 text-white font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105"
+                className="group inline-flex items-center gap-3 px-6 py-4 rounded-xl bg-secondary hover:bg-secondary/90 text-white font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-secondary/40 hover:scale-105"
               >
                 Démarrer mon projet en Indre-et-Loire
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -77,7 +77,7 @@ export function LocalPresence() {
           <ScrollReveal direction="left" delay={0.2}>
             <div className="relative">
               {/* Map-like visualization */}
-              <div className="relative aspect-square rounded-3xl bg-gradient-to-br from-primary to-primary/80 overflow-hidden">
+            <div className="relative aspect-square rounded-3xl bg-gradient-to-br from-[#372f2d] to-[#1a1413] overflow-hidden border border-white/10 shadow-[0_28px_90px_rgba(0,0,0,0.9)]">
                 {/* Grid pattern */}
                 <div className="absolute inset-0 opacity-10" style={{
                   backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
@@ -87,7 +87,7 @@ export function LocalPresence() {
                 {/* Center point for Indre-et-Loire */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                   <div className="relative">
-                    <div className="w-16 h-16 rounded-full bg-accent shadow-lg shadow-accent/50 flex items-center justify-center animate-pulse">
+                    <div className="w-16 h-16 rounded-full bg-secondary shadow-lg shadow-secondary/50 flex items-center justify-center animate-pulse">
                       <MapPin className="w-8 h-8 text-white" />
                     </div>
                     <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full bg-white text-primary text-sm font-semibold whitespace-nowrap shadow-lg">
@@ -122,14 +122,14 @@ export function LocalPresence() {
               </div>
 
               {/* Stats overlay */}
-              <div className="absolute -bottom-6 -right-6 p-6 rounded-2xl bg-background border border-border shadow-xl">
+              <div className="absolute -bottom-6 -right-6 p-6 rounded-2xl bg-white/5 border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.9)] backdrop-blur-lg">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
-                    <Building2 className="w-6 h-6 text-accent" />
+                  <div className="w-12 h-12 rounded-xl bg-secondary/25 flex items-center justify-center">
+                    <Building2 className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <p className="font-semibold text-primary">Zone d&apos;intervention</p>
-                    <p className="text-foreground/60 text-sm">Tours et environs</p>
+                    <p className="font-semibold text-white">Zone d&apos;intervention</p>
+                    <p className="text-white/70 text-sm">Tours et environs</p>
                   </div>
                 </div>
               </div>

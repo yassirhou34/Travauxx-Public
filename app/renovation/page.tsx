@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function RenovationPage() {
   return (
     <>
-      <Header />
+      <Header variant="transparent" />
       <main className="overflow-x-hidden">
         <RenovationHero />
         <RenovationTypes />
@@ -26,7 +26,6 @@ export default function RenovationPage() {
         <RenovationProcess />
         <RenovationCTA />
       </main>
-      <div className="h-12 sm:h-16 md:h-20 lg:h-24" />
       <Footer />
     </>
   )

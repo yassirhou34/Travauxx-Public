@@ -362,14 +362,18 @@ export default function DevisPage() {
       <Header />
       <main>
         <SectionHero
-          title="Demande de devis gratuite et sans engagement."
-          subtitle="Décrivez votre projet, on le cadre.
-Vous recevez une réponse rapide pour avancer."
+          title="Construisons votre projet, simplement."
+          titleClassName="text-secondary"
+          subtitle={
+            "Décrivez votre projet, on le cadre.\nVous recevez une première réponse claire pour avancer sereinement."
+          }
           bullets={[
-            'Simple et rapide',
-            'Données confidentielles',
-            'Premier retour rapide',
+            'Devis gratuit et sans engagement',
+            'Données traitées en toute confidentialité',
+            'Premier retour sous 48h',
           ]}
+          ctaPrimary={{ label: 'Remplir le formulaire', href: '#formulaire-devis' }}
+          ctaSecondary={{ label: 'Parler à un expert', href: 'tel:+33247000000' }}
         />
 
         {/* Content Section */}
@@ -379,20 +383,20 @@ Vous recevez une réponse rapide pour avancer."
               {/* Info */}
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-3xl font-serif font-bold text-primary mb-4">
+                  <h2 className="text-3xl font-serif font-bold text-white mb-4">
                     Ce que vous pouvez préciser
                   </h2>
-                  <p className="text-base text-foreground/70 leading-relaxed">
+                  <p className="text-base text-white/80 leading-relaxed">
                     Type de projet, bien concerné, budget, contraintes, attentes. Plus c&apos;est clair,
                     plus l&apos;estimation est fiable.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-serif font-bold text-primary mb-4">
+                  <h3 className="text-2xl font-serif font-bold text-white mb-4">
                     Et ensuite
                   </h3>
-                  <p className="text-base text-foreground/70 leading-relaxed">
+                  <p className="text-base text-white/80 leading-relaxed">
                     On vous contacte, on affine le besoin, puis on formalise une proposition cadrée.
                   </p>
                 </div>
@@ -407,11 +411,14 @@ Vous recevez une réponse rapide pour avancer."
               </div>
 
               {/* Form */}
-              <div className="bg-white p-8 rounded-lg border border-border">
+              <div
+                id="formulaire-devis"
+                className="bg-white p-8 rounded-lg border border-border shadow-xl shadow-black/30"
+              >
                 {!submitted ? (
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
-                      <label className="block text-sm font-semibold text-foreground mb-2">
+                      <label className="block text-sm font-semibold text-primary mb-2">
                         Type de projet *
                       </label>
                       <select
@@ -430,7 +437,7 @@ Vous recevez une réponse rapide pour avancer."
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-foreground mb-2">
+                      <label className="block text-sm font-semibold text-primary mb-2">
                         Type de bien *
                       </label>
                       <select
@@ -449,7 +456,7 @@ Vous recevez une réponse rapide pour avancer."
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-foreground mb-2">
+                      <label className="block text-sm font-semibold text-primary mb-2">
                         Ville / Code postal *
                       </label>
                       <input
@@ -463,7 +470,7 @@ Vous recevez une réponse rapide pour avancer."
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-foreground mb-2">
+                      <label className="block text-sm font-semibold text-primary mb-2">
                         Budget estimatif
                       </label>
                       <input
@@ -476,7 +483,7 @@ Vous recevez une réponse rapide pour avancer."
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-foreground mb-2">
+                      <label className="block text-sm font-semibold text-primary mb-2">
                         Détails du projet
                       </label>
                       <textarea
@@ -489,11 +496,11 @@ Vous recevez une réponse rapide pour avancer."
                     </div>
 
                     <div className="border-t border-border pt-6">
-                      <h4 className="font-semibold text-foreground mb-4">Vos coordonnées</h4>
+                      <h4 className="font-semibold text-primary mb-4">Vos coordonnées</h4>
 
                       <div className="space-y-4">
                         <div>
-                          <label className="block text-sm font-semibold text-foreground mb-2">
+                          <label className="block text-sm font-semibold text-primary mb-2">
                             Nom *
                           </label>
                           <input
@@ -507,7 +514,7 @@ Vous recevez une réponse rapide pour avancer."
                         </div>
 
                         <div>
-                          <label className="block text-sm font-semibold text-foreground mb-2">
+                          <label className="block text-sm font-semibold text-primary mb-2">
                             Email *
                           </label>
                           <input
@@ -521,7 +528,7 @@ Vous recevez une réponse rapide pour avancer."
                         </div>
 
                         <div>
-                          <label className="block text-sm font-semibold text-foreground mb-2">
+                          <label className="block text-sm font-semibold text-primary mb-2">
                             Téléphone *
                           </label>
                           <input
@@ -566,7 +573,7 @@ Vous recevez une réponse rapide pour avancer."
                     <h3 className="text-xl font-serif font-bold text-primary mb-2">
                       Merci pour votre demande
                     </h3>
-                    <p className="text-foreground/70">
+                    <p className="text-primary/80">
                       Votre demande a bien été envoyée. Nous revenons vers vous rapidement.
                     </p>
                   </div>
@@ -604,8 +611,8 @@ Vous recevez une réponse rapide pour avancer."
                       }}
                       className={`px-3 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm md:text-base font-medium transition-all duration-300 ${
                         isActive
-                          ? 'bg-background text-primary shadow-sm'
-                          : 'bg-transparent text-foreground/60 hover:text-foreground'
+                          ? 'bg-white text-primary shadow-sm'
+                          : 'bg-transparent text-primary/80 hover:text-primary'
                       }`}
                     >
                       {category.label}
@@ -625,12 +632,12 @@ Vous recevez une réponse rapide pour avancer."
                       onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                       className="w-full px-4 sm:px-5 md:px-6 lg:px-8 py-4 sm:py-5 md:py-6 text-left flex items-center justify-between bg-white border border-border/60 rounded-xl hover:border-accent/50 hover:shadow-md hover:shadow-accent/10 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-accent/2"
                     >
-                      <h3 className="font-semibold text-foreground text-sm sm:text-base md:text-lg group-hover:text-primary transition-colors duration-300 pr-3 sm:pr-4 flex-1">
+                      <h3 className="font-semibold text-primary text-sm sm:text-base md:text-lg transition-colors duration-300 pr-3 sm:pr-4 flex-1">
                         {item.question}
                       </h3>
                       <ChevronDown
                         size={20}
-                        className={`flex-shrink-0 text-accent transition-all duration-300 group-hover:text-accent sm:w-6 sm:h-6 ${
+                        className={`flex-shrink-0 text-primary transition-all duration-300 group-hover:text-primary sm:w-6 sm:h-6 ${
                           openIndex === idx ? 'rotate-180' : ''
                         }`}
                       />
@@ -638,7 +645,7 @@ Vous recevez une réponse rapide pour avancer."
 
                     {openIndex === idx && (
                       <div className="px-4 sm:px-5 md:px-6 lg:px-8 py-4 sm:py-5 md:py-6 bg-gradient-to-b from-muted/40 to-muted/20 border-x border-b border-border/40 rounded-b-xl animate-in fade-in slide-in-from-top-2 duration-300">
-                        <p className="text-foreground/70 leading-relaxed text-xs sm:text-sm md:text-base font-light">
+                        <p className="text-primary/80 leading-relaxed text-xs sm:text-sm md:text-base font-light">
                           {item.answer}
                         </p>
                       </div>

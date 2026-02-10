@@ -18,7 +18,7 @@ interface SpotlightGridProps {
 
 const SpotlightRow = ({ item, index }: { item: FeatureItem; index: number; hoverGradientFrom?: string; hoverGradientTo?: string }) => {
     return (
-        <div className="relative border-t border-white/20 py-6 sm:py-8 md:py-10 lg:py-12 group cursor-pointer overflow-hidden rounded-lg transition-colors">
+        <div className="relative border-t border-white/15 py-6 sm:py-8 md:py-10 lg:py-12 group cursor-pointer overflow-hidden transition-colors">
             <div className="flex items-center justify-between relative z-20 px-3 sm:px-4 md:px-6 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
                 <span className="text-white/60 font-mono text-xs sm:text-sm md:text-base min-w-[40px] sm:min-w-[50px] md:min-w-[60px]">0{index + 1}</span>
 
@@ -54,7 +54,10 @@ const SpotlightGrid: React.FC<SpotlightGridProps> = ({
     hoverGradientTo = "blue-900",
 }) => {
     return (
-        <div className="w-full" style={{ backgroundColor }}>
+        <div
+            className="w-full rounded-2xl sm:rounded-3xl border border-white/10 bg-white/5/0 bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md overflow-hidden"
+            style={{ backgroundColor }}
+        >
             <div className="w-full">
                 {features.map((item, i) => (
                     <SpotlightRow key={i} item={item} index={i} hoverGradientFrom={hoverGradientFrom} hoverGradientTo={hoverGradientTo} />

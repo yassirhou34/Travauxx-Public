@@ -44,28 +44,27 @@ const missionSteps = [
 
 export function MissionSection() {
   return (
-    <section id="mission" className="relative py-20 sm:py-28 lg:py-36 overflow-hidden">
+    <section id="mission" className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-[#050308]">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-muted/30 via-background to-background" />
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050308] via-[#050308] to-[#050308]" />
+        <div className="absolute top-16 right-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl opacity-70" />
+        <div className="absolute -bottom-10 left-0 w-80 h-80 bg-secondary/25 rounded-full blur-3xl opacity-60" />
+      </div>
       
-      {/* Animated orbs */}
-      <div className="absolute top-20 right-20 w-72 h-72 bg-accent/5 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <ScrollReveal direction="up">
           <div className="text-center mb-16 lg:mb-24">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/15 border border-accent/40 mb-6">
               <Target className="w-4 h-4 text-accent" />
               <span className="text-accent text-sm font-medium">Notre mission</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
-              Transformer vos idées en projets réalisés
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              Transformer vos idées en projets réalisables
             </h2>
-            <p className="text-foreground/60 text-lg max-w-3xl mx-auto">
-              Que vous soyez un particulier souhaitant agrandir sa maison, un professionnel rénovant un local commercial, 
-              ou un investisseur valorisant un bien, Activ Travaux vous accompagne à chaque étape.
+            <p className="text-white/70 text-lg max-w-3xl mx-auto">
+              Particulier, professionnel ou investisseur en Indre-et-Loire : nous pilotons votre chantier de A à Z. De la conception à la remise des clés, nous gérons l&apos;intégralité de vos travaux pour vous garantir un résultat sans imprévus.
             </p>
           </div>
         </ScrollReveal>
@@ -76,22 +75,24 @@ export function MissionSection() {
             const Icon = step.icon
             return (
               <ScrollReveal key={i} direction="up" delay={i * 0.1}>
-                <div className="group relative h-full">
-                  {/* Number background */}
-                  <div className="absolute -top-2 -left-2 text-7xl font-bold text-accent/10 group-hover:text-accent/20 transition-colors">
-                    {step.number}
-                  </div>
-                  
+                <div className="group h-full">
                   {/* Card */}
-                  <div className="relative h-full p-6 lg:p-8 rounded-2xl bg-background border border-border/50 hover:border-accent/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                  <div className="relative h-full p-6 lg:p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-accent/50 hover:shadow-[0_24px_80px_rgba(0,0,0,0.9)] transition-all duration-300 hover:-translate-y-1 backdrop-blur-lg">
+                    {/* Large step number en beige en arrière-plan, collé encore plus à gauche */}
+                    <div className="pointer-events-none absolute -top-2 left-1 text-6xl font-extrabold text-secondary/20 group-hover:text-secondary/30 transition-colors">
+                      {step.number}
+                    </div>
+
                     {/* Icon */}
-                    <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
-                      <Icon className="w-7 h-7 text-accent" />
+                    <div className="relative w-14 h-14 rounded-2xl bg-secondary/25 flex items-center justify-center mb-5 group-hover:bg-secondary/40 transition-colors">
+                      <Icon className="w-7 h-7 text-secondary" />
                     </div>
 
                     {/* Content */}
-                    <h3 className="text-lg font-bold text-primary mb-3">{step.title}</h3>
-                    <p className="text-foreground/60 text-sm leading-relaxed">{step.description}</p>
+                    <div className="relative">
+                      <h3 className="text-lg font-bold text-white mb-3">{step.title}</h3>
+                      <p className="text-white/75 text-sm leading-relaxed">{step.description}</p>
+                    </div>
                   </div>
                 </div>
               </ScrollReveal>
@@ -101,12 +102,12 @@ export function MissionSection() {
 
         {/* Promise box */}
         <ScrollReveal direction="up" delay={0.6}>
-          <div className="mt-16 lg:mt-20 p-8 lg:p-12 rounded-3xl bg-gradient-to-br from-primary to-primary/90 text-white">
-            <div className="text-center max-w-3xl mx-auto">
+          <div className="mt-16 lg:mt-20 p-8 lg:p-12 rounded-3xl bg-gradient-to-br from-[#372f2d] to-[#1a1413] border border-white/10 shadow-[0_32px_100px_rgba(0,0,0,0.9)]">
+            <div className="text-center max-w-3xl mx-auto text-white">
               <h3 className="text-2xl sm:text-3xl font-bold mb-4">
                 Une expérience fluide, sécurisée et sans mauvaises surprises
               </h3>
-              <p className="text-white/70 text-lg mb-6">
+              <p className="text-white/75 text-lg mb-6">
                 Tout est pensé pour vous garantir une expérience optimale, grâce à notre engagement contractuel 
                 sur le <strong>prix ferme</strong>, le <strong>planning</strong> et la <strong>qualité d&apos;exécution</strong>.
               </p>

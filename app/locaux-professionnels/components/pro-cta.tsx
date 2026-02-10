@@ -38,8 +38,8 @@ export function ProCTA() {
               </h2>
               
               <p className="text-white/70 text-lg mb-8 max-w-lg">
-                Un premier échange gratuit pour comprendre vos enjeux métier et vous proposer 
-                une solution sur-mesure adaptée à votre activité.
+              Audit technique et diagnostic de faisabilité pour aligner vos surfaces sur vos impératifs d'exploitation. Nous structurons une réponse globale adaptée à vos flux métiers.
+
               </p>
 
               {/* Sectors reminder */}
@@ -64,8 +64,7 @@ export function ProCTA() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/concevoir-mon-projet">
                   <Button className="w-full sm:w-auto group bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105">
-                    Démarrer mon projet
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  Lancer mon projet                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
                 <Link href="/realisations">

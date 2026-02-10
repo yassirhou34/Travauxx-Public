@@ -71,11 +71,8 @@ export function ArchitectureHero() {
 
         {/* Subtitle */}
         <ScrollReveal direction="up" delay={0.3}>
-          <p className="text-lg sm:text-xl md:text-2xl text-white/60 max-w-2xl mx-auto mb-4 font-light">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/60 max-w-2xl mx-auto mb-10 font-light">
             Une approche architecturale sur-mesure pour chaque projet.
-          </p>
-          <p className="text-base sm:text-lg text-white/40 max-w-xl mx-auto mb-10">
-            Innovation IA · Architectes partenaires · Bureau d&apos;études
           </p>
         </ScrollReveal>
 
@@ -105,19 +102,24 @@ export function ArchitectureHero() {
 
         {/* CTAs */}
         <ScrollReveal direction="up" delay={0.5}>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
             <Link href="/concevoir-mon-projet">
-              <Button className="group bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-6 text-base sm:text-lg rounded-full transition-all duration-300 hover:shadow-2xl hover:shadow-accent/30 hover:scale-105 border-0">
-                Concevoir mon projet
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <Button className="group inline-flex items-center justify-center gap-2 w-[260px] h-[56px] bg-accent hover:bg-accent/90 text-white font-semibold rounded-full text-base sm:text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-accent/30 hover:scale-105 border-0">
+                <span className="flex items-center justify-center gap-2 whitespace-nowrap">
+                  Concevoir mon projet
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </span>
               </Button>
             </Link>
-            <button 
+            <button
               onClick={scrollToContent}
-              className="text-white/60 hover:text-white font-medium flex items-center gap-2 transition-colors"
+              className="group inline-flex items-center justify-center gap-2 min-w-[260px] h-[56px] px-8 relative border-2 border-white/70 text-white hover:bg-white/20 font-bold rounded-full text-base sm:text-lg transition-all duration-300 bg-white/10 backdrop-blur-md hover:border-white hover:scale-105 shadow-xl shadow-white/20 whitespace-nowrap mx-3 sm:mx-4"
             >
-              Découvrir notre approche
-              <ChevronDown className="w-4 h-4 animate-bounce" />
+              <span className="relative z-10 flex items-center gap-2 whitespace-nowrap">
+                Découvrir notre approche
+                <ChevronDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
+              </span>
+              <div className="absolute -inset-2 bg-white/15 rounded-full blur-2xl opacity-50" />
             </button>
           </div>
         </ScrollReveal>

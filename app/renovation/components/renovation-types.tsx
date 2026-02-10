@@ -9,12 +9,11 @@ import { ArrowRight, Home, Leaf, Thermometer, Droplets, Wind, Sun, Lightbulb, Pa
 const renovationTypes = [
   {
     id: 'globale',
-    title: 'Rénovation Globale',
+    title: 'Rénovation globale : la solution idéale',
     shortTitle: 'Globale',
     icon: Home,
-    tagline: 'Transformez entièrement votre intérieur',
-    description: 'La rénovation globale consiste à repenser intégralement votre habitat : redistribution des espaces, mise aux normes électriques et plomberie, isolation, menuiseries, revêtements et finitions. Un projet complet pour un résultat cohérent.',
-    longDescription: 'Plutôt que de rénover pièce par pièce au fil des années, la rénovation globale permet d\'optimiser les interventions, de garantir la cohérence technique et esthétique, et souvent de réaliser des économies par rapport à des travaux fractionnés.',
+    tagline: 'Restructuration complète de vos espaces.',
+    description: 'Repensez l’intégralité de votre habitat. Nous garantissons une cohérence technique et esthétique supérieure en une seule intervention. Cette approche globale optimise vos coûts par rapport à des travaux fractionnés. ',
     features: [
       { icon: PaintBucket, label: 'Redistribution des espaces' },
       { icon: Lightbulb, label: 'Électricité aux normes' },
@@ -36,10 +35,10 @@ const renovationTypes = [
   },
   {
     id: 'energetique',
-    title: 'Rénovation Énergétique',
+    title: 'Rénovation énergétique',
     shortTitle: 'Énergétique',
     icon: Leaf,
-    tagline: 'Réduisez votre empreinte et vos factures',
+    tagline: 'Performance thermique et économies d\'énergie.',
     description: 'La rénovation énergétique vise à améliorer la performance thermique de votre logement : isolation des murs, toiture et planchers, remplacement des menuiseries, installation d\'un système de chauffage performant et d\'une ventilation adaptée.',
     longDescription: 'C\'est bon pour la planète, bon pour votre confort et bon pour votre porte-monnaie. Une éco-rénovation bien menée peut réduire vos factures d\'énergie de 40 à 70% tout en améliorant significativement votre confort été comme hiver.',
     features: [
@@ -77,10 +76,13 @@ export function RenovationTypes() {
   }
 
   return (
-    <section id="renovation-types" className="relative py-20 sm:py-28 lg:py-36 bg-background overflow-hidden">
+    <section
+      id="renovation-types"
+      className="relative pt-10 sm:pt-12 lg:pt-14 pb-20 sm:pb-28 lg:pb-36 bg-[#050308] overflow-hidden"
+    >
       {/* Background decorations */}
-      <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-radial from-secondary/5 to-transparent opacity-50" />
-      <div className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-gradient-radial from-accent/5 to-transparent opacity-50" />
+      <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-radial from-secondary/20 to-transparent opacity-60" />
+      <div className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-gradient-radial from-accent/20 to-transparent opacity-60" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
@@ -89,10 +91,10 @@ export function RenovationTypes() {
             <span className="inline-block text-accent text-sm font-semibold tracking-wider uppercase mb-4">
               Nos Solutions
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               2 approches, 1 objectif
             </h2>
-            <p className="text-foreground/60 text-lg max-w-2xl mx-auto">
+            <p className="text-white/70 text-lg max-w-2xl mx-auto">
               Améliorer durablement votre cadre de vie. Choisissez l&apos;approche adaptée à votre projet.
             </p>
           </div>
@@ -108,10 +110,11 @@ export function RenovationTypes() {
                 <button
                   key={type.id}
                   onClick={() => handleTypeChange(type)}
-                  className={`group relative p-6 lg:p-8 rounded-3xl text-left transition-all duration-500 overflow-hidden ${
+                  onMouseEnter={() => handleTypeChange(type)}
+                  className={`group relative p-6 lg:p-8 rounded-3xl text-left transition-all duration-500 overflow-hidden border ${
                     isActive 
-                      ? 'bg-primary text-white shadow-2xl scale-[1.02]' 
-                      : 'bg-muted/50 text-foreground hover:bg-muted'
+                      ? 'bg-white/10 text-white shadow-2xl scale-[1.02] border-white/30' 
+                      : 'bg-white/5 text-white/80 hover:bg-white/10 border-white/10'
                   }`}
                 >
                   {/* Gradient overlay on active */}
@@ -121,15 +124,15 @@ export function RenovationTypes() {
                   
                   <div className="relative z-10">
                     <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl mb-4 ${
-                      isActive ? 'bg-white/20' : 'bg-background'
+                      isActive ? 'bg-white/20' : 'bg-white/5'
                     }`}>
-                      <Icon className={`w-7 h-7 ${isActive ? 'text-white' : 'text-foreground/70'}`} />
+                      <Icon className={`w-7 h-7 ${isActive ? 'text-white' : 'text-white/70'}`} />
                     </div>
                     
-                    <h3 className={`text-2xl lg:text-3xl font-bold mb-2 ${isActive ? 'text-white' : 'text-primary'}`}>
+                    <h3 className={`text-2xl lg:text-3xl font-bold mb-2 ${isActive ? 'text-white' : 'text-white'}`}>
                       {type.title}
                     </h3>
-                    <p className={`text-sm lg:text-base ${isActive ? 'text-white/80' : 'text-foreground/60'}`}>
+                    <p className={`text-sm lg:text-base ${isActive ? 'text-white/80' : 'text-white/70'}`}>
                       {type.tagline}
                     </p>
 
@@ -160,18 +163,6 @@ export function RenovationTypes() {
               
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              
-              {/* Badge */}
-              <div 
-                className="absolute top-6 left-6 px-4 py-2 rounded-full backdrop-blur-md text-white font-semibold text-sm flex items-center gap-2"
-                style={{ backgroundColor: `${activeType.color}dd` }}
-              >
-                {(() => {
-                  const Icon = activeType.icon
-                  return <Icon className="w-4 h-4" />
-                })()}
-                {activeType.title}
-              </div>
 
               {/* For who badges */}
               <div className="absolute bottom-6 left-6 right-6">
@@ -195,21 +186,21 @@ export function RenovationTypes() {
                 style={{ backgroundColor: activeType.color }}
               />
               
-              <h3 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
+              <h3 className="text-3xl sm:text-4xl font-bold text-white mb-4">
                 {activeType.title}
               </h3>
               
-              <p className="text-lg text-foreground/70 mb-4 leading-relaxed">
+              <p className="text-lg text-white/80 mb-4 leading-relaxed">
                 {activeType.description}
               </p>
               
-              <p className="text-base text-foreground/60 mb-6 leading-relaxed">
+              <p className="text-base text-white/70 mb-6 leading-relaxed">
                 {activeType.longDescription}
               </p>
 
               {/* Benefits */}
               <div className="mb-6">
-                <h4 className="text-sm font-semibold text-foreground/50 uppercase tracking-wider mb-3">Avantages clés</h4>
+                <h4 className="text-sm font-semibold text-white/60 uppercase tracking-wider mb-3">Avantages clés</h4>
                 <div className="flex flex-wrap gap-2">
                   {activeType.benefits.map((benefit, i) => (
                     <span 
@@ -230,13 +221,13 @@ export function RenovationTypes() {
                   return (
                     <div 
                       key={i}
-                      className="flex items-center gap-2 p-3 rounded-xl bg-muted/30 border border-border/50 hover:border-accent/30 transition-colors group"
+                      className="flex items-center gap-2 p-3 rounded-xl bg-white/5 border border-white/10 hover:border-accent/40 transition-colors group"
                     >
                       <FeatureIcon 
                         className="w-4 h-4 flex-shrink-0 transition-colors"
                         style={{ color: activeType.color }}
                       />
-                      <span className="text-xs font-medium text-foreground/80">{feature.label}</span>
+                      <span className="text-xs font-medium text-white/90">{feature.label}</span>
                     </div>
                   )
                 })}
@@ -248,7 +239,7 @@ export function RenovationTypes() {
                 className="group inline-flex items-center gap-3 px-6 py-4 rounded-xl font-semibold text-white transition-all duration-300 hover:shadow-xl hover:scale-105"
                 style={{ backgroundColor: activeType.color }}
               >
-                Démarrer mon projet de {activeType.shortTitle.toLowerCase()}
+                Démarrer mon projet 
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>

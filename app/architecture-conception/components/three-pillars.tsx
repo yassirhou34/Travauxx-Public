@@ -14,7 +14,8 @@ const pillars = [
     title: 'Innovation & Intelligence Artificielle',
     shortTitle: 'Innovation IA',
     icon: Cpu,
-    color: 'from-accent to-accent/80',
+    // Dégradé beige premium pour éviter le rose trop présent
+    color: 'from-[#a39383] to-[#c2b6aa]',
     bgColor: 'accent',
     description: 'Activ Travaux développe des outils innovants basés sur l\'intelligence artificielle pour enrichir votre expérience dès la phase de conception.',
     longDescription: 'Ces technologies renforcent la précision, la transparence et la personnalisation de votre projet, tout en rendant votre parcours client plus fluide et interactif.',
@@ -32,7 +33,7 @@ const pillars = [
     title: 'Architectes & Architectes d\'intérieur',
     shortTitle: 'Architectes',
     icon: PenTool,
-    color: 'from-accent/90 to-accent/70',
+    color: 'from-[#a39383] to-[#8b8276]',
     bgColor: 'accent',
     description: 'Grâce à nos architectes, dessinateurs et techniciens partenaires, nous vous accompagnons dès les premières étapes de votre projet.',
     longDescription: 'Chaque mètre carré est pensé pour vous offrir fonctionnalité, confort et élégance, sans compromis. Une conception alignée sur vos besoins et votre mode de vie.',
@@ -50,7 +51,7 @@ const pillars = [
     title: 'Bureau d\'études',
     shortTitle: 'Bureau d\'études',
     icon: Compass,
-    color: 'from-secondary to-secondary/80',
+    color: 'from-[#a39383] to-[#c2b6aa]',
     bgColor: 'secondary',
     description: 'Un projet bien conçu, c\'est un chantier bien maîtrisé. La phase de conception est le socle de la réussite technique de votre projet.',
     longDescription: 'Nos bureaux d\'études partenaires assurent la faisabilité technique, le respect des normes et la précision des plans pour un chantier sans mauvaises surprises.',
@@ -70,22 +71,23 @@ export function ThreePillars() {
 
   return (
     <section id="architecture-pillars" className="relative py-20 sm:py-28 lg:py-36 bg-background overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-radial from-accent/5 to-transparent opacity-50" />
-      <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-radial from-secondary/5 to-transparent opacity-50" />
+      {/* Background decorations dans la charte sombre/beige */}
+      <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-radial from-[#a39383]/10 to-transparent opacity-60" />
+      <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-radial from-[#a39383]/15 to-transparent opacity-60" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <ScrollReveal direction="up">
           <div className="text-center mb-16 lg:mb-20">
-            <span className="inline-block text-violet-500 text-sm font-semibold tracking-wider uppercase mb-4">
+            <span className="inline-block text-[#a39883] text-sm font-semibold tracking-wider uppercase mb-4">
               Notre approche
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
-              3 piliers pour votre projet
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            Trois piliers, une maîtrise
             </h2>
-            <p className="text-foreground/60 text-lg max-w-2xl mx-auto">
-              Une approche complète qui combine innovation technologique, expertise architecturale et rigueur technique.
+            <p className="text-white/70 text-lg max-w-2xl mx-auto">
+            Convergence de l'innovation prédictive, de la maîtrise architecturale et d'une rigueur d'exécution sans concession.
+
             </p>
           </div>
         </ScrollReveal>
@@ -101,15 +103,15 @@ export function ThreePillars() {
                   key={pillar.id}
                   onClick={() => setActivePillar(pillar)}
                   className={`group relative flex items-center gap-3 px-6 py-4 rounded-2xl transition-all duration-500 ${
-                    isActive 
-                      ? 'bg-gradient-to-r text-white shadow-xl scale-105' 
-                      : 'bg-muted/50 text-foreground/70 hover:bg-muted hover:text-foreground'
+                    isActive
+                      ? 'bg-gradient-to-r text-white shadow-xl scale-105'
+                      : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'
                   }`}
                   style={isActive ? { backgroundImage: `linear-gradient(to right, var(--tw-gradient-stops))` } : {}}
                 >
                   {isActive && <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${pillar.color}`} />}
                   <div className="relative z-10 flex items-center gap-3">
-                    <Icon className={`w-5 h-5 ${isActive ? 'text-white' : 'text-foreground/50 group-hover:text-violet-500'} transition-colors`} />
+                    <Icon className={`w-5 h-5 ${isActive ? 'text-white' : 'text-white/50 group-hover:text-[#a39883]'} transition-colors`} />
                     <span className="font-semibold whitespace-nowrap">{pillar.shortTitle}</span>
                   </div>
                 </button>
@@ -130,66 +132,66 @@ export function ThreePillars() {
                 })()}
               </div>
               
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-4">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
                 {activePillar.title}
               </h3>
               
-              <p className="text-lg text-foreground/70 mb-4 leading-relaxed">
+              <p className="text-lg text-white/80 mb-4 leading-relaxed">
                 {activePillar.description}
               </p>
               
-              <p className="text-base text-foreground/60 mb-8 leading-relaxed">
+              <p className="text-base text-white/60 mb-8 leading-relaxed">
                 {activePillar.longDescription}
               </p>
 
               {/* Key benefits */}
-              <div className="p-6 rounded-2xl bg-gradient-to-br from-muted/50 to-muted/30 border border-border/50">
-                <h4 className="font-semibold text-primary mb-4">Ce que cela vous apporte :</h4>
+              <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
+                <h4 className="font-semibold text-white mb-4">Ce que cela vous apporte :</h4>
                 <ul className="space-y-3">
                   {activePillar.id === 'ia' && (
                     <>
-                      <li className="flex items-center gap-2 text-foreground/70 text-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-violet-500" />
+                      <li className="flex items-center gap-2 text-white/70 text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#a39883]" />
                         Parcours client fluide et interactif
                       </li>
-                      <li className="flex items-center gap-2 text-foreground/70 text-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-violet-500" />
+                      <li className="flex items-center gap-2 text-white/70 text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#a39883]" />
                         Précision et transparence accrues
                       </li>
-                      <li className="flex items-center gap-2 text-foreground/70 text-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-violet-500" />
+                      <li className="flex items-center gap-2 text-white/70 text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#a39883]" />
                         Personnalisation maximale
                       </li>
                     </>
                   )}
                   {activePillar.id === 'architectes' && (
                     <>
-                      <li className="flex items-center gap-2 text-foreground/70 text-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-500" />
+                      <li className="flex items-center gap-2 text-white/70 text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#a39883]" />
                         Espaces pensés pour votre mode de vie
                       </li>
-                      <li className="flex items-center gap-2 text-foreground/70 text-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-500" />
+                      <li className="flex items-center gap-2 text-white/70 text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#a39883]" />
                         Fonctionnalité, confort et élégance
                       </li>
-                      <li className="flex items-center gap-2 text-foreground/70 text-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-500" />
+                      <li className="flex items-center gap-2 text-white/70 text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#a39883]" />
                         Valorisation esthétique du bien
                       </li>
                     </>
                   )}
                   {activePillar.id === 'bureau' && (
                     <>
-                      <li className="flex items-center gap-2 text-foreground/70 text-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-cyan-500" />
+                      <li className="flex items-center gap-2 text-white/70 text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#a39883]" />
                         Budget estimé avec précision
                       </li>
-                      <li className="flex items-center gap-2 text-foreground/70 text-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-cyan-500" />
+                      <li className="flex items-center gap-2 text-white/70 text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#a39883]" />
                         Contraintes identifiées en amont
                       </li>
-                      <li className="flex items-center gap-2 text-foreground/70 text-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-cyan-500" />
+                      <li className="flex items-center gap-2 text-white/70 text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#a39883]" />
                         Délais plus précis et respectés
                       </li>
                     </>
@@ -205,17 +207,17 @@ export function ThreePillars() {
               {activePillar.features.map((feature, i) => {
                 const FeatureIcon = feature.icon
                 return (
-                  <div 
+                  <div
                     key={i}
-                    className="group p-5 rounded-2xl bg-muted/30 border border-border/50 hover:border-violet-500/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                    className="group p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#a39883]/70 hover:shadow-[0_24px_80px_rgba(0,0,0,0.85)] transition-all duration-300 hover:-translate-y-1"
                   >
-                    <div 
+                    <div
                       className={`w-12 h-12 rounded-xl bg-gradient-to-br ${activePillar.color} flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform`}
                     >
                       <FeatureIcon className="w-6 h-6 text-white" />
                     </div>
-                    <h4 className="font-semibold text-primary mb-2">{feature.title}</h4>
-                    <p className="text-foreground/60 text-sm leading-relaxed">{feature.desc}</p>
+                    <h4 className="font-semibold text-white mb-2">{feature.title}</h4>
+                    <p className="text-white/70 text-sm leading-relaxed">{feature.desc}</p>
                   </div>
                 )
               })}

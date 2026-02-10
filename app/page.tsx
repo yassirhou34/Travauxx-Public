@@ -2,12 +2,13 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Facebook, Instagram, Music2, Youtube } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { SectionHero } from '@/components/section-hero'
 import { HeroVideo } from '@/components/hero-video'
 import { SectionContent } from '@/components/section-content'
-import { CTASection } from '@/components/cta-section'
+import { HomeCTA } from '@/components/home-cta'
 import StatsLuxury from '@/components/StatsLuxury'
 import SpotlightGrid from '@/components/SpotlightGrid'
 import { Marquee } from '@/components/MagazineComponents'
@@ -26,9 +27,9 @@ export default function Home() {
         {/* Hero Video avec contenu animé */}
         <HeroVideo />
 
-        {/* Statistiques clés – comme sur le site national */}
+        {/* Statistiques clés – comme sur le site national (fond blanc) */}
         <StatsLuxury
-          badgeText="Nos Performances"
+          badgeText="Nos performances"
           title="Notre héritage en chiffres"
           stats={[
             { value: 1000, suffix: '+', label: 'projets réalisés / an' },
@@ -36,38 +37,42 @@ export default function Home() {
             { value: 20, suffix: ' ans', label: "d'expérience" },
             { value: 100, suffix: '%', label: 'sérénité' },
           ]}
+          /* Fond blanc comme avant */
           backgroundColor="#ffffff"
+          /* Lignes et badge en rose charte */
           dividerColor="#e83263"
           badgeColor="#e83263"
+          /* Titre et textes en noir */
           titleColor="#1a1a1a"
           dividerLineColor="rgba(0,0,0,0.1)"
+          /* Chiffres : on garde le même dégradé rose → rouge */
           valueGradientFrom="#e83263"
           valueGradientTo="#af191c"
+          /* Libellés sous les chiffres en gris foncé, comme avant */
           labelColor="rgba(107, 114, 128, 1)"
           labelHoverColor="#1a1a1a"
         />
 
-        {/* Le confort d'un projet clé en main */}
+        {/* Pourquoi choisir le contrat de Contractant Général – carte claire sur fond sombre */}
         <ParallaxWrapper speed={0.3}>
-          <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-background via-muted/20 to-background">
+          <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-[#050308]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="max-w-4xl mx-auto">
                 <AdvancedReveal direction="scale" delay={0.2}>
-                  <div className="relative p-8 sm:p-10 md:p-12 lg:p-16 rounded-3xl bg-gradient-to-br from-primary/5 via-primary/3 to-accent/5 border border-primary/20 shadow-xl">
-                    {/* Decorative elements */}
-                    <div className="absolute top-0 left-0 w-32 h-32 bg-accent/10 rounded-full blur-3xl animate-pulse" />
-                    <div className="absolute bottom-0 right-0 w-40 h-40 bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+                  <div className="relative p-8 sm:p-10 md:p-12 lg:p-16 rounded-[32px] bg-white/5 border border-white/12 shadow-[0_40px_120px_rgba(0,0,0,0.85)] backdrop-blur-xl">
+                    {/* Halo décoratif façon studio */}
+                    <div className="absolute -top-16 -left-16 w-40 h-40 bg-accent/20 rounded-full blur-3xl opacity-70" />
+                    <div className="absolute -bottom-20 -right-10 w-48 h-48 bg-secondary/25 rounded-full blur-3xl opacity-70" />
                     
                     <div className="relative z-10">
                       <TextSplitReveal splitBy="word" delay={0.3}>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary mb-6">
-                          Le confort d&apos;un projet clé en main
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-6">
+                          Le confort d&apos;un projet piloté par des experts.
                         </h2>
                       </TextSplitReveal>
                       <AdvancedReveal direction="fade" delay={0.5}>
-                        <p className="text-base sm:text-lg md:text-xl text-foreground/70 leading-relaxed">
-                          On pilote pour vous la conception, les démarches, le chiffrage et l&apos;exécution. 
-                          Vous gardez la vision, on prend la coordination, dans l&apos;esprit du contrat de contractant général Activ Travaux.
+                        <p className="text-base sm:text-lg md:text-xl text-white/75 leading-relaxed">
+                          Oubliez la gestion des corps d&apos;état et les imprévus budgétaires. Activ Travaux 37 coordonne la conception, le chiffrage et l&apos;exécution. Vous gardez la vision, nous prenons la responsabilité.
                         </p>
                       </AdvancedReveal>
                     </div>
@@ -78,32 +83,30 @@ export default function Home() {
           </section>
         </ParallaxWrapper>
 
-        {/* Avantages du contrat de contractant général */}
-        <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-muted/40 via-muted/30 to-background overflow-hidden">
-          {/* Background decoration */}
-          <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-radial from-accent/5 to-transparent opacity-50" />
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-radial from-primary/5 to-transparent opacity-50" />
+        {/* Avantages du contrat de contractant général – cartes fortes sur fond sombre (beige only au hover) */}
+        <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 bg-[#050308] overflow-hidden">
+          {/* Background decoration en beige / charbon */}
+          <div className="absolute inset-0 bg-gradient-to-b from-secondary/15 via-transparent to-secondary/10 opacity-70" />
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <AdvancedReveal direction="up" delay={0.1}>
               <div className="max-w-3xl mb-8 sm:mb-12">
-                <div className="inline-block px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-4">
-                  <span className="text-accent text-sm font-semibold">Avantages exclusifs</span>
+                <div className="inline-block px-4 py-2 rounded-full bg-secondary/20 border border-secondary/40 mb-4">
+                  <span className="text-secondary-foreground text-sm font-semibold">Avantages exclusifs</span>
                 </div>
                 <TextSplitReveal splitBy="word" delay={0.2}>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mb-3 sm:mb-4">
-                    Profitez des avantages inégalables du contrat de contractant général
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white mb-3 sm:mb-4">
+                    Pourquoi choisir le contrat de Contractant Général ?
                   </h2>
                 </TextSplitReveal>
                 <AdvancedReveal direction="fade" delay={0.4}>
-                  <p className="text-foreground/70 text-sm sm:text-base md:text-lg leading-relaxed">
-                    Un cadre contractuel clair, inspiré du réseau national Activ Travaux :
-                    interlocuteur unique, prix ferme, délais engagés et garanties solides.
+                  <p className="text-white/75 text-sm sm:text-base md:text-lg leading-relaxed">
+                    Un cadre contractuel clair, inspiré du réseau national Activ Travaux : interlocuteur unique, prix ferme, délais engagés et garanties solides.
                   </p>
                 </AdvancedReveal>
               </div>
             </AdvancedReveal>
-            <StaggerContainer 
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8"
+            <StaggerContainer
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-stretch"
               staggerDelay={0.1}
               direction="up"
               delay={0.3}
@@ -134,19 +137,23 @@ export default function Home() {
                   desc: 'Plans, perspectives et outils d\'aide à la décision pour mieux vous projeter dans votre futur intérieur.',
                 },
               ].map((item, idx) => (
-                <MagneticHover key={item.title} strength={0.2}>
-                  <div className="group relative space-y-2 sm:space-y-3 p-4 sm:p-5 md:p-6 rounded-2xl bg-gradient-to-br from-background via-background to-muted/20 shadow-sm border border-border/60 hover:border-accent/50 transition-all duration-500 hover:shadow-2xl hover:shadow-accent/10 hover:-translate-y-2 overflow-hidden">
-                    {/* Gradient overlay on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-accent/0 via-accent/0 to-accent/0 group-hover:from-accent/5 group-hover:via-accent/3 group-hover:to-accent/0 transition-all duration-500 rounded-2xl" />
+                <MagneticHover key={item.title} strength={0.2} className="h-full">
+                  <div className="group relative h-full flex flex-col space-y-2 sm:space-y-3 p-4 sm:p-5 md:p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-secondary transition-all duration-500 hover:shadow-[0_30px_90px_rgba(0,0,0,0.9)] hover:-translate-y-2 overflow-hidden backdrop-blur-lg">
+                    {/* Gradient overlay on hover – beige uniquement */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-transparent group-hover:from-secondary/15 group-hover:via-secondary/5 group-hover:to-secondary/20 transition-all duration-500 rounded-3xl" />
                     
-                    {/* Number indicator */}
-                    <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-accent/10 group-hover:bg-accent/20 flex items-center justify-center transition-all duration-300 group-hover:scale-110">
-                      <span className="text-xs font-bold text-accent">{idx + 1}</span>
+                    {/* Number indicator – beige */}
+                    <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-secondary/20 group-hover:bg-secondary flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                      <span className="text-xs font-bold text-white">{idx + 1}</span>
                     </div>
                     
                     <div className="relative z-10">
-                      <h3 className="text-lg sm:text-xl font-serif font-semibold text-primary group-hover:text-accent transition-colors duration-300 pr-8">{item.title}</h3>
-                      <p className="text-xs sm:text-sm md:text-base text-foreground/70 leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">{item.desc}</p>
+                      <h3 className="text-lg sm:text-xl font-serif font-semibold text-white group-hover:text-secondary transition-colors duration-300 pr-8">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm md:text-base text-white/75 leading-relaxed group-hover:text-white transition-colors duration-300">
+                        {item.desc}
+                      </p>
                     </div>
                   </div>
                 </MagneticHover>
@@ -155,29 +162,23 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Les 3 grandes étapes d'un projet */}
-        <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 bg-background overflow-hidden">
+        {/* 3 étapes claires – cartes claires sur fond sombre */}
+        <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 bg-[#050308] overflow-hidden">
           {/* Background decoration */}
-          <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
+          <div className="absolute top-1/4 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-secondary/15 rounded-full blur-3xl" />
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-5 gap-6 sm:gap-8 md:gap-10 lg:gap-12 items-start">
               <AdvancedReveal direction="right" delay={0.2}>
                 <div className="lg:col-span-2 space-y-4 sm:space-y-6">
-                  <div className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4">
-                    <span className="text-primary text-sm font-semibold">Notre processus</span>
+                  <div className="inline-block px-4 py-2 rounded-full bg-secondary/20 border border-secondary/40 mb-4">
+                    <span className="text-secondary-foreground text-sm font-semibold">Notre processus</span>
                   </div>
                   <TextSplitReveal splitBy="word" delay={0.3}>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary">
-                      3 grandes étapes pour donner vie à votre projet
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white">
+                      3 étapes claires
                     </h2>
                   </TextSplitReveal>
-                  <AdvancedReveal direction="fade" delay={0.5}>
-                    <p className="text-sm sm:text-base md:text-lg text-foreground/70 leading-relaxed">
-                      Comme sur le site national Activ Travaux, tout commence par l&apos;analyse du besoin,
-                      se poursuit par un chiffrage clair puis un suivi de chantier précis jusqu&apos;à la réception.
-                    </p>
-                  </AdvancedReveal>
                 </div>
               </AdvancedReveal>
               <StaggerContainer 
@@ -207,23 +208,31 @@ export default function Home() {
                   },
                 ].map((item, idx) => (
                   <MagneticHover key={item.step} strength={0.15}>
-                    <div className="group relative rounded-2xl border border-border/70 bg-gradient-to-br from-white/80 via-white/70 to-muted/30 backdrop-blur-sm p-4 sm:p-5 md:p-6 lg:p-7 shadow-sm hover:shadow-2xl hover:shadow-accent/10 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40 overflow-hidden">
+                    <div className="group relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur-lg p-4 sm:p-5 md:p-6 lg:p-7 shadow-lg hover:shadow-[0_30px_90px_rgba(0,0,0,0.9)] transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 overflow-hidden">
                       {/* Left accent bar */}
                       <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-accent via-accent/80 to-accent/60 group-hover:w-1.5 transition-all duration-500" />
                       
                       {/* Step number badge */}
-                      <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-accent/10 group-hover:bg-accent/20 flex items-center justify-center transition-all duration-300 group-hover:scale-110">
-                        <span className="text-sm font-bold text-accent">{idx + 1}</span>
+                      <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-accent/15 group-hover:bg-accent flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                        <span className="text-sm font-bold text-white">{idx + 1}</span>
                       </div>
                       
                       {/* Content */}
-                      <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-foreground/60 mb-2 group-hover:text-accent/70 transition-colors duration-300">{item.step}</p>
-                      <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-primary mb-2 sm:mb-3 group-hover:text-accent transition-colors duration-300 pr-12">{item.title}</h3>
-                      <p className="text-xs sm:text-sm md:text-base text-foreground/70 leading-relaxed mb-2 sm:mb-3 group-hover:text-foreground/80 transition-colors duration-300">{item.desc}</p>
+                      <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-white/60 mb-2 group-hover:text-accent/70 transition-colors duration-300">
+                        {item.step}
+                      </p>
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-2 sm:mb-3 group-hover:text-accent transition-colors duration-300 pr-12">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm md:text-base text-white/75 leading-relaxed mb-2 sm:mb-3 group-hover:text-white transition-colors duration-300">
+                        {item.desc}
+                      </p>
                       <div className="relative">
-                        <p className="text-xs sm:text-sm text-foreground/80 font-medium italic group-hover:text-accent/90 transition-colors duration-300">{item.goal}</p>
+                        <p className="text-xs sm:text-sm text-white/80 font-medium italic group-hover:text-accent/90 transition-colors duration-300">
+                          {item.goal}
+                        </p>
                         {/* Decorative line */}
-                        <div className="absolute -left-6 top-1/2 -translate-y-1/2 w-4 h-0.5 bg-accent/30 group-hover:bg-accent/60 group-hover:w-6 transition-all duration-300" />
+                        <div className="absolute -left-6 top-1/2 -translate-y-1/2 w-4 h-0.5 bg-accent/40 group-hover:bg-accent/70 group-hover:w-6 transition-all duration-300" />
                       </div>
                     </div>
                   </MagneticHover>
@@ -236,38 +245,37 @@ export default function Home() {
         {/* Marquee */}
         <Marquee text="Nos Réalisations • Projets Premium • Rénovation Clé en Main • " />
 
-        {/* Réalisations – aperçu */}
+        {/* Réalisations – aperçu sur fond sombre */}
         <ParallaxWrapper speed={0.2}>
-          <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 bg-muted/40">
+          <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 bg-[#050308]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid lg:grid-cols-[1fr_1.3fr] gap-6 sm:gap-8 lg:gap-6 items-center">
                 <AdvancedReveal direction="right" delay={0.2}>
                   <div className="space-y-4 sm:space-y-5 md:space-y-6">
                     <TextSplitReveal splitBy="word" delay={0.3}>
-                      <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary">
-                        Voir nos réalisations
+                      <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white">
+                        Nos réalisations
                       </h2>
                     </TextSplitReveal>
                     <AdvancedReveal direction="fade" delay={0.5}>
-                      <p className="text-sm sm:text-base md:text-lg text-foreground/70 leading-relaxed">
-                        Des rénovations complètes, des extensions contemporaines, des réaménagements d'intérieurs et de
-                        bureaux : découvrez quelques exemples de projets réalisés dans le département.
+                      <p className="text-sm sm:text-base md:text-lg text-white/75 leading-relaxed">
+                        Rénovations globales, extensions contemporaines et aménagements tertiaires : consultez nos interventions en Indre-et-Loire.
                       </p>
-                      <p className="text-xs sm:text-sm md:text-base text-foreground/70 leading-relaxed mt-4">
-                        Chaque projet est accompagné, de la première visite à la réception, avec un niveau de finition
-                        soigné et un suivi de chantier rigoureux.
+                      <p className="text-sm sm:text-base md:text-lg text-white/75 leading-relaxed">
+                        Un pilotage intégral garantissant une exécution technique rigoureuse et une finition conforme à vos exigences, de la conception à la livraison.
                       </p>
-                      <a
-                        href="/realisations"
-                        className="inline-flex items-center text-xs sm:text-sm md:text-base font-semibold text-accent hover:text-accent/80 underline-offset-4 hover:underline transition-all duration-300"
-                      >
-                        Découvrir plus de réalisations
-                      </a>
+                      <div className="pt-4">
+                        <Link href="/realisations">
+                          <Button className="group bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 hover:shadow-2xl hover:shadow-accent/30 hover:scale-105 border-0">
+                            Découvrir nos réalisations
+                          </Button>
+                        </Link>
+                      </div>
                     </AdvancedReveal>
                   </div>
                 </AdvancedReveal>
                 <AdvancedReveal direction="left" delay={0.4}>
-                  <div className="w-full bg-[#050308] rounded-2xl sm:rounded-3xl p-3 sm:p-4 md:p-6 lg:p-8 shadow-xl overflow-hidden">
+                  <div className="w-full rounded-3xl sm:rounded-[32px] p-3 sm:p-5 md:p-6 lg:p-8 bg-gradient-to-br from-[#0f0c14] via-[#050308] to-[#151018] border border-white/12 shadow-[0_30px_90px_rgba(0,0,0,0.9)] overflow-hidden">
                     <SpotlightGrid
                       features={[
                         { 
@@ -302,62 +310,19 @@ export default function Home() {
           </section>
         </ParallaxWrapper>
 
-        {/* Nos prestations & zone d'intervention */}
-        <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-background via-muted/20 to-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <StaggerContainer 
-              className="grid md:grid-cols-3 gap-6 sm:gap-8"
-              staggerDelay={0.15}
-              direction="up"
-              delay={0.2}
-            >
-              {[
-                {
-                  title: 'Conception plus lisible',
-                  content:
-                    'Plans, volumes, choix, arbitrages : nous posons tout noir sur blanc pour vous permettre de décider sereinement avant de lancer les travaux.',
-                },
-                {
-                  title: 'Nos prestations',
-                  content:
-                    'Rénovation globale, rénovation énergétique, extension, aménagement intérieur, modernisation de locaux professionnels : nous coordonnons l\'ensemble des corps de métiers.',
-                },
-                {
-                  title: 'Zone d\'intervention',
-                  content: 'Indre-et-Loire (37), autour de Tours et de ses environs proches.',
-                },
-              ].map((block, idx) => (
-                <MagneticHover key={idx} strength={0.15}>
-                  <div className="group relative p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-white/80 via-white/70 to-muted/20 border border-border/60 hover:border-accent/40 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
-                    {/* Top accent */}
-                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent/0 via-accent/30 to-accent/0 group-hover:via-accent/60 transition-all duration-500" />
-                    
-                    <h3 className="text-xl sm:text-2xl font-serif font-bold text-primary mb-3 group-hover:text-accent transition-colors duration-300">
-                      {block.title}
-                    </h3>
-                    <p className="text-sm sm:text-base text-foreground/70 leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
-                      {block.content}
-                    </p>
-                  </div>
-                </MagneticHover>
-              ))}
-            </StaggerContainer>
-          </div>
-        </section>
-
         {/* Actualités – contenus propres à l'agence, inspirés des thèmes du réseau */}
-        <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-background">
+        <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-[#050308]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <AdvancedReveal direction="up" delay={0.2}>
               <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6 sm:mb-8 md:mb-10">
                 <div>
                   <TextSplitReveal splitBy="word" delay={0.3}>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mb-2">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white mb-2">
                       Nos actualités rénovation
                     </h2>
                   </TextSplitReveal>
                   <AdvancedReveal direction="fade" delay={0.5}>
-                    <p className="text-xs sm:text-sm md:text-base text-foreground/70">
+                    <p className="text-xs sm:text-sm md:text-base text-white/75">
                       Une sélection de conseils courts et concrets pour préparer votre projet de rénovation, d'extension
                       ou d'aménagement, inspirés des grandes tendances du marché.
                     </p>
@@ -366,7 +331,7 @@ export default function Home() {
               </div>
             </AdvancedReveal>
             <StaggerContainer 
-              className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8"
+              className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-stretch"
               staggerDelay={0.15}
               direction="up"
               delay={0.4}
@@ -388,30 +353,36 @@ export default function Home() {
                   desc: 'Menuiseries, isolation et ventilation : nous identifions les priorités pour gagner en confort tout en préparant une rénovation énergétique cohérente.',
                 },
               ].map((item, idx) => (
-                <MagneticHover key={item.title} strength={0.2}>
-                  <article className="group relative rounded-2xl border border-border/70 bg-gradient-to-br from-white/80 via-white/70 to-muted/20 backdrop-blur-sm p-4 sm:p-5 md:p-6 shadow-sm hover:shadow-2xl hover:shadow-accent/10 transition-all duration-500 hover:-translate-y-2 hover:border-accent/50 overflow-hidden">
-                    {/* Gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-accent/0 via-accent/0 to-accent/0 group-hover:from-accent/5 group-hover:via-accent/3 group-hover:to-accent/0 transition-all duration-500 rounded-2xl" />
+                <MagneticHover key={item.title} strength={0.2} className="h-full">
+                  <article className="group relative h-full flex flex-col rounded-3xl border border-white/10 bg-white/5 backdrop-blur-lg p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-[0_30px_90px_rgba(0,0,0,0.9)] transition-all duration-500 hover:-translate-y-2 hover:border-secondary overflow-hidden">
+                    {/* Gradient overlay (reste très discret au survol) */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-transparent group-hover:from-secondary/10 group-hover:via-transparent group-hover:to-transparent transition-all duration-500 rounded-3xl" />
                     
                     {/* Top accent line */}
-                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent/30 to-transparent group-hover:via-accent/60 group-hover:h-1.5 transition-all duration-500" />
+                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent/40 to-transparent group-hover:via-accent/70 group-hover:h-1.5 transition-all duration-500" />
                     
                     {/* Date badge */}
-                    <div className="relative z-10 inline-block px-3 py-1 rounded-full bg-accent/10 group-hover:bg-accent/20 mb-3 transition-all duration-300">
-                      <p className="text-[10px] sm:text-xs text-accent font-semibold">{item.date}</p>
+                    <div className="relative z-10 inline-block px-3 py-1 rounded-full bg-secondary/20 group-hover:bg-secondary mb-3 transition-all duration-300">
+                      <p className="text-[10px] sm:text-xs text-white font-semibold">
+                        {item.date}
+                      </p>
                     </div>
                     
                     {/* Content */}
                     <div className="relative z-10">
-                      <h3 className="text-base sm:text-lg font-semibold text-primary mb-2 group-hover:text-accent transition-colors duration-300">{item.title}</h3>
-                      <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed mb-2 sm:mb-3 group-hover:text-foreground/80 transition-colors duration-300">{item.desc}</p>
-                      <p className="text-[10px] sm:text-xs text-foreground/60 group-hover:text-foreground/70 transition-colors duration-300">
+                      <h3 className="text-base sm:text-lg font-semibold text-white mb-2 group-hover:text-secondary transition-colors duration-300">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-white/75 leading-relaxed mb-2 sm:mb-3 group-hover:text-white transition-colors duration-300">
+                        {item.desc}
+                      </p>
+                      <p className="text-[10px] sm:text-xs text-white/60 group-hover:text-white/80 transition-colors duration-300">
                         Contenus rédigés par notre agence, inspirés des actualités rénovation 2025–2026.
                       </p>
                     </div>
                     
                     {/* Corner decoration */}
-                    <div className="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-accent/5 to-transparent rounded-tl-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-accent/15 to-transparent rounded-tl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </article>
                 </MagneticHover>
               ))}
@@ -419,17 +390,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <CTASection
-          buttons={[
-            { label: 'Demander un devis', href: '/concevoir-mon-projet', variant: 'secondary' },
-            { label: 'Être rappelé', href: '/concevoir-mon-projet' },
-            { label: 'Voir les réalisations', href: '#' },
-            { label: 'Trouver une agence', href: '/a-propos' },
-          ]}
-        />
+        {/* CTA Section – Parlons de votre projet */}
+        <HomeCTA />
       </main>
-      <div className="h-12 sm:h-16 md:h-20 lg:h-24" />
       <Footer />
     </>
   )

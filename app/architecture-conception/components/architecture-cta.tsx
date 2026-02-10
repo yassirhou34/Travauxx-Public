@@ -62,14 +62,15 @@ export function ArchitectureCTA() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/concevoir-mon-projet">
                   <Button className="w-full sm:w-auto group bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105">
-                    Concevoir mon projet
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    <span className="flex items-center justify-center gap-2">
+                      Concevoir mon projet
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </span>
                   </Button>
                 </Link>
                 <Link href="/realisations">
-                  <Button 
-                    variant="outline" 
-                    className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 bg-transparent"
+                  <Button
+                    className="w-full sm:w-auto bg-[#a39383] hover:bg-[#8b8276] text-white font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105 border-0"
                   >
                     Voir nos réalisations
                   </Button>

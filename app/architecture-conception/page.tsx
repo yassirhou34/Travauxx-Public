@@ -26,7 +26,6 @@ export default function ArchitecturePage() {
         <ValueProposition />
         <ArchitectureCTA />
       </main>
-      <div className="h-12 sm:h-16 md:h-20 lg:h-24" />
       <Footer />
     </>
   )

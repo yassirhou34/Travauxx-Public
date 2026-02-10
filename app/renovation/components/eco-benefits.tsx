@@ -7,7 +7,7 @@ const mainBenefits = [
   {
     icon: Thermometer,
     title: 'Confort thermique',
-    description: 'Fini les courants d\'air et les pièces froides. Une isolation performante garantit une température homogène dans toute la maison, été comme hiver.',
+    description: 'Température homogène et isolation haute performance pour un confort intérieur constant.',
     color: 'from-accent to-accent/80',
   },
   {
@@ -19,13 +19,13 @@ const mainBenefits = [
   {
     icon: Globe,
     title: 'Impact environnemental',
-    description: 'Réduisez considérablement vos émissions de CO2. La rénovation énergétique est un acte concret pour lutter contre le réchauffement climatique.',
+    description: 'Réduction drastique des émissions de carbone et transition vers un habitat durable.',
     color: 'from-accent/90 to-accent/70',
   },
   {
     icon: TrendingDown,
     title: 'Anticipation réglementaire',
-    description: 'Les passoires thermiques seront bientôt interdites à la location. Anticipez la réglementation et valorisez votre bien dès maintenant.',
+    description: 'Mise en conformité aux normes d\'urbanisme et valorisation immédiate de votre patrimoine.',
     color: 'from-secondary to-secondary/80',
   },
 ]
@@ -39,16 +39,9 @@ const comfortItems = [
 
 export function EcoBenefits() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 overflow-hidden">
+    <section className="relative pt-20 sm:pt-24 lg:pt-28 pb-8 sm:pb-10 lg:pb-12 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/95 to-primary" />
-      
-      {/* Pattern overlay */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
-      </div>
 
       {/* Floating elements */}
       <div className="absolute top-20 left-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
@@ -66,8 +59,8 @@ export function EcoBenefits() {
               Rénover, c&apos;est agir
             </h2>
             <p className="text-white/70 text-lg max-w-3xl mx-auto">
-              La rénovation thermique écologique est devenue une urgence. Elle permet d&apos;atteindre 
-              trois objectifs majeurs : <strong className="text-accent">confort</strong>, <strong className="text-accent">économies</strong> et <strong className="text-accent">écologie</strong>.
+            Maîtrisez votre consommation et optimisez votre confort. Nous transformons votre habitat en une structure durable et économe.
+
             </p>
           </div>
         </ScrollReveal>

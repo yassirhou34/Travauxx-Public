@@ -31,13 +31,15 @@ export function ExtensionCTA() {
           <ScrollReveal direction="right">
             <div>
               <span className="inline-block text-white/80 text-sm font-semibold tracking-wider uppercase mb-4">
-                Prêt à agrandir ?
+              Prêt à agrandir votre bien ? 
+
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Concrétisons<br />votre projet<span className="text-white/60">.</span>
+                Concrétisons<br />votre extension<span className="text-white/60">.</span>
               </h2>
               <p className="text-white/80 text-lg mb-8 max-w-lg">
-                Une première discussion gratuite et sans engagement pour comprendre votre besoin et vous orienter vers la meilleure solution.
+              Sollicitez une étude de faisabilité gratuite et sans engagement. Notre expertise permet d'analyser vos besoins et de définir la solution technique idéale pour votre habitat.
+
               </p>
 
               {/* CTAs */}
@@ -49,9 +51,8 @@ export function ExtensionCTA() {
                   </Button>
                 </Link>
                 <Link href="/realisations">
-                  <Button 
-                    variant="outline" 
-                    className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 bg-transparent"
+                  <Button
+                    className="w-full sm:w-auto bg-[#a39383] hover:bg-[#8b8276] text-white font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105 border-0"
                   >
                     Voir nos réalisations
                   </Button>

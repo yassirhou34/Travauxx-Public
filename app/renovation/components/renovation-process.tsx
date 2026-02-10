@@ -10,7 +10,7 @@ const steps = [
     title: 'Premier échange',
     description: 'Discussion de votre projet, de vos envies et de vos contraintes. Visite sur site pour évaluer l\'existant.',
     duration: 'Gratuit',
-    color: '#e83263',
+    color: '#a39383',
   },
   {
     number: '02',
@@ -26,7 +26,7 @@ const steps = [
     title: 'Chiffrage & Contrat',
     description: 'Devis détaillé poste par poste. Engagement contractuel sur le prix ferme et les délais.',
     duration: '1-2 semaines',
-    color: '#e83263',
+    color: '#a39383',
   },
   {
     number: '04',
@@ -42,7 +42,7 @@ const steps = [
     title: 'Réception',
     description: 'Visite de fin de chantier, levée des réserves éventuelles, remise des clés et des documents.',
     duration: 'J-Final',
-    color: '#e83263',
+    color: '#a39383',
   },
   {
     number: '06',
@@ -56,9 +56,9 @@ const steps = [
 
 export function RenovationProcess() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 bg-background overflow-hidden">
+    <section className="relative py-20 sm:py-28 lg:py-36 bg-[#050308] overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-accent/5 to-transparent opacity-50" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-accent/20 to-transparent opacity-60" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
@@ -67,11 +67,11 @@ export function RenovationProcess() {
             <span className="inline-block text-accent text-sm font-semibold tracking-wider uppercase mb-4">
               Notre méthode
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
-              Un projet bien cadré
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            Un cadre idéal
             </h2>
-            <p className="text-foreground/60 text-lg max-w-2xl mx-auto">
-              De la première discussion à la remise des clés, un accompagnement structuré pour un résultat à la hauteur.
+            <p className="text-white/70 text-lg max-w-2xl mx-auto">
+            Un pilotage technique et contractuel rigoureux pour garantir la maîtrise totale de votre chantier, de la conception à la livraison.
             </p>
           </div>
         </ScrollReveal>
@@ -92,7 +92,7 @@ export function RenovationProcess() {
                   </div>
                   
                   {/* Card */}
-                  <div className="relative h-full p-6 lg:p-8 rounded-2xl bg-muted/30 border border-border/50 hover:border-accent/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                  <div className="relative h-full p-6 lg:p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-accent/40 hover:shadow-[0_30px_90px_rgba(0,0,0,0.9)] transition-all duration-300 hover:-translate-y-1">
                     {/* Icon */}
                     <div 
                       className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 transition-transform group-hover:scale-110"
@@ -112,7 +112,7 @@ export function RenovationProcess() {
                       <h3 className="text-lg font-bold text-primary">{step.title}</h3>
                     </div>
                     
-                    <p className="text-foreground/60 text-sm leading-relaxed mb-4">
+                    <p className="text-white/75 text-sm leading-relaxed mb-4">
                       {step.description}
                     </p>
 
@@ -132,20 +132,19 @@ export function RenovationProcess() {
 
         {/* Bottom summary */}
         <ScrollReveal direction="up" delay={0.5}>
-          <div className="mt-16 lg:mt-20 p-8 lg:p-12 rounded-3xl bg-gradient-to-br from-muted/50 to-muted/30 border border-border/50">
-            <div className="grid sm:grid-cols-4 gap-8 text-center">
+          <div className="mt-16 lg:mt-20 p-8 lg:p-12 rounded-3xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10">
+            <div className="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
               {[
                 { value: '1', label: 'interlocuteur unique', suffix: 'seul' },
                 { value: '100%', label: 'prix ferme garanti', suffix: '' },
-                { value: '10', label: 'ans de garantie décennale', suffix: 'ans' },
-                { value: '0', label: 'mauvaise surprise', suffix: '' },
+                { value: '10', label: 'de garantie décennale', suffix: 'ans' },
               ].map((stat, i) => (
                 <div key={i}>
-                  <div className="text-3xl sm:text-4xl font-bold text-primary mb-1">
+                  <div className="text-3xl sm:text-4xl font-bold text-white mb-1">
                     {stat.value}
                     {stat.suffix && <span className="text-accent text-xl ml-1">{stat.suffix}</span>}
                   </div>
-                  <div className="text-foreground/60 text-sm">{stat.label}</div>
+                  <div className="text-white/60 text-sm">{stat.label}</div>
                 </div>
               ))}
             </div>

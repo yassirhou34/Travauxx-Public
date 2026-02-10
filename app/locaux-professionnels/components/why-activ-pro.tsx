@@ -41,93 +41,101 @@ const services = [
 
 export function WhyActivPro() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/95 to-primary" />
-      
-      {/* Animated orbs */}
-      <div className="absolute top-20 right-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-secondary/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+    <section className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-[#050308]">
+      {/* Fond dans la charte sombre/beige */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#121212] via-[#050308] to-[#050308]" />
 
-      {/* Pattern */}
-      <div className="absolute inset-0 opacity-5" style={{
-        backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
-        backgroundSize: '32px 32px',
-      }} />
+      {/* Orbes animés */}
+      <div className="absolute top-20 right-20 w-72 h-72 bg-[#a39383]/15 rounded-full blur-3xl animate-pulse" />
+      <div
+        className="absolute bottom-20 left-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse"
+        style={{ animationDelay: '1s' }}
+      />
+
+      {/* Motif en points léger */}
+      <div
+        className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage: "radial-gradient(circle at 2px 2px, rgba(255,255,255,0.6) 1px, transparent 0)",
+          backgroundSize: '32px 32px',
+        }}
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <ScrollReveal direction="up">
           <div className="text-center mb-16 lg:mb-20">
-            <span className="inline-block text-accent text-sm font-semibold tracking-wider uppercase mb-4">
-              Pourquoi nous choisir
+            <span className="inline-block text-[#a39383] text-sm font-semibold tracking-wider uppercase mb-4">
+              Pourquoi nous choisir ?
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Sérénité & Efficacité
+              Sérénité & efficacité
             </h2>
-            <p className="text-white/60 text-lg max-w-3xl mx-auto">
-              Choisir Activ Travaux, c&apos;est faire le choix d&apos;un partenaire unique qui vous libère 
-              des contraintes techniques et administratives.
+            <p className="text-white/70 text-lg max-w-3xl mx-auto">
+              Activ Travaux assume la responsabilité globale de votre chantier professionnel. Nous neutralisons vos contraintes
+              techniques et administratives pour sécuriser votre investissement et vos dates d&apos;ouverture.
             </p>
           </div>
         </ScrollReveal>
 
-        {/* Advantages grid */}
+        {/* Avantages */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {advantages.map((adv, i) => {
             const Icon = adv.icon
             return (
               <ScrollReveal key={i} direction="up" delay={i * 0.1}>
-                <div className="group relative h-full p-6 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-blue-500/30 transition-all duration-500 hover:-translate-y-2">
+                <div className="group relative h-full p-6 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#a39383]/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-black/60">
                   {/* Icon */}
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#a39383] to-[#8b8276] flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform">
                     <Icon className="w-7 h-7 text-white" />
                   </div>
 
-                  {/* Highlight badge */}
-                  <div className="inline-block px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 text-xs font-semibold mb-3">
+                  {/* Badge */}
+                  <div className="inline-block px-3 py-1 rounded-full bg-[#a39383]/20 text-[#f5f0ea] text-xs font-semibold mb-3">
                     {adv.highlight}
                   </div>
 
-                  {/* Content */}
+                  {/* Contenu */}
                   <h3 className="text-xl font-bold text-white mb-2">{adv.title}</h3>
-                  <p className="text-white/60 text-sm leading-relaxed">{adv.description}</p>
+                  <p className="text-white/65 text-sm leading-relaxed">{adv.description}</p>
                 </div>
               </ScrollReveal>
             )
           })}
         </div>
 
-        {/* Services we provide */}
+        {/* Services assurés */}
         <ScrollReveal direction="up" delay={0.4}>
-          <div className="p-8 lg:p-12 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10">
+          <div className="p-8 lg:p-12 rounded-3xl bg-gradient-to-br from-[#121212] via-[#050308] to-[#121212] backdrop-blur-sm border border-white/10">
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-                  Nous assurons pour vous
-                </h3>
-                <p className="text-white/60 mb-6">
-                  De l&apos;écoute initiale à la réception du chantier, un accompagnement complet 
-                  qui couvre toutes les étapes de votre projet professionnel.
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#a39383]/15 border border-[#a39383]/40 mb-6">
+                  <Shield className="w-4 h-4 text-[#f5f0ea]" />
+                  <span className="text-white/85 text-sm font-medium">Pilotage global clé en main</span>
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">Nous assurons pour vous</h3>
+                <p className="text-white/70 mb-6">
+                  De l&apos;écoute initiale à la réception du chantier, vous bénéficiez d&apos;un accompagnement complet qui couvre
+                  toutes les étapes de votre projet professionnel, dans un cadre contractuel maîtrisé.
                 </p>
-                <div className="flex items-center gap-4 text-white/50 text-sm">
+                <div className="flex items-center gap-4 text-white/55 text-sm">
                   <span className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-green-400" />
-                    Réseau d&apos;artisans qualifiés
+                    Réseau d&apos;entreprises qualifiées
                   </span>
                   <span className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-green-400" />
-                    Pilotage précis
+                    Pilotage précis des délais
                   </span>
                 </div>
               </div>
-              
+
               <div className="grid sm:grid-cols-2 gap-3">
                 {services.map((service, i) => {
                   const Icon = service.icon
                   return (
                     <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
-                      <Icon className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                      <Icon className="w-5 h-5 text-[#a39383] flex-shrink-0 mt-0.5" />
                       <span className="text-white/80 text-sm">{service.label}</span>
                     </div>
                   )

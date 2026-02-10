@@ -104,6 +104,16 @@
   --sidebar-ring: #ff4d7d;
 }
 
+/* Thème global par défaut : fond sombre et texte clair sur tout le site */
+:root {
+  --background: #050308;
+  --foreground: #ffffff;
+  --card: #121212;
+  --card-foreground: #ffffff;
+  --popover: #121212;
+  --popover-foreground: #ffffff;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;

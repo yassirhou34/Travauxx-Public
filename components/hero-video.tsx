@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, ChevronDown, Play, Sparkles } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 export function HeroVideo() {
   const [scrollY, setScrollY] = useState(0)
@@ -122,12 +122,12 @@ export function HeroVideo() {
                   transition: 'transform 0.8s cubic-bezier(0.19, 1, 0.22, 1) 0.3s',
                 }}
               >
-                Rénovation premium
+                Rénovation globale
               </span>
             </span>
             <span className="block overflow-hidden">
               <span 
-                className="inline-block bg-gradient-to-r from-accent via-accent/90 to-accent bg-clip-text text-transparent"
+                className="inline-block text-[#a39383]"
                 style={{
                   transform: isVisible ? 'translateY(0)' : 'translateY(100%)',
                   transition: 'transform 0.8s cubic-bezier(0.19, 1, 0.22, 1) 0.5s',
@@ -144,7 +144,7 @@ export function HeroVideo() {
           className={`max-w-2xl mx-auto mb-10 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
           <p className="text-base sm:text-lg md:text-xl text-white/80 leading-relaxed font-light">
-            Un interlocuteur unique, un prix annoncé, un planning suivi.
+            Un interlocuteur unique, un prix annoncé, un planning respecté.
           </p>
         </div>
 
@@ -174,14 +174,13 @@ export function HeroVideo() {
           className={`flex flex-col sm:flex-row gap-5 sm:gap-6 justify-center items-center mb-24 sm:mb-32 transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
           <Link href="/concevoir-mon-projet">
-            <Button className="group relative bg-gradient-to-r from-accent via-accent/95 to-accent/90 hover:from-accent/90 hover:via-accent hover:to-accent text-white font-bold px-10 py-7 text-lg sm:text-xl rounded-full transition-all duration-300 hover:shadow-2xl hover:shadow-accent/50 hover:scale-110 overflow-hidden border-2 border-accent/30 shadow-xl shadow-accent/20">
+            <Button className="group relative bg-[#a39383] hover:bg-[#8b8276] text-white font-bold px-10 py-7 text-lg sm:text-xl rounded-full transition-all duration-300 hover:shadow-2xl hover:shadow-[rgba(0,0,0,0.7)] hover:scale-110 overflow-hidden border-2 border-[#c2b6aa] shadow-xl shadow-[rgba(0,0,0,0.6)]">
               <span className="relative z-10 flex items-center gap-3">
-                Demander un devis
+                Lancer mon projet
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-              {/* Permanent glow effect for visibility */}
-              <div className="absolute -inset-2 bg-accent/30 rounded-full blur-2xl opacity-60" />
+              {/* léger highlight blanc au survol */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
             </Button>
           </Link>
           <Link href="/realisations">
@@ -191,7 +190,6 @@ export function HeroVideo() {
             >
               <span className="relative z-10 flex items-center gap-3">
                 Voir nos réalisations
-                <Play className="w-6 h-6 group-hover:scale-125 transition-transform" />
               </span>
               {/* Permanent glow effect for visibility */}
               <div className="absolute -inset-2 bg-white/15 rounded-full blur-2xl opacity-50" />

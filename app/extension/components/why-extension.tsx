@@ -7,63 +7,64 @@ const benefits = [
   {
     icon: TrendingUp,
     title: 'Valorisez votre patrimoine',
-    description: 'Une extension bien conçue augmente significativement la valeur de votre bien immobilier. C\'est un investissement intelligent qui combine confort personnel et potentiel de revente.',
+    description: 'Une extension augmente significativement la valeur de revente de votre maison. C\’est un investissement stratégique qui allie confort immédiat et plus-value à long terme.',
     stat: '+40%',
     statLabel: 'de valeur',
-    gradient: 'from-secondary to-secondary/80',
+    gradient: 'from-[#a39883] to-[#a39883]/80',
   },
   {
     icon: Heart,
-    title: 'Gardez votre cadre de vie',
+    title: 'Cadre de vie préservé',
     description: 'Vous aimez votre quartier, vos voisins, l\'école des enfants, vos habitudes. Plutôt que de déménager, optez pour une extension qui adapte votre maison à vos nouveaux besoins.',
+
     stat: '0',
     statLabel: 'déménagement',
-    gradient: 'from-accent to-accent/80',
+    gradient: 'from-[#a39883] to-[#a39883]/80',
   },
   {
     icon: Shield,
-    title: 'Projet 100% sécurisé',
-    description: 'En tant que contractant général, nous nous engageons sur un prix ferme et des délais tenus. Garantie décennale, parfait achèvement, et responsabilité unique.',
+    title: 'Un projet sécurisé',
+    description: 'En tant que contractant général, nous nous engageons sur un prix ferme et des délais garantis. Vous bénéficiez d\'une responsabilité unique et de toutes les garanties légales (décennale, bon fonctionnement).',
     stat: '100%',
     statLabel: 'maîtrisé',
-    gradient: 'from-accent/90 to-accent/70',
+    gradient: 'from-[#a39883] to-[#a39883]/80',
   },
   {
     icon: Sparkles,
     title: 'Conception sur-mesure',
-    description: 'Chaque extension est pensée pour s\'intégrer harmonieusement à l\'existant, avec des matériaux de qualité et des finitions soignées dans une logique de valorisation long terme.',
+    description: 'Chaque projet est conçu pour s\'intégrer à l\'architecture existante. Nous assurons une gestion fluide de A à Z, de la première esquisse à la remise des clés, pour un résultat idéal.',
     stat: '1',
     statLabel: 'interlocuteur',
-    gradient: 'from-secondary to-secondary/80',
+    gradient: 'from-[#a39883] to-[#a39883]/80',
   },
 ]
 
 const accompagnement = [
   {
     icon: Users,
-    title: 'Interlocuteur unique',
-    description: 'Un gestionnaire de projet dédié de A à Z',
+    title: 'Responsabilité  unique',
+    description: 'Un interlocuteur dédié pilote l\'ensemble des corps d\'état pour une coordination fluide.',
   },
   {
     icon: Award,
-    title: 'Expertise technique',
-    description: 'Réseau de professionnels qualifiés et certifiés',
+    title: 'Savoir-faire local',
+    description: 'Un réseau de partenaires sélectionnés pour leur rigueur et leur fiabilité technique en Indre-et-Loire.',
   },
   {
     icon: Home,
     title: 'Livraison clé en main',
-    description: 'De la conception à la réception finale',
+    description: 'Une solution complète incluant la conception, les démarches administratives et le suivi de travaux.',
   },
   {
     icon: Clock,
     title: 'Délais garantis',
-    description: 'Planning respecté, sans mauvaises surprises',
+    description: 'Un engagement ferme sur le respect du planning et du budget initialement fixés.',
   },
 ]
 
 export function WhyExtension() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 bg-primary overflow-hidden">
+    <section className="relative py-20 sm:py-28 lg:py-36 bg-[#050308] overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -73,8 +74,8 @@ export function WhyExtension() {
       </div>
 
       {/* Floating accents */}
-      <div className="absolute top-20 left-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute top-20 left-10 w-64 h-64 bg-accent/15 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
@@ -84,10 +85,11 @@ export function WhyExtension() {
               Pourquoi agrandir ?
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              L&apos;extension,<br />un investissement intelligent
+              L&apos;extension:<br /> un investissement pour votre patrimoine
+
             </h2>
             <p className="text-white/60 text-lg max-w-2xl mx-auto">
-              Plutôt que de déménager, optez pour une solution qui valorise votre patrimoine tout en améliorant votre confort.
+            Plutôt que de déménager, optez pour une solution qui valorise votre bien tout en améliorant votre confort quotidien.
             </p>
           </div>
         </ScrollReveal>
@@ -102,8 +104,8 @@ export function WhyExtension() {
                   {/* Card */}
                   <div className="relative h-full p-6 lg:p-8 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-500 hover:-translate-y-2">
                     {/* Icon */}
-                    <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br ${benefit.gradient} mb-6 shadow-lg`}>
-                      <Icon className="w-7 h-7 text-white" />
+                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/10 mb-6 shadow-lg">
+                      <Icon className="w-7 h-7 text-[#a39883]" />
                     </div>
 
                     {/* Stat */}
@@ -136,11 +138,12 @@ export function WhyExtension() {
           <div className="mt-16 lg:mt-20 p-8 lg:p-12 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10">
             <div className="text-center mb-10">
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-                Activ Travaux : un accompagnement haut de gamme
+              Activ Travaux 37 : la maîtrise du Contractant Général
+
               </h3>
               <p className="text-white/60 max-w-2xl mx-auto">
-                En tant que contractant général, nous pilotons l&apos;ensemble de votre projet d&apos;extension, 
-                de la première idée à la réalisation finale.
+              Nous assurons la gestion intégrale de votre projet. De l'étude de faisabilité à la remise des clés, nous portons la responsabilité unique de votre chantier.
+
               </p>
             </div>
             
@@ -149,8 +152,8 @@ export function WhyExtension() {
                 const Icon = item.icon
                 return (
                   <div key={i} className="text-center">
-                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-accent/20 mb-4">
-                      <Icon className="w-7 h-7 text-accent" />
+                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#a39883]/20 mb-4">
+                      <Icon className="w-7 h-7 text-[#a39883]" />
                     </div>
                     <h4 className="font-semibold text-white mb-2">{item.title}</h4>
                     <p className="text-white/60 text-sm">{item.description}</p>

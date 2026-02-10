@@ -39,21 +39,21 @@ const deliverables = [
 
 export function ValueProposition() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 bg-muted/30 overflow-hidden">
-      {/* Background */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
+    <section className="relative py-20 sm:py-28 lg:py-36 bg-[#050308] overflow-hidden">
+      {/* Background dans la charte sombre/beige */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#a39383]/40 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <ScrollReveal direction="up">
           <div className="text-center mb-16 lg:mb-20">
-            <span className="inline-block text-accent text-sm font-semibold tracking-wider uppercase mb-4">
+            <span className="inline-block text-[#a39383] text-sm font-semibold tracking-wider uppercase mb-4">
               Notre engagement
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Esthétique, technique & sérénité
             </h2>
-            <p className="text-foreground/60 text-lg max-w-2xl mx-auto">
+            <p className="text-white/70 text-lg max-w-2xl mx-auto">
               Conjuguer créativité architecturale, rigueur technique et tranquillité d&apos;esprit pour vous.
             </p>
           </div>
@@ -65,12 +65,12 @@ export function ValueProposition() {
             const Icon = value.icon
             return (
               <ScrollReveal key={i} direction="up" delay={i * 0.1}>
-                <div className="group h-full p-6 rounded-2xl bg-background border border-border/50 hover:border-accent/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent to-accent/80 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-lg">
+                <div className="group h-full p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#a39383]/70 hover:shadow-[0_24px_80px_rgba(0,0,0,0.85)] transition-all duration-300 hover:-translate-y-1">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#a39383] to-[#8b8276] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-lg">
                     <Icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-primary mb-2">{value.title}</h3>
-                  <p className="text-foreground/60 text-sm leading-relaxed">{value.description}</p>
+                  <h3 className="text-lg font-bold text-white mb-2">{value.title}</h3>
+                  <p className="text-white/70 text-sm leading-relaxed">{value.description}</p>
                 </div>
               </ScrollReveal>
             )
@@ -79,12 +79,12 @@ export function ValueProposition() {
 
         {/* Deliverables section */}
         <ScrollReveal direction="up" delay={0.3}>
-          <div className="p-8 lg:p-12 rounded-3xl bg-gradient-to-br from-primary to-violet-900">
+          <div className="p-8 lg:p-12 rounded-3xl bg-gradient-to-br from-[#121212] via-[#050308] to-[#121212] border border-white/10">
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <div>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6">
-                  <Sparkles className="w-4 h-4 text-violet-300" />
-                  <span className="text-white/80 text-sm font-medium">Ce que comprend la conception</span>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#a39383]/15 border border-[#a39383]/40 mb-6">
+                  <Sparkles className="w-4 h-4 text-[#f5f0ea]" />
+                  <span className="text-white/85 text-sm font-medium">Ce que comprend la conception</span>
                 </div>
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
                   Une étude complète pour un projet maîtrisé
@@ -98,7 +98,7 @@ export function ValueProposition() {
               <div className="grid sm:grid-cols-2 gap-3">
                 {deliverables.map((item, i) => (
                   <div key={i} className="flex items-start gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
-                    <CheckCircle2 className="w-5 h-5 text-violet-400 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-[#a39383] flex-shrink-0 mt-0.5" />
                     <span className="text-white/80 text-sm">{item}</span>
                   </div>
                 ))}

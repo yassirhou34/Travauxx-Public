@@ -56,21 +56,21 @@ const forWho = [
 
 export function WhyRenovate() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 bg-muted/30 overflow-hidden">
+    <section className="relative py-20 sm:py-28 lg:py-36 bg-[#050308] overflow-hidden">
       {/* Background */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#a39383]/40 to-transparent" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <ScrollReveal direction="up">
           <div className="text-center mb-16 lg:mb-20">
-            <span className="inline-block text-accent text-sm font-semibold tracking-wider uppercase mb-4">
-              Pourquoi nous choisir
+            <span className="inline-block text-[#a39383] text-sm font-semibold tracking-wider uppercase mb-4">
+              Pourquoi nous choisir ?
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Rénover avec méthode
             </h2>
-            <p className="text-foreground/60 text-lg max-w-2xl mx-auto">
+            <p className="text-white/70 text-lg max-w-2xl mx-auto">
               En tant que contractant général, nous apportons un cadre structuré à votre projet 
               de rénovation pour un résultat à la hauteur de vos attentes.
             </p>
@@ -83,12 +83,12 @@ export function WhyRenovate() {
             const Icon = reason.icon
             return (
               <ScrollReveal key={i} direction="up" delay={i * 0.1}>
-                <div className="group h-full p-6 rounded-2xl bg-background border border-border/50 hover:border-accent/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-                    <Icon className="w-6 h-6 text-accent" />
+                <div className="group h-full p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#a39383]/60 hover:shadow-[0_30px_90px_rgba(0,0,0,0.9)] transition-all duration-300 hover:-translate-y-1">
+                  <div className="w-12 h-12 rounded-xl bg-[#a39383]/20 flex items-center justify-center mb-4 group-hover:bg-[#a39383]/30 transition-colors">
+                    <Icon className="w-6 h-6 text-[#a39383]" />
                   </div>
-                  <h3 className="text-lg font-bold text-primary mb-2">{reason.title}</h3>
-                  <p className="text-foreground/60 text-sm leading-relaxed">{reason.description}</p>
+                  <h3 className="text-lg font-bold text-white mb-2">{reason.title}</h3>
+                  <p className="text-white/75 text-sm leading-relaxed">{reason.description}</p>
                 </div>
               </ScrollReveal>
             )
@@ -97,7 +97,7 @@ export function WhyRenovate() {
 
         {/* For who section */}
         <ScrollReveal direction="up" delay={0.3}>
-          <div className="p-8 lg:p-12 rounded-3xl bg-primary">
+          <div className="p-8 lg:p-12 rounded-3xl bg-[#0b0b0b] border border-white/10">
             <div className="text-center mb-10">
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
                 Pour qui ?
@@ -114,7 +114,7 @@ export function WhyRenovate() {
                   <p className="text-white/60 text-sm mb-4">{item.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {item.examples.map((ex, j) => (
-                      <span key={j} className="px-2 py-1 rounded-full bg-accent/20 text-accent text-xs">
+                      <span key={j} className="px-2 py-1 rounded-full bg-[#a39383]/25 text-[#f5f0ea] text-xs">
                         {ex}
                       </span>
                     ))}

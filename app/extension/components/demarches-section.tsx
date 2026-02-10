@@ -63,23 +63,23 @@ const keyPoints = [
 
 export function DemarchesSection() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 bg-muted/30 overflow-hidden">
+    <section className="relative pt-20 sm:pt-28 lg:pt-36 pb-8 sm:pb-10 lg:pb-12 bg-[#050308] overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <ScrollReveal direction="up">
           <div className="text-center mb-16 lg:mb-20">
             <span className="inline-block text-accent text-sm font-semibold tracking-wider uppercase mb-4">
               Démarches administratives
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               On s&apos;occupe de tout
             </h2>
-            <p className="text-foreground/60 text-lg max-w-3xl mx-auto">
-              En France, tout projet d&apos;extension est encadré par des règles d&apos;urbanisme précises. 
-              Nous vous accompagnons dans toutes les démarches pour garantir la conformité de votre projet.
+            <p className="text-white/70 text-lg max-w-3xl mx-auto">
+              Tout projet d’extension est encadré par des règles d’urbanisme strictes. Nous assurons la gestion intégrale
+              de vos formalités pour garantir la viabilité de votre dossier et le respect des normes locales.
             </p>
           </div>
         </ScrollReveal>
@@ -88,33 +88,35 @@ export function DemarchesSection() {
         <ScrollReveal direction="up" delay={0.1}>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
             {keyPoints.map((point, i) => (
-              <div 
+              <div
                 key={i}
-                className="relative p-6 rounded-2xl bg-background border border-border/50 hover:border-accent/30 hover:shadow-lg transition-all duration-300 group"
+                className="relative p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#a39883] hover:shadow-[0_24px_80px_rgba(0,0,0,0.85)] transition-all duration-300 group"
               >
-                <span className="text-3xl mb-4 block">{point.icon}</span>
-                <h4 className="font-bold text-primary mb-1">{point.title}</h4>
-                <p className="text-accent text-sm font-medium mb-2">{point.subtitle}</p>
-                <p className="text-foreground/60 text-sm">{point.description}</p>
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#a39883]/20 mb-4">
+                  <span className="text-2xl text-[#a39883]">{point.icon}</span>
+                </div>
+                <h4 className="font-bold text-white mb-1">{point.title}</h4>
+                <p className="text-[#a39883] text-sm font-medium mb-2">{point.subtitle}</p>
+                <p className="text-white/70 text-sm">{point.description}</p>
               </div>
             ))}
           </div>
         </ScrollReveal>
 
-        {/* Detailed info grid */}
-        <div className="grid md:grid-cols-2 gap-6 mb-16">
+        {/* Detailed info grid – 4 cards same size, alignées */}
+        <div className="grid md:grid-cols-2 md:grid-rows-2 gap-6 mb-16 items-stretch">
           {demarchesInfo.map((item, i) => {
             const Icon = item.icon
             return (
               <ScrollReveal key={i} direction={i % 2 === 0 ? 'left' : 'right'} delay={i * 0.1}>
-                <div className="flex gap-5 p-6 rounded-2xl bg-background border border-border/50 hover:shadow-lg transition-all duration-300">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center">
-                    <Icon className="w-7 h-7 text-accent" />
+                <div className="flex gap-5 p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#a39883] hover:shadow-[0_24px_80px_rgba(0,0,0,0.85)] transition-all duration-300 h-full">
+                  <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-[#a39883]/15 flex items-center justify-center">
+                    <Icon className="w-7 h-7 text-[#a39883]" />
                   </div>
-                  <div>
-                    <h4 className="font-bold text-primary text-lg mb-2">{item.title}</h4>
-                    <p className="text-foreground/70 mb-2">{item.description}</p>
-                    <p className="text-foreground/50 text-sm">{item.details}</p>
+                  <div className="flex-1 flex flex-col min-w-0 text-left">
+                    <h4 className="font-bold text-white text-lg mb-2">{item.title}</h4>
+                    <p className="text-white/80 mb-2">{item.description}</p>
+                    <p className="text-white/60 text-sm mt-auto">{item.details}</p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -124,7 +126,7 @@ export function DemarchesSection() {
 
         {/* Promise box */}
         <ScrollReveal direction="up" delay={0.3}>
-          <div className="relative p-8 lg:p-12 rounded-3xl bg-primary overflow-hidden">
+          <div className="relative p-8 lg:p-12 rounded-3xl bg-white/5 border border-white/10 overflow-hidden">
             {/* Background pattern */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute inset-0" style={{
@@ -170,7 +172,7 @@ export function DemarchesSection() {
                   </div>
                 </div>
                 <p className="text-white/60 text-sm">
-                  Avec Activ Travaux, vous êtes sûr d&apos;être en conformité à chaque étape.
+                  Avec Activ Travaux 37, vous êtes sûr d&apos;être en conformité à chaque étape.
                 </p>
               </div>
             </div>

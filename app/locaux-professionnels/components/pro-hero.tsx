@@ -85,29 +85,9 @@ export function ProHero() {
           <p className="text-lg sm:text-xl md:text-2xl text-white/60 max-w-2xl mx-auto mb-4 font-light">
             Votre partenaire unique pour rénover et aménager vos locaux.
           </p>
-          <p className="text-base sm:text-lg text-white/40 max-w-xl mx-auto mb-10">
-            Commerces · Bureaux · CHR · Résidences Services
-          </p>
+         
         </ScrollReveal>
 
-        {/* Key metrics */}
-        <ScrollReveal direction="up" delay={0.4}>
-          <div className="flex flex-wrap justify-center gap-8 sm:gap-12 md:gap-16 mb-12">
-            {[
-              { value: '1', label: 'interlocuteur unique', suffix: 'seul' },
-              { value: '100%', label: 'projet maîtrisé', suffix: '' },
-              { value: '0', label: 'mauvaise surprise', suffix: '' },
-            ].map((stat, i) => (
-              <div key={i} className="text-center">
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-1">
-                  {stat.value}
-                  {stat.suffix && <span className="text-accent text-xl ml-1">{stat.suffix}</span>}
-                </div>
-                <div className="text-xs sm:text-sm text-white/50 uppercase tracking-wider">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </ScrollReveal>
 
         {/* 4 sectors preview */}
         <ScrollReveal direction="up" delay={0.45}>
@@ -136,19 +116,24 @@ export function ProHero() {
 
         {/* CTAs */}
         <ScrollReveal direction="up" delay={0.5}>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
             <Link href="/concevoir-mon-projet">
-              <Button className="group bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-6 text-base sm:text-lg rounded-full transition-all duration-300 hover:shadow-2xl hover:shadow-accent/30 hover:scale-105 border-0">
-                Concevoir mon projet pro
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <Button className="group inline-flex items-center justify-center gap-2 w-[260px] h-[56px] bg-accent hover:bg-accent/90 text-white font-semibold rounded-full text-base sm:text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-accent/30 hover:scale-105 border-0">
+                <span className="flex items-center justify-center gap-2 whitespace-nowrap">
+                  Concevoir mon projet pro
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </span>
               </Button>
             </Link>
-            <button 
+            <button
               onClick={scrollToSectors}
-              className="text-white/60 hover:text-white font-medium flex items-center gap-2 transition-colors"
+              className="group inline-flex items-center justify-center gap-2 min-w-[260px] h-[56px] px-8 relative border-2 border-white/70 text-white hover:bg-white/20 font-bold rounded-full text-base sm:text-lg transition-all duration-300 bg-white/10 backdrop-blur-md hover:border-white hover:scale-105 shadow-xl shadow-white/20 whitespace-nowrap mx-3 sm:mx-4"
             >
-              Découvrir nos secteurs
-              <ChevronDown className="w-4 h-4 animate-bounce" />
+              <span className="relative z-10 flex items-center gap-2 whitespace-nowrap">
+                Découvrir nos secteurs
+                <ChevronDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
+              </span>
+              <div className="absolute -inset-2 bg-white/15 rounded-full blur-2xl opacity-50" />
             </button>
           </div>
         </ScrollReveal>
