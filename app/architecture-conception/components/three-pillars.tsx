@@ -3,31 +3,11 @@
 import { useState } from 'react'
 import { ScrollReveal } from '@/components/scroll-reveal'
 import { 
-  Cpu, Brain, Sparkles, Eye, Zap, Settings,
   PenTool, Palette, Users, Lightbulb, Home, Maximize,
   Compass, Calculator, FileCheck, Ruler, ClipboardCheck, Shield
 } from 'lucide-react'
 
 const pillars = [
-  {
-    id: 'ia',
-    title: 'Innovation & Intelligence Artificielle',
-    shortTitle: 'Innovation IA',
-    icon: Cpu,
-    // Dégradé beige premium pour éviter le rose trop présent
-    color: 'from-[#a39383] to-[#c2b6aa]',
-    bgColor: 'accent',
-    description: 'Activ Travaux développe des outils innovants basés sur l\'intelligence artificielle pour enrichir votre expérience dès la phase de conception.',
-    longDescription: 'Ces technologies renforcent la précision, la transparence et la personnalisation de votre projet, tout en rendant votre parcours client plus fluide et interactif.',
-    features: [
-      { icon: Eye, title: 'Visualisation avant/après', desc: 'Simulations réalistes en quelques clics pour voir votre projet transformé' },
-      { icon: Brain, title: 'Définition des besoins', desc: 'Analyse intelligente : ensoleillement, vis-à-vis, pluie, ventilation' },
-      { icon: Sparkles, title: 'Choix esthétiques', desc: 'Anticipez les résultats selon différents scénarios de design' },
-      { icon: Zap, title: 'Adaptation en temps réel', desc: 'Propositions architecturales générées à partir des données du site' },
-      { icon: Settings, title: 'Personnalisation poussée', desc: 'Chaque détail ajusté selon vos préférences exactes' },
-      { icon: Lightbulb, title: 'Aide à la décision', desc: 'Comparatifs visuels pour valider vos choix sereinement' },
-    ],
-  },
   {
     id: 'architectes',
     title: 'Architectes & Architectes d\'intérieur',
@@ -36,7 +16,6 @@ const pillars = [
     color: 'from-[#a39383] to-[#8b8276]',
     bgColor: 'accent',
     description: 'Grâce à nos architectes, dessinateurs et techniciens partenaires, nous vous accompagnons dès les premières étapes de votre projet.',
-    longDescription: 'Chaque mètre carré est pensé pour vous offrir fonctionnalité, confort et élégance, sans compromis. Une conception alignée sur vos besoins et votre mode de vie.',
     features: [
       { icon: Users, title: 'Écoute personnalisée', desc: 'Compréhension de vos usages, envies et mode de vie' },
       { icon: PenTool, title: 'Esquisses créatives', desc: 'Premières ébauches pour explorer les possibilités' },
@@ -54,7 +33,6 @@ const pillars = [
     color: 'from-[#a39383] to-[#c2b6aa]',
     bgColor: 'secondary',
     description: 'Un projet bien conçu, c\'est un chantier bien maîtrisé. La phase de conception est le socle de la réussite technique de votre projet.',
-    longDescription: 'Nos bureaux d\'études partenaires assurent la faisabilité technique, le respect des normes et la précision des plans pour un chantier sans mauvaises surprises.',
     features: [
       { icon: Compass, title: 'Analyse du bâti', desc: 'Étude de l\'existant et de son potentiel d\'évolution' },
       { icon: Ruler, title: 'Plans techniques', desc: 'Documents précis pour dépôt administratif et chantier' },
@@ -136,34 +114,14 @@ export function ThreePillars() {
                 {activePillar.title}
               </h3>
               
-              <p className="text-lg text-white/80 mb-4 leading-relaxed">
+              <p className="text-lg text-white/80 mb-6 leading-relaxed">
                 {activePillar.description}
-              </p>
-              
-              <p className="text-base text-white/60 mb-8 leading-relaxed">
-                {activePillar.longDescription}
               </p>
 
               {/* Key benefits */}
               <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
                 <h4 className="font-semibold text-white mb-4">Ce que cela vous apporte :</h4>
                 <ul className="space-y-3">
-                  {activePillar.id === 'ia' && (
-                    <>
-                      <li className="flex items-center gap-2 text-white/70 text-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#a39883]" />
-                        Parcours client fluide et interactif
-                      </li>
-                      <li className="flex items-center gap-2 text-white/70 text-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#a39883]" />
-                        Précision et transparence accrues
-                      </li>
-                      <li className="flex items-center gap-2 text-white/70 text-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#a39883]" />
-                        Personnalisation maximale
-                      </li>
-                    </>
-                  )}
                   {activePillar.id === 'architectes' && (
                     <>
                       <li className="flex items-center gap-2 text-white/70 text-sm">

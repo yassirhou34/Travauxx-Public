@@ -53,36 +53,6 @@ export default function Home() {
           labelHoverColor="#1a1a1a"
         />
 
-        {/* Pourquoi choisir le contrat de Contractant Général – carte claire sur fond sombre */}
-        <ParallaxWrapper speed={0.3}>
-          <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-[#050308]">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="max-w-4xl mx-auto">
-                <AdvancedReveal direction="scale" delay={0.2}>
-                  <div className="relative p-8 sm:p-10 md:p-12 lg:p-16 rounded-[32px] bg-white/5 border border-white/12 shadow-[0_40px_120px_rgba(0,0,0,0.85)] backdrop-blur-xl">
-                    {/* Halo décoratif façon studio */}
-                    <div className="absolute -top-16 -left-16 w-40 h-40 bg-accent/20 rounded-full blur-3xl opacity-70" />
-                    <div className="absolute -bottom-20 -right-10 w-48 h-48 bg-secondary/25 rounded-full blur-3xl opacity-70" />
-                    
-                    <div className="relative z-10">
-                      <TextSplitReveal splitBy="word" delay={0.3}>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-6">
-                          Le confort d&apos;un projet piloté par des experts.
-                        </h2>
-                      </TextSplitReveal>
-                      <AdvancedReveal direction="fade" delay={0.5}>
-                        <p className="text-base sm:text-lg md:text-xl text-white/75 leading-relaxed">
-                          Oubliez la gestion des corps d&apos;état et les imprévus budgétaires. Activ Travaux 37 coordonne la conception, le chiffrage et l&apos;exécution. Vous gardez la vision, nous prenons la responsabilité.
-                        </p>
-                      </AdvancedReveal>
-                    </div>
-                  </div>
-                </AdvancedReveal>
-              </div>
-            </div>
-          </section>
-        </ParallaxWrapper>
-
         {/* Avantages du contrat de contractant général – cartes fortes sur fond sombre (beige only au hover) */}
         <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 bg-[#050308] overflow-hidden">
           {/* Background decoration en beige / charbon */}
@@ -105,60 +75,28 @@ export default function Home() {
                 </AdvancedReveal>
               </div>
             </AdvancedReveal>
-            <StaggerContainer
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-stretch"
-              staggerDelay={0.1}
-              direction="up"
-              delay={0.3}
-            >
+            {/* Liste typographique – titres seuls, un par ligne, lisible */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8 sm:gap-y-10 lg:gap-y-12">
               {[
-                {
-                  title: 'Un interlocuteur unique',
-                  desc: 'Votre gestionnaire de projet local suit votre dossier de la conception à la réception. Vous savez toujours à qui parler.',
-                },
-                {
-                  title: 'Un prix ferme et définitif',
-                  desc: 'Pas de mauvaises surprises : nous engageons un budget global et détaillé, validé avant le démarrage des travaux.',
-                },
-                {
-                  title: 'Respect des délais',
-                  desc: 'Un planning d\'intervention clair, coordonné avec les corps de métiers, avec un engagement précis sur les délais.',
-                },
-                {
-                  title: 'Garanties contractuelles',
-                  desc: 'Parfait achèvement, conformité, assurance décennale : un cadre sécurisé pour vos travaux de rénovation ou d\'extension.',
-                },
-                {
-                  title: 'Responsabilité unique',
-                  desc: 'Un seul responsable pour l\'ensemble du chantier. Nous coordonnons les intervenants pour vous simplifier la vie.',
-                },
-                {
-                  title: 'Conception augmentée',
-                  desc: 'Plans, perspectives et outils d\'aide à la décision pour mieux vous projeter dans votre futur intérieur.',
-                },
-              ].map((item, idx) => (
-                <MagneticHover key={item.title} strength={0.2} className="h-full">
-                  <div className="group relative h-full flex flex-col space-y-2 sm:space-y-3 p-4 sm:p-5 md:p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-secondary transition-all duration-500 hover:shadow-[0_30px_90px_rgba(0,0,0,0.9)] hover:-translate-y-2 overflow-hidden backdrop-blur-lg">
-                    {/* Gradient overlay on hover – beige uniquement */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-transparent group-hover:from-secondary/15 group-hover:via-secondary/5 group-hover:to-secondary/20 transition-all duration-500 rounded-3xl" />
-                    
-                    {/* Number indicator – beige */}
-                    <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-secondary/20 group-hover:bg-secondary flex items-center justify-center transition-all duration-300 group-hover:scale-110">
-                      <span className="text-xs font-bold text-white">{idx + 1}</span>
-                    </div>
-                    
-                    <div className="relative z-10">
-                      <h3 className="text-lg sm:text-xl font-serif font-semibold text-white group-hover:text-secondary transition-colors duration-300 pr-8">
-                        {item.title}
-                      </h3>
-                      <p className="text-xs sm:text-sm md:text-base text-white/75 leading-relaxed group-hover:text-white transition-colors duration-300">
-                        {item.desc}
-                      </p>
-                    </div>
+                'Un interlocuteur unique',
+                'Un prix ferme et définitif',
+                'Respect des délais',
+                'Garanties contractuelles',
+                'Responsabilité unique',
+                'Conception augmentée',
+              ].map((title, idx) => (
+                <AdvancedReveal key={title} direction="up" delay={0.3 + idx * 0.06}>
+                  <div className="group flex items-baseline gap-4 min-w-0">
+                    <span className="flex-shrink-0 text-3xl sm:text-4xl font-bold tabular-nums text-white/20 group-hover:text-secondary/50 transition-colors duration-300 select-none">
+                      {String(idx + 1).padStart(2, '0')}
+                    </span>
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-bold text-white group-hover:text-secondary transition-colors duration-300 break-words">
+                      {title}
+                    </h3>
                   </div>
-                </MagneticHover>
+                </AdvancedReveal>
               ))}
-            </StaggerContainer>
+            </div>
           </div>
         </section>
 
@@ -189,25 +127,22 @@ export default function Home() {
               >
                 {[
                   {
-                    step: '1 | 3',
                     title: 'Analyse du besoin & conception du projet',
                     desc: 'Phase d\'écoute, visite sur site, relevé de l\'existant, études de faisabilité et coordination avec architectes ou bureaux d\'études partenaires si nécessaire.',
                     goal: 'Proposer un projet cohérent, conforme aux réglementations, prêt à être chiffré précisément.',
                   },
                   {
-                    step: '2 | 3',
                     title: 'Chiffrage, contractualisation & planification',
                     desc: 'Chiffrage global, contrat unique et planning d\'intervention détaillé. Nous nous engageons sur le prix et les délais.',
                     goal: 'Vous offrir une vision claire, fiable et engageante du projet à venir, sans mauvaises surprises.',
                   },
                   {
-                    step: '3 | 3',
                     title: 'Réalisation & suivi du chantier',
                     desc: 'Coordination des corps de métiers, suivi qualité, sécurité du chantier et échanges réguliers jusqu\'à la réception des travaux.',
                     goal: 'Livrer un projet clés en main, conforme, dans les temps, avec un haut niveau de satisfaction.',
                   },
                 ].map((item, idx) => (
-                  <MagneticHover key={item.step} strength={0.15}>
+                  <MagneticHover key={item.title} strength={0.15}>
                     <div className="group relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur-lg p-4 sm:p-5 md:p-6 lg:p-7 shadow-lg hover:shadow-[0_30px_90px_rgba(0,0,0,0.9)] transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 overflow-hidden">
                       {/* Left accent bar */}
                       <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-accent via-accent/80 to-accent/60 group-hover:w-1.5 transition-all duration-500" />
@@ -218,9 +153,6 @@ export default function Home() {
                       </div>
                       
                       {/* Content */}
-                      <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-white/60 mb-2 group-hover:text-accent/70 transition-colors duration-300">
-                        {item.step}
-                      </p>
                       <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-2 sm:mb-3 group-hover:text-accent transition-colors duration-300 pr-12">
                         {item.title}
                       </h3>

@@ -69,8 +69,7 @@ export function ValueProposition() {
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#a39383] to-[#8b8276] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-lg">
                     <Icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">{value.title}</h3>
-                  <p className="text-white/70 text-sm leading-relaxed">{value.description}</p>
+                  <h3 className="text-lg font-bold text-white">{value.title}</h3>
                 </div>
               </ScrollReveal>
             )

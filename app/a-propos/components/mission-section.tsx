@@ -100,28 +100,6 @@ export function MissionSection() {
           })}
         </div>
 
-        {/* Promise box */}
-        <ScrollReveal direction="up" delay={0.6}>
-          <div className="mt-16 lg:mt-20 p-8 lg:p-12 rounded-3xl bg-gradient-to-br from-[#372f2d] to-[#1a1413] border border-white/10 shadow-[0_32px_100px_rgba(0,0,0,0.9)]">
-            <div className="text-center max-w-3xl mx-auto text-white">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4">
-                Une expérience fluide, sécurisée et sans mauvaises surprises
-              </h3>
-              <p className="text-white/75 text-lg mb-6">
-                Tout est pensé pour vous garantir une expérience optimale, grâce à notre engagement contractuel 
-                sur le <strong>prix ferme</strong>, le <strong>planning</strong> et la <strong>qualité d&apos;exécution</strong>.
-              </p>
-              <div className="flex flex-wrap justify-center gap-6">
-                {['Prix ferme', 'Planning tenu', 'Qualité garantie'].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-accent" />
-                    <span className="text-white/90 font-medium">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   )

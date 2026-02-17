@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { ChevronDown, ArrowRight, Compass, Cpu, PenTool, Sparkles } from 'lucide-react'
+import { ChevronDown, ArrowRight, Compass, PenTool } from 'lucide-react'
 
 export function ArchitectureHero() {
   const scrollToContent = () => {
@@ -39,7 +39,7 @@ export function ArchitectureHero() {
         <Compass className="w-20 h-20 text-accent" />
       </div>
       <div className="absolute bottom-32 right-[15%] opacity-20 animate-float" style={{ animationDelay: '1s' }}>
-        <Cpu className="w-16 h-16 text-secondary" />
+        <Compass className="w-16 h-16 text-secondary" />
       </div>
       <div className="absolute top-1/3 right-[10%] opacity-20 animate-float" style={{ animationDelay: '2s' }}>
         <PenTool className="w-14 h-14 text-accent" />
@@ -50,12 +50,7 @@ export function ArchitectureHero() {
         {/* Badge */}
         <ScrollReveal direction="fade" delay={0.1}>
           <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/5 backdrop-blur-md border border-white/10 mb-8">
-            <Sparkles className="w-4 h-4 text-accent" />
-            <span className="text-white/80 text-sm font-medium tracking-wide">Architecture & Conception</span>
-            <span className="flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-accent opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
-            </span>
+            <span className="text-white/80 text-sm font-medium tracking-wide">Architecture & conception</span>
           </div>
         </ScrollReveal>
 
@@ -76,11 +71,10 @@ export function ArchitectureHero() {
           </p>
         </ScrollReveal>
 
-        {/* 3 Pillars preview */}
+        {/* 2 piliers preview (sans IA) */}
         <ScrollReveal direction="up" delay={0.4}>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-12">
             {[
-              { icon: Cpu, label: 'Intelligence Artificielle', color: 'from-accent to-accent/80' },
               { icon: PenTool, label: 'Architectes partenaires', color: 'from-accent/90 to-accent/70' },
               { icon: Compass, label: 'Bureau d\'études', color: 'from-secondary to-secondary/80' },
             ].map((item, i) => {
@@ -123,13 +117,6 @@ export function ArchitectureHero() {
             </button>
           </div>
         </ScrollReveal>
-      </div>
-      
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-        <div className="w-6 h-10 rounded-full border-2 border-white/20 flex items-start justify-center p-2">
-          <div className="w-1 h-2 bg-accent/60 rounded-full animate-bounce" />
-        </div>
       </div>
     </section>
   )

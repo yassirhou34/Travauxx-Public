@@ -34,33 +34,6 @@ const demarchesInfo = [
   },
 ]
 
-const keyPoints = [
-  {
-    title: 'Surface créée < 20m²',
-    subtitle: 'Déclaration préalable',
-    description: 'Simple déclaration en mairie, délai ~1 mois',
-    icon: '📋',
-  },
-  {
-    title: 'Surface créée 20-40m²',
-    subtitle: 'Selon la zone',
-    description: 'DP en zone urbaine avec PLU, sinon permis',
-    icon: '📐',
-  },
-  {
-    title: 'Surface créée > 40m²',
-    subtitle: 'Permis de construire',
-    description: 'Permis obligatoire, architecte si >150m² total',
-    icon: '🏗️',
-  },
-  {
-    title: 'Zone protégée / ABF',
-    subtitle: 'Avis architecte des bâtiments',
-    description: 'Délais allongés, contraintes esthétiques',
-    icon: '🏛️',
-  },
-]
-
 export function DemarchesSection() {
   return (
     <section className="relative pt-20 sm:pt-28 lg:pt-36 pb-8 sm:pb-10 lg:pb-12 bg-[#050308] overflow-hidden">
@@ -81,25 +54,6 @@ export function DemarchesSection() {
               Tout projet d’extension est encadré par des règles d’urbanisme strictes. Nous assurons la gestion intégrale
               de vos formalités pour garantir la viabilité de votre dossier et le respect des normes locales.
             </p>
-          </div>
-        </ScrollReveal>
-
-        {/* Quick reference cards */}
-        <ScrollReveal direction="up" delay={0.1}>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
-            {keyPoints.map((point, i) => (
-              <div
-                key={i}
-                className="relative p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#a39883] hover:shadow-[0_24px_80px_rgba(0,0,0,0.85)] transition-all duration-300 group"
-              >
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#a39883]/20 mb-4">
-                  <span className="text-2xl text-[#a39883]">{point.icon}</span>
-                </div>
-                <h4 className="font-bold text-white mb-1">{point.title}</h4>
-                <p className="text-[#a39883] text-sm font-medium mb-2">{point.subtitle}</p>
-                <p className="text-white/70 text-sm">{point.description}</p>
-              </div>
-            ))}
           </div>
         </ScrollReveal>
 
@@ -127,15 +81,7 @@ export function DemarchesSection() {
         {/* Promise box */}
         <ScrollReveal direction="up" delay={0.3}>
           <div className="relative p-8 lg:p-12 rounded-3xl bg-white/5 border border-white/10 overflow-hidden">
-            {/* Background pattern */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute inset-0" style={{
-                backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
-                backgroundSize: '24px 24px',
-              }} />
-            </div>
-
-            <div className="relative z-10 grid lg:grid-cols-2 gap-8 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
                   Notre engagement

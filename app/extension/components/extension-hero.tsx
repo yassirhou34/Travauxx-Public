@@ -39,7 +39,6 @@ export function ExtensionHero() {
         {/* Badge */}
         <ScrollReveal direction="fade" delay={0.1}>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 mb-8">
-            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
             <span className="text-white/80 text-sm font-medium tracking-wide uppercase">Extension de maison</span>
           </div>
         </ScrollReveal>
@@ -64,24 +63,8 @@ export function ExtensionHero() {
           </p>
         </ScrollReveal>
 
-        {/* Stats row */}
-        <ScrollReveal direction="up" delay={0.4}>
-          <div className="flex flex-wrap justify-center gap-8 sm:gap-12 md:gap-16 mb-12">
-            {[
-              { value: '+40%', label: 'valeur du bien' },
-              { value: '100%', label: 'clé en main' },
-              
-            ].map((stat, i) => (
-              <div key={i} className="text-center">
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-1">{stat.value}</div>
-                <div className="text-xs sm:text-sm text-white/50 uppercase tracking-wider">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </ScrollReveal>
-
         {/* CTAs */}
-        <ScrollReveal direction="up" delay={0.5}>
+        <ScrollReveal direction="up" delay={0.4}>
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center items-center">
             <Link href="/concevoir-mon-projet">
               <Button className="group inline-flex items-center justify-center gap-2 w-[260px] h-[56px] bg-accent hover:bg-accent/90 text-white font-semibold rounded-full text-base sm:text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-accent/30 hover:scale-105">
@@ -103,13 +86,6 @@ export function ExtensionHero() {
             </button>
           </div>
         </ScrollReveal>
-      </div>
-      
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-        <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2">
-          <div className="w-1 h-2 bg-white/60 rounded-full animate-bounce" />
-        </div>
       </div>
     </section>
   )

@@ -4,30 +4,10 @@ import { ScrollReveal } from '@/components/scroll-reveal'
 import { Users, FileCheck, Clock, Shield, Award, Handshake, Target, Zap } from 'lucide-react'
 
 const advantages = [
-  {
-    icon: Users,
-    title: 'Interlocuteur unique',
-    description: 'Un seul responsable de l\'ensemble du projet. Vous restez concentré sur votre activité.',
-    highlight: '1 contact',
-  },
-  {
-    icon: FileCheck,
-    title: 'Contrat unique',
-    description: 'Un cadre contractuel clair avec engagement sur le budget et les délais.',
-    highlight: 'Prix ferme',
-  },
-  {
-    icon: Clock,
-    title: 'Délais respectés',
-    description: 'Planning précis et tenu. Nous comprenons l\'importance de votre date d\'ouverture.',
-    highlight: 'Date garantie',
-  },
-  {
-    icon: Shield,
-    title: 'Conformité assurée',
-    description: 'Urbanisme, sécurité, accessibilité PMR, normes hygiène : on gère tout.',
-    highlight: '100% conforme',
-  },
+  { icon: Users, title: 'Interlocuteur unique', highlight: '1 contact' },
+  { icon: FileCheck, title: 'Contrat unique', highlight: 'Prix ferme' },
+  { icon: Clock, title: 'Délais respectés', highlight: 'Date garantie' },
+  { icon: Shield, title: 'Conformité assurée', highlight: '100% conforme' },
 ]
 
 const services = [
@@ -96,8 +76,7 @@ export function WhyActivPro() {
                   </div>
 
                   {/* Contenu */}
-                  <h3 className="text-xl font-bold text-white mb-2">{adv.title}</h3>
-                  <p className="text-white/65 text-sm leading-relaxed">{adv.description}</p>
+                  <h3 className="text-xl font-bold text-white">{adv.title}</h3>
                 </div>
               </ScrollReveal>
             )

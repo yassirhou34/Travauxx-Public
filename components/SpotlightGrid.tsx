@@ -20,7 +20,7 @@ const SpotlightRow = ({ item, index }: { item: FeatureItem; index: number; hover
     return (
         <div className="relative border-t border-white/15 py-6 sm:py-8 md:py-10 lg:py-12 group cursor-pointer overflow-hidden transition-colors">
             <div className="flex items-center justify-between relative z-20 px-3 sm:px-4 md:px-6 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
-                <span className="text-white/60 font-mono text-xs sm:text-sm md:text-base min-w-[40px] sm:min-w-[50px] md:min-w-[60px]">0{index + 1}</span>
+                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-light text-white/60 group-hover:text-white transition-all duration-300 min-w-[40px] sm:min-w-[50px] md:min-w-[60px] tabular-nums">0{index + 1}</span>
 
                 <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-light text-white group-hover:text-white transition-all duration-300 transform group-hover:translate-x-2 sm:group-hover:translate-x-3 md:group-hover:translate-x-5 flex-1">
                     {item.title}
@@ -32,8 +32,8 @@ const SpotlightRow = ({ item, index }: { item: FeatureItem; index: number; hover
             </div>
 
             {item.img && (
-                <div className="absolute top-1/2 left-1/2 w-[300px] h-[200px] sm:w-[400px] sm:h-[280px] md:w-[500px] md:h-[350px] pointer-events-none z-10 rounded-xl overflow-hidden filter brightness-90 contrast-110 opacity-0 scale-90 -translate-x-1/2 -translate-y-1/2 group-hover:opacity-100 group-hover:scale-100 transition-all duration-500 ease-out">
-                    <img src={item.img} className="w-full h-full object-cover" alt={item.title} loading="lazy" />
+                <div className="absolute inset-0 pointer-events-none z-10 overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <img src={item.img} className="w-full h-full object-cover object-center" alt={item.title} loading="lazy" />
                 </div>
             )}
 

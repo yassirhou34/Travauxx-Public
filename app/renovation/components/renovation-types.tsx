@@ -40,7 +40,7 @@ const renovationTypes = [
     icon: Leaf,
     tagline: 'Performance thermique et économies d\'énergie.',
     description: 'La rénovation énergétique vise à améliorer la performance thermique de votre logement : isolation des murs, toiture et planchers, remplacement des menuiseries, installation d\'un système de chauffage performant et d\'une ventilation adaptée.',
-    longDescription: 'C\'est bon pour la planète, bon pour votre confort et bon pour votre porte-monnaie. Une éco-rénovation bien menée peut réduire vos factures d\'énergie de 40 à 70% tout en améliorant significativement votre confort été comme hiver.',
+    longDescription: '',
     features: [
       { icon: Thermometer, label: 'Isolation thermique globale' },
       { icon: Sun, label: 'Menuiseries haute performance' },
@@ -104,7 +104,6 @@ export function RenovationTypes() {
         <ScrollReveal direction="up" delay={0.1}>
           <div className="grid md:grid-cols-2 gap-4 lg:gap-6 mb-16">
             {renovationTypes.map((type) => {
-              const Icon = type.icon
               const isActive = activeType.id === type.id
               return (
                 <button
@@ -123,12 +122,6 @@ export function RenovationTypes() {
                   )}
                   
                   <div className="relative z-10">
-                    <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl mb-4 ${
-                      isActive ? 'bg-white/20' : 'bg-white/5'
-                    }`}>
-                      <Icon className={`w-7 h-7 ${isActive ? 'text-white' : 'text-white/70'}`} />
-                    </div>
-                    
                     <h3 className={`text-2xl lg:text-3xl font-bold mb-2 ${isActive ? 'text-white' : 'text-white'}`}>
                       {type.title}
                     </h3>
@@ -164,17 +157,7 @@ export function RenovationTypes() {
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-              {/* For who badges */}
-              <div className="absolute bottom-6 left-6 right-6">
-                <p className="text-white/60 text-xs uppercase tracking-wider mb-2">Pour qui ?</p>
-                <div className="flex flex-wrap gap-2">
-                  {activeType.forWho.map((item, i) => (
-                    <span key={i} className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm text-white text-xs">
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              {/* For who badges supprimés */}
             </div>
           </ScrollReveal>
 
@@ -198,20 +181,9 @@ export function RenovationTypes() {
                 {activeType.longDescription}
               </p>
 
-              {/* Benefits */}
+              {/* Benefits – on garde uniquement le titre, sans CTA/badges */}
               <div className="mb-6">
-                <h4 className="text-sm font-semibold text-white/60 uppercase tracking-wider mb-3">Avantages clés</h4>
-                <div className="flex flex-wrap gap-2">
-                  {activeType.benefits.map((benefit, i) => (
-                    <span 
-                      key={i}
-                      className="px-3 py-1.5 rounded-full text-xs font-semibold text-white"
-                      style={{ backgroundColor: activeType.color }}
-                    >
-                      ✓ {benefit}
-                    </span>
-                  ))}
-                </div>
+                <h4 className="text-sm font-semibold text-white/60 uppercase tracking-wider">Avantages clés</h4>
               </div>
 
               {/* Features grid */}
@@ -236,7 +208,7 @@ export function RenovationTypes() {
               {/* CTA */}
               <Link 
                 href="/concevoir-mon-projet"
-                className="group inline-flex items-center gap-3 px-6 py-4 rounded-xl font-semibold text-white transition-all duration-300 hover:shadow-xl hover:scale-105"
+                className="group inline-flex items-center gap-3 px-6 py-4 rounded-full font-semibold text-white transition-all duration-300 hover:shadow-xl hover:scale-105"
                 style={{ backgroundColor: activeType.color }}
               >
                 Démarrer mon projet 

@@ -104,7 +104,6 @@ export function ConceptionProcess() {
 
                     {/* Content */}
                     <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
-                    <p className="text-white/70 text-sm leading-relaxed mb-4">{step.description}</p>
 
                     {/* Details */}
                     <div className="space-y-2">

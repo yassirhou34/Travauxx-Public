@@ -401,10 +401,10 @@ export default function DevisPage() {
                   </p>
                 </div>
 
-                <div className="space-y-3 bg-white p-6 rounded-lg border border-border">
-                  <p className="text-sm font-semibold text-primary">Vos informations restent confidentielles</p>
-                  <p className="text-sm font-semibold text-primary">Devis sans engagement</p>
-                  <p className="text-sm font-semibold text-primary">
+                <div className="space-y-3 bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
+                  <p className="text-sm font-semibold text-white/90">Vos informations restent confidentielles</p>
+                  <p className="text-sm font-semibold text-white/80">Devis sans engagement</p>
+                  <p className="text-sm font-semibold text-white/80">
                     Vous pouvez joindre des photos si nécessaire (option)
                   </p>
                 </div>
@@ -413,19 +413,22 @@ export default function DevisPage() {
               {/* Form */}
               <div
                 id="formulaire-devis"
-                className="bg-white p-8 rounded-lg border border-border shadow-xl shadow-black/30"
+                className="relative p-8 rounded-3xl border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.6)] overflow-hidden bg-gradient-to-br from-[#141014] via-[#0f0c12] to-[#08060a]"
               >
+                <div className="absolute inset-0 opacity-30 pointer-events-none" style={{ backgroundImage: 'radial-gradient(ellipse 80% 50% at 50% 0%, rgba(232,50,99,0.15), transparent), radial-gradient(ellipse 60% 40% at 100% 100%, rgba(163,147,131,0.1), transparent)' }} />
+                <div className="absolute inset-0 opacity-[0.06] pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+                <div className="relative z-10">
                 {!submitted ? (
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
-                      <label className="block text-sm font-semibold text-primary mb-2">
+                      <label className="block text-sm font-semibold text-white/80 mb-2">
                         Type de projet *
                       </label>
                       <select
                         name="projectType"
                         value={formData.projectType}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/15 bg-white/5 text-white focus:outline-none focus:ring-2 focus:ring-primary/60 focus:border-transparent transition [&>option]:bg-[#1a1618]"
                         required
                       >
                         <option value="">Sélectionnez un type</option>
@@ -437,14 +440,14 @@ export default function DevisPage() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-primary mb-2">
+                      <label className="block text-sm font-semibold text-white/80 mb-2">
                         Type de bien *
                       </label>
                       <select
                         name="propertyType"
                         value={formData.propertyType}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/15 bg-white/5 text-white focus:outline-none focus:ring-2 focus:ring-primary/60 focus:border-transparent transition [&>option]:bg-[#1a1618]"
                         required
                       >
                         <option value="">Sélectionnez un type</option>
@@ -456,7 +459,7 @@ export default function DevisPage() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-primary mb-2">
+                      <label className="block text-sm font-semibold text-white/80 mb-2">
                         Ville / Code postal *
                       </label>
                       <input
@@ -464,13 +467,14 @@ export default function DevisPage() {
                         name="location"
                         value={formData.location}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/15 bg-white/5 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary/60 focus:border-transparent transition"
+                        placeholder="Ex. Tours 37000"
                         required
                       />
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-primary mb-2">
+                      <label className="block text-sm font-semibold text-white/80 mb-2">
                         Budget estimatif
                       </label>
                       <input
@@ -478,12 +482,13 @@ export default function DevisPage() {
                         name="budget"
                         value={formData.budget}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/15 bg-white/5 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary/60 focus:border-transparent transition"
+                        placeholder="Optionnel"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-primary mb-2">
+                      <label className="block text-sm font-semibold text-white/80 mb-2">
                         Détails du projet
                       </label>
                       <textarea
@@ -491,16 +496,17 @@ export default function DevisPage() {
                         value={formData.details}
                         onChange={handleChange}
                         rows={4}
-                        className="w-full px-4 py-2.5 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/15 bg-white/5 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary/60 focus:border-transparent transition resize-y"
+                        placeholder="Décrivez votre projet, vos contraintes, vos attentes..."
                       />
                     </div>
 
-                    <div className="border-t border-border pt-6">
-                      <h4 className="font-semibold text-primary mb-4">Vos coordonnées</h4>
+                    <div className="border-t border-white/10 pt-6">
+                      <h4 className="font-semibold text-white mb-4">Vos coordonnées</h4>
 
                       <div className="space-y-4">
                         <div>
-                          <label className="block text-sm font-semibold text-primary mb-2">
+                          <label className="block text-sm font-semibold text-white/80 mb-2">
                             Nom *
                           </label>
                           <input
@@ -508,13 +514,13 @@ export default function DevisPage() {
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
-                            className="w-full px-4 py-2.5 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                            className="w-full px-4 py-2.5 rounded-xl border border-white/15 bg-white/5 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary/60 focus:border-transparent transition"
                             required
                           />
                         </div>
 
                         <div>
-                          <label className="block text-sm font-semibold text-primary mb-2">
+                          <label className="block text-sm font-semibold text-white/80 mb-2">
                             Email *
                           </label>
                           <input
@@ -522,13 +528,13 @@ export default function DevisPage() {
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
-                            className="w-full px-4 py-2.5 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                            className="w-full px-4 py-2.5 rounded-xl border border-white/15 bg-white/5 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary/60 focus:border-transparent transition"
                             required
                           />
                         </div>
 
                         <div>
-                          <label className="block text-sm font-semibold text-primary mb-2">
+                          <label className="block text-sm font-semibold text-white/80 mb-2">
                             Téléphone *
                           </label>
                           <input
@@ -536,7 +542,7 @@ export default function DevisPage() {
                             name="phone"
                             value={formData.phone}
                             onChange={handleChange}
-                            className="w-full px-4 py-2.5 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                            className="w-full px-4 py-2.5 rounded-xl border border-white/15 bg-white/5 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary/60 focus:border-transparent transition"
                             required
                           />
                         </div>
@@ -546,7 +552,7 @@ export default function DevisPage() {
                     <Button
                       type="submit"
                       disabled={!isFormValid || isLoading}
-                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-3 disabled:opacity-50"
+                      className="w-full rounded-xl bg-accent hover:bg-accent/90 text-white font-semibold py-3.5 disabled:opacity-50 transition shadow-lg shadow-accent/20"
                     >
                       {isLoading ? 'Envoi en cours...' : 'Envoyer ma demande'}
                     </Button>
@@ -554,9 +560,9 @@ export default function DevisPage() {
                 ) : (
                   <div className="text-center py-8">
                     <div className="mb-4">
-                      <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto">
+                      <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto">
                         <svg
-                          className="w-8 h-8 text-green-600"
+                          className="w-8 h-8 text-accent"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -570,14 +576,15 @@ export default function DevisPage() {
                         </svg>
                       </div>
                     </div>
-                    <h3 className="text-xl font-serif font-bold text-primary mb-2">
+                    <h3 className="text-xl font-serif font-bold text-white mb-2">
                       Merci pour votre demande
                     </h3>
-                    <p className="text-primary/80">
+                    <p className="text-white/70">
                       Votre demande a bien été envoyée. Nous revenons vers vous rapidement.
                     </p>
                   </div>
                 )}
+                </div>
               </div>
             </div>
           </div>

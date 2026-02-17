@@ -88,50 +88,7 @@ export function EcoBenefits() {
           })}
         </div>
 
-        {/* Comfort showcase */}
-        <ScrollReveal direction="up" delay={0.3}>
-          <div className="p-8 lg:p-12 rounded-3xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10">
-            <div className="text-center mb-10">
-              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-                Un confort 4 saisons
-              </h3>
-              <p className="text-white/60 max-w-2xl mx-auto">
-                Une maison bien isolée et bien ventilée, c&apos;est un confort retrouvé au quotidien.
-              </p>
-            </div>
-            
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {comfortItems.map((item, i) => {
-                const Icon = item.icon
-                return (
-                  <div key={i} className="text-center group">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 mb-4 group-hover:scale-110 transition-transform">
-                      <Icon className="w-8 h-8 text-emerald-400" />
-                    </div>
-                    <h4 className="font-semibold text-white mb-1">{item.label}</h4>
-                    <p className="text-white/50 text-sm">{item.desc}</p>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-        </ScrollReveal>
-
-        {/* Bottom stats */}
-        <ScrollReveal direction="up" delay={0.4}>
-          <div className="mt-16 grid sm:grid-cols-3 gap-8 text-center">
-            {[
-              { value: '40-70%', label: 'Réduction des factures énergie' },
-              { value: '4 tonnes', label: 'CO2 économisées / an en moyenne' },
-              { value: '2030', label: 'Interdiction location passoires thermiques' },
-            ].map((stat, i) => (
-              <div key={i}>
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-emerald-400 mb-2">{stat.value}</div>
-                <p className="text-white/60 text-sm">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </ScrollReveal>
+        {/* Bloc confort 4 saisons + stats supprimé */}
       </div>
     </section>
   )

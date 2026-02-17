@@ -115,7 +115,7 @@ export function ExtensionTypes() {
   return (
     <section
       id="extension-types"
-      className="relative pt-10 sm:pt-12 lg:pt-14 pb-20 sm:pb-28 lg:pb-36 bg-[#050308] overflow-hidden"
+      className="relative pt-10 sm:pt-12 lg:pt-14 pb-12 sm:pb-16 lg:pb-20 bg-[#050308] overflow-hidden"
     >
       {/* Background decorations façon accueil/rénovation */}
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-radial from-accent/15 to-transparent opacity-70" />
@@ -151,7 +151,7 @@ export function ExtensionTypes() {
                   key={type.id}
                   type="button"
                   onMouseEnter={() => handleMouseEnter(type)}
-                  className={`group relative flex items-center gap-3 px-6 py-4 rounded-2xl transition-all duration-500 ${
+                  className={`group relative flex items-center gap-3 px-6 py-4 rounded-full transition-all duration-500 ${
                     isHovered
                       ? 'bg-white text-[#050308] shadow-xl'
                       : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white hover:shadow-xl border border-white/10'
@@ -190,7 +190,7 @@ export function ExtensionTypes() {
                   type="button"
                   onMouseEnter={() => handleMouseEnter(type)}
                   onClick={() => handleMouseEnter(type)}
-                  className={`flex-shrink-0 flex items-center gap-2 px-4 py-3 rounded-xl transition-all duration-300 ${
+                  className={`flex-shrink-0 flex items-center gap-2 px-4 py-3 rounded-full transition-all duration-300 ${
                     isHovered
                       ? 'bg-white text-[#050308]'
                       : 'bg-white/5 text-white/70'
@@ -249,26 +249,9 @@ export function ExtensionTypes() {
                 {activeType.title}
               </h3>
               
-              <p className="text-lg text-white/80 mb-4 leading-relaxed">
+              <p className="text-lg text-white/80 mb-6 leading-relaxed">
                 {activeType.description}
               </p>
-              
-              <p className="text-base text-white/60 mb-6 leading-relaxed">
-                {activeType.longDescription}
-              </p>
-
-              {/* Advantages badges */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                {activeType.advantages.map((adv, i) => (
-                  <span 
-                    key={i}
-                    className="px-3 py-1.5 rounded-full text-xs font-semibold text-white"
-                    style={{ backgroundColor: activeType.color }}
-                  >
-                    ✓ {adv}
-                  </span>
-                ))}
-              </div>
 
               {/* Features grid */}
               <div className="grid grid-cols-2 gap-3 mb-6">
@@ -295,7 +278,7 @@ export function ExtensionTypes() {
               {/* CTA */}
               <Link 
                 href="/concevoir-mon-projet"
-                className="group inline-flex items-center gap-3 px-6 py-4 rounded-xl font-semibold text-white transition-all duration-300 hover:shadow-xl hover:scale-105"
+                className="group inline-flex items-center gap-3 px-6 py-4 rounded-full font-semibold text-white transition-all duration-300 hover:shadow-xl hover:scale-105"
                 style={{ backgroundColor: activeType.color }}
               >
                Estimer mon projet

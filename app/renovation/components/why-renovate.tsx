@@ -56,7 +56,7 @@ const forWho = [
 
 export function WhyRenovate() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 bg-[#050308] overflow-hidden">
+    <section className="relative py-12 sm:py-16 lg:py-20 bg-[#050308] overflow-hidden">
       {/* Background */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#a39383]/40 to-transparent" />
       
@@ -87,8 +87,7 @@ export function WhyRenovate() {
                   <div className="w-12 h-12 rounded-xl bg-[#a39383]/20 flex items-center justify-center mb-4 group-hover:bg-[#a39383]/30 transition-colors">
                     <Icon className="w-6 h-6 text-[#a39383]" />
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">{reason.title}</h3>
-                  <p className="text-white/75 text-sm leading-relaxed">{reason.description}</p>
+                  <h3 className="text-lg font-bold text-white mb-0">{reason.title}</h3>
                 </div>
               </ScrollReveal>
             )
@@ -111,14 +110,7 @@ export function WhyRenovate() {
               {forWho.map((item, i) => (
                 <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/10">
                   <h4 className="font-bold text-white text-lg mb-2">{item.title}</h4>
-                  <p className="text-white/60 text-sm mb-4">{item.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {item.examples.map((ex, j) => (
-                      <span key={j} className="px-2 py-1 rounded-full bg-[#a39383]/25 text-[#f5f0ea] text-xs">
-                        {ex}
-                      </span>
-                    ))}
-                  </div>
+                  <p className="text-white/60 text-sm mb-0">{item.description}</p>
                 </div>
               ))}
             </div>

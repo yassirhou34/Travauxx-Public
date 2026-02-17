@@ -40,8 +40,8 @@ export function LocalPresence() {
                 Activ Travaux 37
               </h2>
             <p className="text-white/75 text-lg mb-8 leading-relaxed">
-                En Indre-et-Loire, votre activateur Activ Travaux vous apporte toute l&apos;expertise 
-                du réseau national avec la proximité et la réactivité d&apos;un interlocuteur local.
+                En Indre-et-Loire, Activ Travaux vous apporte toute l&apos;expertise du réseau national 
+                avec la proximité et la réactivité d&apos;un interlocuteur local.
               </p>
 
               {/* Features */}

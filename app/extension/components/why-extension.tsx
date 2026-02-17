@@ -64,7 +64,7 @@ const accompagnement = [
 
 export function WhyExtension() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 bg-[#050308] overflow-hidden">
+    <section className="relative py-12 sm:py-16 lg:py-20 bg-[#050308] overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -100,32 +100,27 @@ export function WhyExtension() {
             const Icon = benefit.icon
             return (
               <ScrollReveal key={i} direction="up" delay={i * 0.1}>
-                <div className="group relative h-full">
-                  {/* Card */}
-                  <div className="relative h-full p-6 lg:p-8 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-500 hover:-translate-y-2">
+                <div className="group relative">
+                  {/* Card – titres seuls, format compact */}
+                  <div className="relative p-4 lg:p-5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-500 hover:-translate-y-1">
                     {/* Icon */}
-                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/10 mb-6 shadow-lg">
-                      <Icon className="w-7 h-7 text-[#a39883]" />
+                    <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-white/10 mb-3 shadow-lg">
+                      <Icon className="w-5 h-5 text-[#a39883]" />
                     </div>
 
                     {/* Stat */}
-                    <div className="mb-4">
-                      <span className="text-4xl lg:text-5xl font-bold text-white">{benefit.stat}</span>
-                      <span className="text-white/50 text-sm ml-2">{benefit.statLabel}</span>
+                    <div className="mb-2">
+                      <span className="text-2xl lg:text-3xl font-bold text-white">{benefit.stat}</span>
+                      <span className="text-white/50 text-xs ml-1.5">{benefit.statLabel}</span>
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl font-bold text-white mb-3">
+                    <h3 className="text-base font-bold text-white">
                       {benefit.title}
                     </h3>
 
-                    {/* Description */}
-                    <p className="text-white/60 text-sm leading-relaxed">
-                      {benefit.description}
-                    </p>
-
                     {/* Hover glow effect */}
-                    <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${benefit.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 -z-10`} />
+                    <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${benefit.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 -z-10`} />
                   </div>
                 </div>
               </ScrollReveal>
@@ -152,11 +147,10 @@ export function WhyExtension() {
                 const Icon = item.icon
                 return (
                   <div key={i} className="text-center">
-                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#a39883]/20 mb-4">
-                      <Icon className="w-7 h-7 text-[#a39883]" />
+                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#a39883]/20 mb-3">
+                      <Icon className="w-6 h-6 text-[#a39883]" />
                     </div>
-                    <h4 className="font-semibold text-white mb-2">{item.title}</h4>
-                    <p className="text-white/60 text-sm">{item.description}</p>
+                    <h4 className="font-semibold text-white">{item.title}</h4>
                   </div>
                 )
               })}
@@ -170,7 +164,7 @@ export function WhyExtension() {
             <blockquote className="text-xl sm:text-2xl lg:text-3xl text-white/80 font-light italic max-w-3xl mx-auto">
               &ldquo;Agrandir sans dénaturer l&apos;existant, c&apos;est tout l&apos;art d&apos;une extension réussie.&rdquo;
             </blockquote>
-            <p className="mt-4 text-accent font-semibold">— Activ Travaux</p>
+            <p className="mt-4 text-secondary font-semibold">— Activ Travaux</p>
           </div>
         </ScrollReveal>
       </div>

@@ -20,19 +20,14 @@ export function MultiSite() {
                 <span className="text-white/80 text-sm">Multi-sites & déploiements</span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
                 Coordonner plusieurs sites
                 <span className="text-white/60"> avec un seul pilote.</span>
               </h2>
 
-              <p className="text-white/70 text-lg mb-6">
-                Ouvertures en réseau, relocalisation de services, rénovation d&apos;un parc immobilier : nous vous accompagnons
-                dans la structuration et le déploiement de vos projets multi-sites.
-              </p>
-
               <div className="space-y-3 mb-8">
                 {[
-                  'Planification des interventions pour limiter les coupures d&apos;activité',
+                  'Planification des interventions pour limiter les coupures d\'activité',
                   'Standardisation des concepts tout en respectant les spécificités locales',
                   'Suivi centralisé des coûts et des délais pour chaque adresse',
                   'Un interlocuteur unique pour coordonner tous les chantiers',

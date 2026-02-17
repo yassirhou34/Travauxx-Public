@@ -65,9 +65,6 @@ export function ExtensionProcess() {
 
         {/* Process timeline - Desktop */}
         <div className="hidden lg:block relative">
-          {/* Connection line */}
-          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[#a39883]/60 to-transparent -translate-y-1/2" />
-          
           <div className="grid grid-cols-5 gap-6">
             {steps.map((step, i) => {
               const Icon = step.icon

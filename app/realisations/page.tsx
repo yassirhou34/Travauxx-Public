@@ -82,12 +82,7 @@ export default function RealisationsPage() {
               Consultez notre sélection de projets réalisés : réhabilitations lourdes, extensions structurelles et optimisation de parcs tertiaires. Chaque intervention reflète la rigueur et les standards d'excellence du réseau Activ Travaux 37.
 
               </p>
-              <p className="text-sm text-black leading-relaxed">
-               
-Tous nos chantiers sont encadrés par le statut de Contractant Général. Nous garantissons une sécurité juridique et financière totale par un prix ferme, un calendrier d’exécution verrouillé et une coordination stricte des corps d'état.
-
-
-              </p>
+             
             </div>
           </div>
         </section>

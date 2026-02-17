@@ -3,13 +3,13 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { ArrowRight, Phone, Mail, MapPin } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 export function ExtensionCTA() {
   return (
     <section className="relative py-20 sm:py-28 lg:py-36 overflow-hidden">
-      {/* Background with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-accent via-accent to-rose-600" />
+      {/* Background noir */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#050308] via-[#050308] to-[#050308]" />
       
       {/* Animated background shapes */}
       <div className="absolute inset-0 overflow-hidden">
@@ -46,8 +46,10 @@ export function ExtensionCTA() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/concevoir-mon-projet">
                   <Button className="w-full sm:w-auto group bg-white text-accent hover:bg-white/90 font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105">
-                    Concevoir mon projet
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    <span className="inline-flex items-center justify-center gap-2 w-full">
+                      Concevoir mon projet
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </span>
                   </Button>
                 </Link>
                 <Link href="/realisations">
@@ -61,51 +63,7 @@ export function ExtensionCTA() {
             </div>
           </ScrollReveal>
 
-          {/* Right side - Contact cards */}
-          <ScrollReveal direction="left" delay={0.2}>
-            <div className="grid gap-4">
-              {/* Phone card */}
-              <a 
-                href="tel:+33247000000"
-                className="group flex items-center gap-4 p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
-              >
-                <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="text-white/60 text-sm">Appelez-nous</p>
-                  <p className="text-white font-semibold text-lg">02 47 00 00 00</p>
-                </div>
-                <ArrowRight className="ml-auto w-5 h-5 text-white/50 group-hover:text-white group-hover:translate-x-1 transition-all" />
-              </a>
-
-              {/* Email card */}
-              <a 
-                href="mailto:contact@activtravaux37.fr"
-                className="group flex items-center gap-4 p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
-              >
-                <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Mail className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="text-white/60 text-sm">Écrivez-nous</p>
-                  <p className="text-white font-semibold text-lg">contact@activtravaux37.fr</p>
-                </div>
-                <ArrowRight className="ml-auto w-5 h-5 text-white/50 group-hover:text-white group-hover:translate-x-1 transition-all" />
-              </a>
-
-              {/* Location card */}
-              <div className="flex items-center gap-4 p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
-                <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="text-white/60 text-sm">Zone d&apos;intervention</p>
-                  <p className="text-white font-semibold text-lg">Indre-et-Loire (37)</p>
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
+          {/* Right side - plus de coordonnées : colonne supprimée */}
         </div>
 
         {/* Bottom trust badges */}

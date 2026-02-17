@@ -3,11 +3,11 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { ArrowRight, Phone, Mail, MapPin, Home, Leaf } from 'lucide-react'
+import { ArrowRight, Home } from 'lucide-react'
 
 export function RenovationCTA() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 overflow-hidden">
+    <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary" />
       
@@ -73,55 +73,11 @@ export function RenovationCTA() {
             </div>
           </ScrollReveal>
 
-          {/* Right side - Contact options */}
+          {/* Right side - Eco badge uniquement */}
           <ScrollReveal direction="left" delay={0.2}>
             <div className="space-y-4">
-              {/* Phone */}
-              <a 
-                href="tel:+33247000000"
-                className="group flex items-center gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
-              >
-                <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Phone className="w-6 h-6 text-accent" />
-                </div>
-                <div className="flex-1">
-                  <p className="text-white/50 text-sm">Appelez-nous</p>
-                  <p className="text-white font-semibold text-lg">02 47 00 00 00</p>
-                </div>
-                <ArrowRight className="w-5 h-5 text-white/30 group-hover:text-white group-hover:translate-x-1 transition-all" />
-              </a>
-
-              {/* Email */}
-              <a 
-                href="mailto:contact@activtravaux37.fr"
-                className="group flex items-center gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
-              >
-                <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Mail className="w-6 h-6 text-accent" />
-                </div>
-                <div className="flex-1">
-                  <p className="text-white/50 text-sm">Écrivez-nous</p>
-                  <p className="text-white font-semibold text-lg">contact@activtravaux37.fr</p>
-                </div>
-                <ArrowRight className="w-5 h-5 text-white/30 group-hover:text-white group-hover:translate-x-1 transition-all" />
-              </a>
-
-              {/* Location */}
-              <div className="flex items-center gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-                <div className="w-14 h-14 rounded-full bg-secondary/20 flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-secondary" />
-                </div>
-                <div>
-                  <p className="text-white/50 text-sm">Zone d&apos;intervention</p>
-                  <p className="text-white font-semibold text-lg">Indre-et-Loire (37)</p>
-                </div>
-              </div>
-
               {/* Eco badge */}
               <div className="flex items-center gap-4 p-6 rounded-2xl bg-accent/10 border border-accent/30">
-                <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center">
-                  <Leaf className="w-6 h-6 text-accent" />
-                </div>
                 <div>
                   <p className="text-accent font-semibold">Rénovation énergétique</p>
                   <p className="text-white/60 text-sm">Accompagnement aides et subventions</p>
@@ -133,7 +89,7 @@ export function RenovationCTA() {
 
         {/* Trust indicators */}
         <ScrollReveal direction="up" delay={0.4}>
-          <div className="mt-16 pt-12 border-t border-white/10">
+          <div className="mt-10 pt-8 border-t border-white/10">
             <div className="flex flex-wrap justify-center items-center gap-8 text-white/50 text-sm">
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-accent" />

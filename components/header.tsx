@@ -92,7 +92,7 @@ export function Header({ variant = 'solid' }: HeaderProps) {
           {/* CTA & Mobile Menu */}
           <div className="flex items-center gap-2 sm:gap-3 lg:gap-4">
             <Link href="/concevoir-mon-projet" className="hidden sm:block">
-              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-medium px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 text-xs sm:text-sm transition-all duration-300 hover:shadow-lg hover:shadow-accent/20">
+              <Button className="rounded-full bg-accent hover:bg-accent/90 text-accent-foreground font-medium px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 text-xs sm:text-sm transition-all duration-300 hover:shadow-lg hover:shadow-accent/20">
                 Demander un devis
               </Button>
             </Link>
@@ -124,7 +124,7 @@ export function Header({ variant = 'solid' }: HeaderProps) {
                 </Link>
               ))}
               <Link href="/concevoir-mon-projet" className="px-3 py-2 mt-1">
-                <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-medium text-sm sm:text-base transition-all duration-300">
+                <Button className="w-full rounded-full bg-accent hover:bg-accent/90 text-accent-foreground font-medium text-sm sm:text-base transition-all duration-300">
                   Demander un devis
                 </Button>
               </Link>

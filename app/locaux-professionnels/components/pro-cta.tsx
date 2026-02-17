@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { ArrowRight, Phone, Mail, MapPin, Building2, Store, Coffee, Home } from 'lucide-react'
+import { ArrowRight, Building2, Store, Coffee, Home } from 'lucide-react'
 
 export function ProCTA() {
   return (
@@ -24,10 +24,9 @@ export function ProCTA() {
       }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left side - Text */}
-          <ScrollReveal direction="right">
-            <div>
+        <div className="flex justify-center">
+          <ScrollReveal direction="up">
+            <div className="text-center max-w-2xl">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6">
                 <Building2 className="w-4 h-4 text-white" />
                 <span className="text-white/80 text-sm">Projet professionnel ?</span>
@@ -37,13 +36,12 @@ export function ProCTA() {
                 Parlons de vos<br />locaux<span className="text-accent">.</span>
               </h2>
               
-              <p className="text-white/70 text-lg mb-8 max-w-lg">
-              Audit technique et diagnostic de faisabilité pour aligner vos surfaces sur vos impératifs d'exploitation. Nous structurons une réponse globale adaptée à vos flux métiers.
-
+              <p className="text-white/70 text-lg mb-8 mx-auto">
+                Audit technique et diagnostic de faisabilité pour aligner vos surfaces sur vos impératifs d'exploitation. Nous structurons une réponse globale adaptée à vos flux métiers.
               </p>
 
               {/* Sectors reminder */}
-              <div className="flex flex-wrap gap-3 mb-10">
+              <div className="flex flex-wrap gap-3 mb-10 justify-center">
                 {[
                   { icon: Store, label: 'Commerce' },
                   { icon: Building2, label: 'Bureau' },
@@ -61,66 +59,23 @@ export function ProCTA() {
               </div>
 
               {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/concevoir-mon-projet">
-                  <Button className="w-full sm:w-auto group bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105">
-                  Lancer mon projet                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <Button className="w-full sm:w-auto group bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105 inline-flex items-center justify-center">
+                    <span className="inline-flex items-center justify-center gap-2">
+                      Lancer mon projet
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </span>
                   </Button>
                 </Link>
                 <Link href="/realisations">
                   <Button 
                     variant="outline" 
-                    className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 bg-transparent"
+                    className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 bg-transparent inline-flex items-center justify-center"
                   >
-                    Voir nos réalisations
+                    <span className="inline-flex items-center justify-center">Voir nos réalisations</span>
                   </Button>
                 </Link>
-              </div>
-            </div>
-          </ScrollReveal>
-
-          {/* Right side - Contact */}
-          <ScrollReveal direction="left" delay={0.2}>
-            <div className="space-y-4">
-              {/* Phone */}
-              <a 
-                href="tel:+33247000000"
-                className="group flex items-center gap-4 p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
-              >
-                <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
-                <div className="flex-1">
-                  <p className="text-white/50 text-sm">Appelez-nous</p>
-                  <p className="text-white font-semibold text-lg">02 47 00 00 00</p>
-                </div>
-                <ArrowRight className="w-5 h-5 text-white/30 group-hover:text-white group-hover:translate-x-1 transition-all" />
-              </a>
-
-              {/* Email */}
-              <a 
-                href="mailto:pro@activtravaux37.fr"
-                className="group flex items-center gap-4 p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
-              >
-                <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Mail className="w-6 h-6 text-white" />
-                </div>
-                <div className="flex-1">
-                  <p className="text-white/50 text-sm">Email professionnel</p>
-                  <p className="text-white font-semibold text-lg">pro@activtravaux37.fr</p>
-                </div>
-                <ArrowRight className="w-5 h-5 text-white/30 group-hover:text-white group-hover:translate-x-1 transition-all" />
-              </a>
-
-              {/* Location */}
-              <div className="flex items-center gap-4 p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
-                <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="text-white/50 text-sm">Zone principale</p>
-                  <p className="text-white font-semibold text-lg">Indre-et-Loire (37)</p>
-                </div>
               </div>
             </div>
           </ScrollReveal>

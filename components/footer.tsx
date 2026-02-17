@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { Linkedin, Instagram, Facebook } from 'lucide-react'
+import { Linkedin, Instagram, Facebook, Phone, Mail, MapPin } from 'lucide-react'
 
 export function Footer() {
   return (
@@ -83,9 +83,24 @@ export function Footer() {
           {/* Contact CTA */}
           <div className="md:col-span-1 animate-in fade-in slide-in-from-right-8 duration-700" style={{ animationDelay: '300ms' }}>
             <h4 className="font-bold text-xs sm:text-sm mb-4 sm:mb-6 text-accent">Contact</h4>
-            <p className="text-xs sm:text-sm opacity-85 mb-4 sm:mb-6 font-light">
-              Indre-et-Loire (37), autour de Tours
-            </p>
+            <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm mb-4 sm:mb-6">
+              <li>
+                <a href="tel:+33247000000" className="flex items-center gap-2 opacity-85 hover:opacity-100 transition-opacity font-light">
+                  <Phone className="w-4 h-4 flex-shrink-0" />
+                  <span>02 47 00 00 00</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:contact@activtravaux37.fr" className="flex items-center gap-2 opacity-85 hover:opacity-100 transition-opacity font-light">
+                  <Mail className="w-4 h-4 flex-shrink-0" />
+                  <span>contact@activtravaux37.fr</span>
+                </a>
+              </li>
+              <li className="flex items-center gap-2 opacity-85 font-light">
+                <MapPin className="w-4 h-4 flex-shrink-0" />
+                <span>Indre-et-Loire (37), autour de Tours</span>
+              </li>
+            </ul>
             
             {/* Social Networks */}
             <div className="mb-4 sm:mb-6">
@@ -122,7 +137,7 @@ export function Footer() {
             </div>
 
             <Link href="/concevoir-mon-projet" className="block group">
-              <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-xs sm:text-sm transition-all duration-300 group-hover:shadow-lg group-hover:shadow-accent/30">
+              <Button className="w-full rounded-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-xs sm:text-sm transition-all duration-300 group-hover:shadow-lg group-hover:shadow-accent/30">
                 Demander un devis
               </Button>
             </Link>

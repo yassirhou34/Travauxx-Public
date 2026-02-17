@@ -56,7 +56,7 @@ const steps = [
 
 export function RenovationProcess() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 bg-[#050308] overflow-hidden">
+    <section className="relative py-12 sm:py-16 lg:py-20 bg-[#050308] overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-accent/20 to-transparent opacity-60" />
 
@@ -78,78 +78,41 @@ export function RenovationProcess() {
 
         {/* Process grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {steps.map((step, i) => {
-            const Icon = step.icon
-            return (
-              <ScrollReveal key={i} direction="up" delay={i * 0.1}>
-                <div className="group relative h-full">
-                  {/* Number background */}
-                  <div 
-                    className="absolute -top-2 -left-2 text-8xl font-bold opacity-5 group-hover:opacity-10 transition-opacity"
-                    style={{ color: step.color }}
-                  >
-                    {step.number}
-                  </div>
-                  
-                  {/* Card */}
-                  <div className="relative h-full p-6 lg:p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-accent/40 hover:shadow-[0_30px_90px_rgba(0,0,0,0.9)] transition-all duration-300 hover:-translate-y-1">
-                    {/* Icon */}
-                    <div 
-                      className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 transition-transform group-hover:scale-110"
-                      style={{ backgroundColor: `${step.color}20` }}
-                    >
-                      <Icon className="w-7 h-7" style={{ color: step.color }} />
-                    </div>
-
-                    {/* Content */}
-                    <div className="flex items-center gap-2 mb-3">
-                      <span 
-                        className="text-xs font-bold"
-                        style={{ color: step.color }}
-                      >
-                        {step.number}
-                      </span>
-                      <h3 className="text-lg font-bold text-primary">{step.title}</h3>
-                    </div>
-                    
-                    <p className="text-white/75 text-sm leading-relaxed mb-4">
-                      {step.description}
-                    </p>
-
-                    {/* Duration badge */}
-                    <span 
-                      className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-white"
-                      style={{ backgroundColor: step.color }}
-                    >
-                      {step.duration}
-                    </span>
-                  </div>
+          {steps.map((step, i) => (
+            <ScrollReveal key={i} direction="up" delay={i * 0.1}>
+              <div className="group relative h-full">
+                {/* Numéro de fond (gros) */}
+                <div 
+                  className="absolute -top-2 -left-2 text-8xl font-bold opacity-5 group-hover:opacity-10 transition-opacity"
+                  style={{ color: step.color }}
+                >
+                  {step.number}
                 </div>
-              </ScrollReveal>
-            )
-          })}
+
+                {/* Carte sans icône, avec numéro de fond + titre + texte + durée */}
+                <div className="relative h-full p-6 lg:p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-accent/40 hover:shadow-[0_30px_90px_rgba(0,0,0,0.9)] transition-all duration-300 hover:-translate-y-1">
+                  {/* Titre */}
+                  <h3 className="text-lg font-bold text-primary mb-3">{step.title}</h3>
+                  
+                  {/* Description */}
+                  <p className="text-white/75 text-sm leading-relaxed mb-4">
+                    {step.description}
+                  </p>
+
+                  {/* Badge durée */}
+                  <span 
+                    className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-white"
+                    style={{ backgroundColor: step.color }}
+                  >
+                    {step.duration}
+                  </span>
+                </div>
+              </div>
+            </ScrollReveal>
+          ))}
         </div>
 
-        {/* Bottom summary */}
-        <ScrollReveal direction="up" delay={0.5}>
-          <div className="mt-16 lg:mt-20 p-8 lg:p-12 rounded-3xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10">
-            <div className="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-              {[
-                { value: '1', label: 'interlocuteur unique', suffix: 'seul' },
-                { value: '100%', label: 'prix ferme garanti', suffix: '' },
-                { value: '10', label: 'de garantie décennale', suffix: 'ans' },
-              ].map((stat, i) => (
-                <div key={i}>
-                  <div className="text-3xl sm:text-4xl font-bold text-white mb-1">
-                    {stat.value}
-                    {stat.suffix && <span className="text-accent text-xl ml-1">{stat.suffix}</span>}
-                  </div>
-                  <div className="text-white/60 text-sm">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </ScrollReveal>
+        {/* Bottom summary supprimé */}
       </div>
     </section>
   )

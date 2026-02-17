@@ -32,7 +32,7 @@ const GalleryEditorial: React.FC<GalleryEditorialProps> = ({
       className="min-h-screen py-20 sm:py-24 px-4"
       style={{ backgroundColor, color: textColor }}
     >
-      <div className="max-w-5xl mx-auto space-y-20 sm:space-y-24">
+      <div className="max-w-7xl mx-auto space-y-20 sm:space-y-24">
         {items.map((item, i) => (
           <div
             key={i}
@@ -41,7 +41,7 @@ const GalleryEditorial: React.FC<GalleryEditorialProps> = ({
               i % 2 !== 0 ? 'md:flex-row-reverse' : ''
             )}
           >
-            <div className="w-full md:w-1/2 relative h-[55vh] sm:h-[60vh] overflow-hidden group rounded-3xl">
+            <div className="w-full md:w-2/3 relative h-[60vh] sm:h-[70vh] overflow-hidden group rounded-3xl">
               <div className="w-full h-full transform scale-110 group-hover:scale-100 transition-transform duration-700 ease-out">
                 <img src={item.image} className="w-full h-full object-cover" alt={item.title} loading="lazy" />
               </div>
@@ -51,7 +51,7 @@ const GalleryEditorial: React.FC<GalleryEditorialProps> = ({
               />
             </div>
 
-            <div className="w-full md:w-1/2 space-y-5">
+            <div className="w-full md:w-1/3 space-y-5">
               <span
                 className="text-xs font-bold tracking-[0.2em]"
                 style={{ color: accentColor }}

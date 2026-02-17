@@ -1,7 +1,7 @@
 'use client'
 
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { Shield, Eye, Award, Heart, Handshake, CheckCircle2 } from 'lucide-react'
+import { Shield, Eye, Award, CheckCircle2 } from 'lucide-react'
 
 const values = [
   {
@@ -93,45 +93,6 @@ export function ValuesSection() {
           })}
         </div>
 
-        {/* Human approach */}
-        <ScrollReveal direction="up" delay={0.3}>
-          <div className="p-8 lg:p-12 rounded-3xl bg-gradient-to-br from-[#372f2d] to-[#1a1413] text-white border border-white/10 shadow-[0_32px_100px_rgba(0,0,0,0.9)]">
-            <div className="grid lg:grid-cols-2 gap-10 items-center">
-              <div>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6">
-                  <Heart className="w-4 h-4 text-accent" />
-                  <span className="text-white/80 text-sm">Approche humaine</span>
-                </div>
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
-                  Plus qu&apos;un prestataire, un partenaire
-                </h3>
-                <p className="text-white/75 text-lg mb-6">
-                  Activ Travaux 37 est un partenaire de votre projet de vie ou de développement. 
-                  Notre réseau repose sur une culture commune de la qualité, du service et de la rigueur.
-                </p>
-                <p className="text-white/70">
-                  Grâce à une présence nationale, nous sommes capables de répondre à vos projets 
-                  partout en France, en vous offrant toujours un 
-                  accompagnement local, personnalisé et structuré.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { value: '75+', label: 'Activateurs en France' },
-                  { value: '20+', label: 'Ans d&apos;expérience' },
-                  { value: '100%', label: 'Projets maîtrisés' },
-                  { value: '1', label: 'Interlocuteur unique' },
-                ].map((stat, i) => (
-                  <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
-                    <div className="text-3xl sm:text-4xl font-bold text-white mb-2">{stat.value}</div>
-                    <div className="text-white/70 text-sm">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   )

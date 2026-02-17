@@ -47,9 +47,7 @@ export function RenovationHero() {
         {/* Badge */}
         <ScrollReveal direction="fade" delay={0.1}>
           <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 mb-8">
-            <Home className="w-4 h-4 text-accent" />
             <span className="text-white/80 text-sm font-medium tracking-wide">Rénovation de votre habitat</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
           </div>
         </ScrollReveal>
 
@@ -71,13 +69,13 @@ export function RenovationHero() {
          
         </ScrollReveal>
 
-        {/* Key benefits */}
+        {/* Key benefits – ordre : Économie d'énergie / Confort optimal / Éco-responsable */}
         <ScrollReveal direction="up" delay={0.4}>
           <div className="flex flex-wrap justify-center gap-6 sm:gap-10 mb-12">
             {[
-              { icon: Leaf, label: 'Éco-responsable', color: 'text-accent' },
-              { icon: Zap, label: 'Économies d\'énergie', color: 'text-secondary' },
+              { icon: Zap, label: 'Économie d\'énergie', color: 'text-secondary' },
               { icon: Home, label: 'Confort optimal', color: 'text-accent' },
+              { icon: Leaf, label: 'Éco-responsable', color: 'text-accent' },
             ].map((item, i) => {
               const Icon = item.icon
               return (
@@ -87,22 +85,6 @@ export function RenovationHero() {
                 </div>
               )
             })}
-          </div>
-        </ScrollReveal>
-
-        {/* Stats */}
-        <ScrollReveal direction="up" delay={0.45}>
-          <div className="flex flex-wrap justify-center gap-8 sm:gap-12 md:gap-16 mb-12">
-            {[
-              { value: '-40%', label: 'facture énergie' },
-              { value: '100%', label: 'clé en main' },
-              { value: '+25%', label: 'valeur du bien' },
-            ].map((stat, i) => (
-              <div key={i} className="text-center">
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-1">{stat.value}</div>
-                <div className="text-xs sm:text-sm text-white/50 uppercase tracking-wider">{stat.label}</div>
-              </div>
-            ))}
           </div>
         </ScrollReveal>
 
@@ -129,13 +111,6 @@ export function RenovationHero() {
             </button>
           </div>
         </ScrollReveal>
-      </div>
-      
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-        <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2">
-          <div className="w-1 h-2 bg-accent/60 rounded-full animate-bounce" />
-        </div>
       </div>
     </section>
   )

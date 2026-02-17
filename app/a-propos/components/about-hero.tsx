@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { ArrowRight, ChevronDown, Users, MapPin, Award, Sparkles } from 'lucide-react'
+import { ArrowRight, ChevronDown } from 'lucide-react'
 
 export function AboutHero() {
   return (
@@ -21,17 +21,6 @@ export function AboutHero() {
           backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
           backgroundSize: '60px 60px',
         }} />
-      </div>
-
-      {/* Floating elements */}
-      <div className="absolute top-20 left-[10%] opacity-20 animate-float">
-        <Users className="w-20 h-20 text-accent" />
-      </div>
-      <div className="absolute bottom-32 right-[15%] opacity-20 animate-float" style={{ animationDelay: '1s' }}>
-        <MapPin className="w-16 h-16 text-secondary" />
-      </div>
-      <div className="absolute top-1/3 right-[10%] opacity-20 animate-float" style={{ animationDelay: '2s' }}>
-        <Award className="w-14 h-14 text-accent" />
       </div>
 
       {/* Main content */}
@@ -62,16 +51,18 @@ export function AboutHero() {
         <ScrollReveal direction="up" delay={0.5}>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link href="/concevoir-mon-projet">
-              <Button className="group bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-6 text-base sm:text-lg rounded-full transition-all duration-300 hover:shadow-2xl hover:shadow-accent/30 hover:scale-105">
-                Concevoir mon projet
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <Button className="group bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-6 text-base sm:text-lg rounded-full transition-all duration-300 hover:shadow-2xl hover:shadow-accent/30 hover:scale-105 inline-flex items-center justify-center">
+                <span className="inline-flex items-center justify-center gap-2">
+                  Concevoir mon projet
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </span>
               </Button>
             </Link>
             <Link
               href="#mission"
               className="group inline-flex items-center justify-center gap-2 min-w-[260px] h-[56px] px-8 relative border-2 border-white/70 text-white hover:bg-white/20 font-bold rounded-full text-base sm:text-lg transition-all duration-300 bg-white/10 backdrop-blur-md hover:border-white hover:scale-105 shadow-xl shadow-white/20 whitespace-nowrap"
             >
-              <span className="relative z-10 flex items-center gap-2 whitespace-nowrap">
+              <span className="relative z-10 inline-flex items-center justify-center gap-2 whitespace-nowrap">
                 Découvrir notre mission
                 <ChevronDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
               </span>

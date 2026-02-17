@@ -18,7 +18,6 @@ const sectors = [
     icon: Store,
     tagline: 'Créez des espaces attractifs et fonctionnels',
     description: 'Restructuration de points de vente et ingénierie d\'agencement. Nous maximisons votre rentabilité par une gestion rigoureuse des volumes et des flux.',
-    longDescription: 'Maîtrise technique globale, de l\'interface commerciale aux zones logistiques. Nous intégrons les codes du merchandising pour transformer l\'espace en levier de croissance.',
     features: [
       'Agencement sur-mesure',
       'Mise en valeur produits',
@@ -27,7 +26,6 @@ const sectors = [
       'Éclairage commercial',
       'Mobilier adapté',
     ],
-    forWho: ['Boutiques', 'Franchises', 'Showrooms', 'Pop-up stores'],
     image: '/Banqueimages/M7_01330.jpg',
     color: '#e83263',
     gradient: 'from-accent to-accent/80',
@@ -40,7 +38,6 @@ const sectors = [
     icon: Building2,
     tagline: 'Espaces de travail performants et inspirants',
     description: 'Cloisonnement, open space, salles de conférence : restructuration de vos environnements de travail. Nous pilotons l\'agencement de vos plateaux pour garantir une efficience opérationnelle immédiate.',
-    longDescription: 'Ingénierie acoustique et ergonomie structurelle : nous pilotons des aménagements à haute valeur ajoutée technique. Sécurisez un cadre d\'exploitation performant et pérenne pour votre actif.',
     features: [
       'Open space & flex office',
       'Salles de réunion',
@@ -49,7 +46,6 @@ const sectors = [
       'Performance énergétique',
       'Accueil & image',
     ],
-    forWho: ['PME', 'Start-ups', 'Sièges sociaux', 'Coworking'],
     image: '/Banqueimages/M7_01331.jpg',
     color: '#a39383',
     gradient: 'from-secondary to-secondary/80',
@@ -62,7 +58,6 @@ const sectors = [
     icon: Coffee,
     tagline: 'Design d\'ambiance et conformité garantie',
     description: 'Mise aux normes, design d\'ambiance, ergonomie des flux : des espaces qui respectent les réglementations tout en créant une expérience client mémorable.',
-    longDescription: 'Audit sanitaire, déploiement aéraulique et accessibilité PMR. Nous sécurisons votre investissement en neutralisant les risques de non-conformité liés aux spécificités de votre métier.',
     features: [
       'Design d\'ambiance',
       'Normes hygiène & sécurité',
@@ -71,7 +66,6 @@ const sectors = [
       'Accessibilité PMR',
       'Acoustique salle',
     ],
-    forWho: ['Restaurants', 'Cafés & bars', 'Hôtels', 'Brasseries'],
     image: '/Banqueimages/M7_01335.jpg',
     color: '#e83263',
     gradient: 'from-accent/90 to-accent/70',
@@ -84,7 +78,6 @@ const sectors = [
     icon: Home,
     tagline: 'Espaces de vie partagés et confortables',
     description: 'Configuration d\'unités d\'habitation et de zones de flux partagés. Nous structurons des environnements à haute valeur d\'usage pour sécuriser la pérennité de votre modèle d\'exploitation.',
-    longDescription: 'Espaces communs conviviaux, studios fonctionnels, services adaptés : nous créons des résidences qui répondent aux attentes de leurs occupants.',
     features: [
       'Studios optimisés',
       'Espaces communs',
@@ -93,7 +86,6 @@ const sectors = [
       'Sécurité renforcée',
       'Services intégrés',
     ],
-    forWho: ['Résidences étudiantes', 'Résidences seniors', 'Coliving', 'Appart-hôtels'],
     image: '/Banqueimages/M7_01319.jpg',
     color: '#a39383',
     gradient: 'from-secondary to-secondary/80',
@@ -226,18 +218,6 @@ export function ProSectors() {
 
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
-
-              {/* Pour qui ? */}
-              <div className="absolute bottom-6 left-6 right-6">
-                <p className="text-white/60 text-xs uppercase tracking-wider mb-2">Pour qui ?</p>
-                <div className="flex flex-wrap gap-2">
-                  {activeSector.forWho.map((item, i) => (
-                    <span key={i} className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm text-white text-xs">
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
             </div>
           </ScrollReveal>
 
@@ -253,9 +233,7 @@ export function ProSectors() {
                 {activeSector.title}
               </h3>
 
-              <p className="text-lg text-white/75 mb-4 leading-relaxed">{activeSector.description}</p>
-
-              <p className="text-base text-white/60 mb-6 leading-relaxed">{activeSector.longDescription}</p>
+              <p className="text-lg text-white/75 mb-6 leading-relaxed">{activeSector.description}</p>
 
               {/* Atouts */}
               <div className="grid grid-cols-2 gap-3 mb-8">

@@ -1,45 +1,25 @@
 'use client'
 
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { Users, MapPin, Network, Shield, Award, Zap } from 'lucide-react'
+import { Users, Network, Shield, Award } from 'lucide-react'
 
 const networkFeatures = [
-  {
-    icon: Users,
-    title: 'Activateurs de travaux',
-    description: 'Basés ici, en Indre-et-Loire, nous sommes vos seuls interlocuteurs. On suit votre projet de très près pour que vos travaux soient une vraie réussite.',
-    color: 'from-secondary to-secondary/80',
-  },
-  {
-    icon: Network,
-    title: 'Réseau coordonné',
-    description: ' Un réseau d\'artisans et de partenaires qualifiés, d\'architectes et de bureaux d\'études reconnus.',
-    color: 'from-secondary to-secondary/80',
-  },
-  {
-    icon: Shield,
-    title: 'Contractant général',
-    description: 'Nous appliquons les standards d\'organisation d\'un réseau leader pour sécuriser chaque étape de votre projet. C\’est la garantie d\’un calendrier respecté et d’un chantier suivi.',
-    color: 'from-secondary to-secondary/80',
-  },
-  {
-    icon: Award,
-    title: 'Méthodes éprouvées',
-    description: 'Outils, méthodes et supports du réseau Activ Travaux pour garantir la qualité et la cohérence.',
-    color: 'from-secondary to-secondary/80',
-  },
+  { icon: Users, title: 'Activateurs de travaux', color: 'from-secondary to-secondary/80' },
+  { icon: Network, title: 'Réseau coordonné', color: 'from-secondary to-secondary/80' },
+  { icon: Shield, title: 'Contractant général', color: 'from-secondary to-secondary/80' },
+  { icon: Award, title: 'Méthodes éprouvées', color: 'from-secondary to-secondary/80' },
 ]
 
 const advantages = [
   {
     title: 'Proximité & Réactivité',
     subtitle: 'Un interlocuteur local',
-    description: 'Écoute, réactivité et connaissance du terrain',
+    description: 'Écoute, réactivité et connaissance du terrain.',
   },
   {
     title: 'Force & Structure',
     subtitle: 'Un réseau national',
-    description: 'Organisation rigoureuse et fiabilité éprouvée',
+    description: 'Organisation rigoureuse et fiabilité éprouvée.',
   },
 ]
 
@@ -74,12 +54,11 @@ export function NetworkSection() {
             const Icon = feature.icon
             return (
               <ScrollReveal key={i} direction="up" delay={i * 0.1}>
-                <div className="group h-full p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-accent/50 hover:shadow-[0_24px_80px_rgba(0,0,0,0.9)] transition-all duration-300 hover:-translate-y-2 backdrop-blur-lg">
-                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform`}>
-                    <Icon className="w-7 h-7 text-white" />
+                <div className="group h-full p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-accent/50 hover:shadow-[0_24px_80px_rgba(0,0,0,0.9)] transition-all duration-300 hover:-translate-y-2 backdrop-blur-lg">
+                  <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-3 shadow-lg group-hover:scale-110 transition-transform`}>
+                    <Icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-white/75 text-sm leading-relaxed">{feature.description}</p>
+                  <h3 className="text-lg font-bold text-white">{feature.title}</h3>
                 </div>
               </ScrollReveal>
             )
