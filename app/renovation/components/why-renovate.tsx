@@ -1,6 +1,8 @@
 'use client'
 
+import Image from 'next/image'
 import { ScrollReveal } from '@/components/scroll-reveal'
+import LightboxGlass from '@/components/LightboxGlass'
 import { Target, Users, FileCheck, Clock, Award, ShieldCheck } from 'lucide-react'
 
 const reasons = [
@@ -93,6 +95,51 @@ export function WhyRenovate() {
             )
           })}
         </div>
+
+        {/* Bandeau image avant "Pour qui" – 3 photos cliquables en LightboxGlass */}
+        <ScrollReveal direction="up" delay={0.25}>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mb-16">
+            <div className="col-span-2 md:col-span-1">
+              <LightboxGlass
+                embedded
+                image="/Banqueimages/M7_01321.jpg"
+                title="Rénovation habitat"
+                subtitle="Rénover avec méthode"
+                showLike={false}
+                showDownload={true}
+              >
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 cursor-pointer">
+                  <Image src="/Banqueimages/M7_01321.jpg" alt="Rénovation habitat" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
+                </div>
+              </LightboxGlass>
+            </div>
+            <LightboxGlass
+              embedded
+              image="/Banqueimages/M7_01323.jpg"
+              title="Chantier rénovation"
+              subtitle="Rénover avec méthode"
+              showLike={false}
+              showDownload={true}
+            >
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 cursor-pointer">
+                <Image src="/Banqueimages/M7_01323.jpg" alt="Chantier rénovation" fill className="object-cover" sizes="(max-width: 768px) 50vw, 33vw" />
+              </div>
+            </LightboxGlass>
+            <LightboxGlass
+              embedded
+              image="/Banqueimages/M7_01330.jpg"
+              title="Réalisation Activ Travaux"
+              subtitle="Rénover avec méthode"
+              showLike={false}
+              showDownload={true}
+            >
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 cursor-pointer">
+                <Image src="/Banqueimages/M7_01330.jpg" alt="Réalisation Activ Travaux" fill className="object-cover" sizes="(max-width: 768px) 50vw, 33vw" />
+              </div>
+            </LightboxGlass>
+          </div>
+        </ScrollReveal>
 
         {/* For who section */}
         <ScrollReveal direction="up" delay={0.3}>

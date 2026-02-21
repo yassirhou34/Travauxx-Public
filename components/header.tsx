@@ -49,21 +49,21 @@ export function Header({ variant = 'solid' }: HeaderProps) {
   const isAtTop = isTransparent && !scrolled
   const showSolidBg = !isTransparent || scrolled
 
-  // Logo noir pour toutes les pages
-  const logoSrc = '/Banqueimages/LOGO ACTIV TRAVAUX SANS ARRIERE PLAN.png'
+  // Logo (fond transparent)
+  const logoSrc = `/Banqueimages/${encodeURIComponent('Nouveau logo fond transparent-Photoroom.png')}`
 
   return (
     <header className="sticky top-0 z-50 w-full transition-all duration-300 bg-[#050308]/95 backdrop-blur-md shadow-sm border-b border-[#241a19]">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
+        <div className="flex items-center justify-between h-24 sm:h-28 lg:h-32">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 group flex items-center">
-            <div className="relative h-16 sm:h-18 md:h-20 lg:h-24 w-auto transition-transform duration-300 group-hover:scale-105">
+            <div className="relative h-24 sm:h-28 md:h-32 lg:h-36 w-auto transition-transform duration-300 group-hover:scale-105">
               <Image
                 src={logoSrc}
                 alt="Activ Travaux"
-                width={320}
-                height={96}
+                width={440}
+                height={144}
                 className="h-full w-auto object-contain"
                 priority
               />

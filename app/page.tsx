@@ -58,44 +58,65 @@ export default function Home() {
           {/* Background decoration en beige / charbon */}
           <div className="absolute inset-0 bg-gradient-to-b from-secondary/15 via-transparent to-secondary/10 opacity-70" />
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <AdvancedReveal direction="up" delay={0.1}>
-              <div className="max-w-3xl mb-8 sm:mb-12">
-                <div className="inline-block px-4 py-2 rounded-full bg-secondary/20 border border-secondary/40 mb-4">
-                  <span className="text-secondary-foreground text-sm font-semibold">Avantages exclusifs</span>
-                </div>
-                <TextSplitReveal splitBy="word" delay={0.2}>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white mb-3 sm:mb-4">
-                    Pourquoi choisir le contrat de Contractant Général ?
-                  </h2>
-                </TextSplitReveal>
-                <AdvancedReveal direction="fade" delay={0.4}>
-                  <p className="text-white/75 text-sm sm:text-base md:text-lg leading-relaxed">
-                    Un cadre contractuel clair, inspiré du réseau national Activ Travaux : interlocuteur unique, prix ferme, délais engagés et garanties solides.
-                  </p>
-                </AdvancedReveal>
-              </div>
-            </AdvancedReveal>
-            {/* Liste typographique – titres seuls, un par ligne, lisible */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8 sm:gap-y-10 lg:gap-y-12">
-              {[
-                'Un interlocuteur unique',
-                'Un prix ferme et définitif',
-                'Respect des délais',
-                'Garanties contractuelles',
-                'Responsabilité unique',
-                'Conception augmentée',
-              ].map((title, idx) => (
-                <AdvancedReveal key={title} direction="up" delay={0.3 + idx * 0.06}>
-                  <div className="group flex items-baseline gap-4 min-w-0">
-                    <span className="flex-shrink-0 text-3xl sm:text-4xl font-bold tabular-nums text-white/20 group-hover:text-secondary/50 transition-colors duration-300 select-none">
-                      {String(idx + 1).padStart(2, '0')}
-                    </span>
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-bold text-white group-hover:text-secondary transition-colors duration-300 break-words">
-                      {title}
-                    </h3>
+            <div className="grid lg:grid-cols-[1fr_1fr] gap-10 lg:gap-14 items-start">
+              <div>
+                <AdvancedReveal direction="up" delay={0.1}>
+                  <div className="mb-8 sm:mb-12">
+                    <div className="inline-block px-4 py-2 rounded-full bg-secondary/20 border border-secondary/40 mb-4">
+                      <span className="text-secondary-foreground text-sm font-semibold">Avantages exclusifs</span>
+                    </div>
+                    <TextSplitReveal splitBy="word" delay={0.2}>
+                      <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white mb-3 sm:mb-4">
+                        Pourquoi choisir le contrat de Contractant Général ?
+                      </h2>
+                    </TextSplitReveal>
+                    <AdvancedReveal direction="fade" delay={0.4}>
+                      <p className="text-white/75 text-sm sm:text-base md:text-lg leading-relaxed">
+                        Un cadre contractuel clair, inspiré du réseau national Activ Travaux : interlocuteur unique, prix ferme, délais engagés et garanties solides.
+                      </p>
+                    </AdvancedReveal>
                   </div>
                 </AdvancedReveal>
-              ))}
+                {/* Liste typographique – titres seuls, un par ligne, lisible */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 sm:gap-y-10">
+                  {[
+                    'Un interlocuteur unique',
+                    'Un prix ferme et définitif',
+                    'Respect des délais',
+                    'Garanties contractuelles',
+                    'Responsabilité unique',
+                    'Conception augmentée',
+                  ].map((title, idx) => (
+                    <AdvancedReveal key={title} direction="up" delay={0.3 + idx * 0.06}>
+                      <div className="group flex items-baseline gap-4 min-w-0">
+                        <span className="flex-shrink-0 text-3xl sm:text-4xl font-bold tabular-nums text-white/20 group-hover:text-secondary/50 transition-colors duration-300 select-none">
+                          {String(idx + 1).padStart(2, '0')}
+                        </span>
+                        <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-bold text-white group-hover:text-secondary transition-colors duration-300 break-words">
+                          {title}
+                        </h3>
+                      </div>
+                    </AdvancedReveal>
+                  ))}
+                </div>
+              </div>
+              {/* Colonne visuelle – 2 images dynamiques */}
+              <AdvancedReveal direction="left" delay={0.3}>
+                <div className="relative space-y-4 lg:space-y-5">
+                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                    <Image src="/Banqueimages/M7_01321.jpg" alt="Projet rénovation clé en main" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-white/10 shadow-xl">
+                      <Image src="/Banqueimages/M7_01323.jpg" alt="Chantier Activ Travaux" fill className="object-cover" sizes="(max-width: 1024px) 50vw, 25vw" />
+                    </div>
+                    <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-white/10 shadow-xl mt-6">
+                      <Image src="/Banqueimages/DSC09109.jpg" alt="Réalisation extension" fill className="object-cover" sizes="(max-width: 1024px) 50vw, 25vw" />
+                    </div>
+                  </div>
+                </div>
+              </AdvancedReveal>
             </div>
           </div>
         </section>
@@ -130,41 +151,45 @@ export default function Home() {
                     title: 'Analyse du besoin & conception du projet',
                     desc: 'Phase d\'écoute, visite sur site, relevé de l\'existant, études de faisabilité et coordination avec architectes ou bureaux d\'études partenaires si nécessaire.',
                     goal: 'Proposer un projet cohérent, conforme aux réglementations, prêt à être chiffré précisément.',
+                    img: '/Banqueimages/M7_01325.jpg',
                   },
                   {
                     title: 'Chiffrage, contractualisation & planification',
                     desc: 'Chiffrage global, contrat unique et planning d\'intervention détaillé. Nous nous engageons sur le prix et les délais.',
                     goal: 'Vous offrir une vision claire, fiable et engageante du projet à venir, sans mauvaises surprises.',
+                    img: '/Banqueimages/DJI_0081.jpg',
                   },
                   {
                     title: 'Réalisation & suivi du chantier',
                     desc: 'Coordination des corps de métiers, suivi qualité, sécurité du chantier et échanges réguliers jusqu\'à la réception des travaux.',
                     goal: 'Livrer un projet clés en main, conforme, dans les temps, avec un haut niveau de satisfaction.',
+                    img: '/Banqueimages/M7_01330.jpg',
                   },
                 ].map((item, idx) => (
                   <MagneticHover key={item.title} strength={0.15}>
-                    <div className="group relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur-lg p-4 sm:p-5 md:p-6 lg:p-7 shadow-lg hover:shadow-[0_30px_90px_rgba(0,0,0,0.9)] transition-all duration-500 hover:-translate-y-1 hover:border-accent/60 overflow-hidden">
-                      {/* Left accent bar */}
-                      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-accent via-accent/80 to-accent/60 group-hover:w-1.5 transition-all duration-500" />
-                      
-                      {/* Step number badge */}
-                      <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-accent/15 group-hover:bg-accent flex items-center justify-center transition-all duration-300 group-hover:scale-110">
-                        <span className="text-sm font-bold text-white">{idx + 1}</span>
+                    <div className="group relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur-lg overflow-hidden shadow-lg hover:shadow-[0_30px_90px_rgba(0,0,0,0.9)] transition-all duration-500 hover:-translate-y-1 hover:border-accent/60">
+                      {/* Image bandeau en haut de la carte */}
+                      <div className="relative aspect-[16/9] w-full overflow-hidden bg-white/5">
+                        <Image src={item.img} alt="" fill className="object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-500" sizes="(max-width: 768px) 100vw, 33vw" />
+                        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-transparent pointer-events-none" />
+                        <div className="absolute top-3 right-3 w-10 h-10 rounded-full bg-accent/90 flex items-center justify-center shadow-lg">
+                          <span className="text-sm font-bold text-white">{idx + 1}</span>
+                        </div>
                       </div>
-                      
-                      {/* Content */}
-                      <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-2 sm:mb-3 group-hover:text-accent transition-colors duration-300 pr-12">
-                        {item.title}
-                      </h3>
-                      <p className="text-xs sm:text-sm md:text-base text-white/75 leading-relaxed mb-2 sm:mb-3 group-hover:text-white transition-colors duration-300">
-                        {item.desc}
-                      </p>
-                      <div className="relative">
-                        <p className="text-xs sm:text-sm text-white/80 font-medium italic group-hover:text-accent/90 transition-colors duration-300">
-                          {item.goal}
+                      <div className="relative p-4 sm:p-5 md:p-6 lg:p-7 pl-5 sm:pl-6">
+                        <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-accent via-accent/80 to-accent/60 group-hover:w-1.5 transition-all duration-500 rounded-bl" />
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-2 sm:mb-3 group-hover:text-accent transition-colors duration-300 pr-8">
+                          {item.title}
+                        </h3>
+                        <p className="text-xs sm:text-sm md:text-base text-white/75 leading-relaxed mb-2 sm:mb-3 group-hover:text-white transition-colors duration-300">
+                          {item.desc}
                         </p>
-                        {/* Decorative line */}
-                        <div className="absolute -left-6 top-1/2 -translate-y-1/2 w-4 h-0.5 bg-accent/40 group-hover:bg-accent/70 group-hover:w-6 transition-all duration-300" />
+                        <div className="relative">
+                          <p className="text-xs sm:text-sm text-white/80 font-medium italic group-hover:text-accent/90 transition-colors duration-300">
+                            {item.goal}
+                          </p>
+                          <div className="absolute -left-6 top-1/2 -translate-y-1/2 w-4 h-0.5 bg-accent/40 group-hover:bg-accent/70 group-hover:w-6 transition-all duration-300" />
+                        </div>
                       </div>
                     </div>
                   </MagneticHover>
@@ -273,48 +298,46 @@ export default function Home() {
                   date: 'Janvier 2026',
                   title: 'MaPrimeRénov\' 2026 : comment avancer malgré la suspension des aides',
                   desc: 'Plutôt que d\'attendre les aides, nous vous aidons à structurer un projet global, phasé dans le temps, prêt à bénéficier d\'éventuels dispositifs dès leur retour.',
+                  img: '/Banqueimages/M7_01319.jpg',
                 },
                 {
                   date: 'Début 2026',
                   title: 'Budget 2026 : pourquoi le contractant général devient incontournable ?',
                   desc: 'Prix global, délai engagé, interlocuteur unique : le contrat de contractant général sécurise votre budget et vous évite les mauvaises surprises en cours de chantier.',
+                  img: '/Banqueimages/M7_01331.jpg',
                 },
                 {
                   date: 'Hiver 2025–2026',
                   title: 'Hiver : 3 points à vérifier pour réduire les déperditions de chaleur',
                   desc: 'Menuiseries, isolation et ventilation : nous identifions les priorités pour gagner en confort tout en préparant une rénovation énergétique cohérente.',
+                  img: '/Banqueimages/M7_01335.jpg',
                 },
               ].map((item, idx) => (
                 <MagneticHover key={item.title} strength={0.2} className="h-full">
-                  <article className="group relative h-full flex flex-col rounded-3xl border border-white/10 bg-white/5 backdrop-blur-lg p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-[0_30px_90px_rgba(0,0,0,0.9)] transition-all duration-500 hover:-translate-y-2 hover:border-secondary overflow-hidden">
-                    {/* Gradient overlay (reste très discret au survol) */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-transparent group-hover:from-secondary/10 group-hover:via-transparent group-hover:to-transparent transition-all duration-500 rounded-3xl" />
-                    
-                    {/* Top accent line */}
-                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent/40 to-transparent group-hover:via-accent/70 group-hover:h-1.5 transition-all duration-500" />
-                    
-                    {/* Date badge */}
-                    <div className="relative z-10 inline-block px-3 py-1 rounded-full bg-secondary/20 group-hover:bg-secondary mb-3 transition-all duration-300">
-                      <p className="text-[10px] sm:text-xs text-white font-semibold">
-                        {item.date}
-                      </p>
+                  <article className="group relative h-full flex flex-col rounded-3xl border border-white/10 bg-white/5 backdrop-blur-lg overflow-hidden shadow-lg hover:shadow-[0_30px_90px_rgba(0,0,0,0.9)] transition-all duration-500 hover:-translate-y-2 hover:border-secondary">
+                    {/* Image en en-tête de l'article */}
+                    <div className="relative h-36 sm:h-44 w-full overflow-hidden flex-shrink-0">
+                      <Image src={item.img} alt="" fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 33vw" />
+                      <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent" />
+                      <div className="absolute top-3 left-3 z-10">
+                        <span className="inline-block px-3 py-1 rounded-full bg-secondary/90 text-white text-[10px] sm:text-xs font-semibold">
+                          {item.date}
+                        </span>
+                      </div>
                     </div>
-                    
-                    {/* Content */}
-                    <div className="relative z-10">
+                    <div className="relative flex flex-col flex-1 p-4 sm:p-5 md:p-6">
+                      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent/40 to-transparent group-hover:via-accent/70 transition-all duration-500" />
                       <h3 className="text-base sm:text-lg font-semibold text-white mb-2 group-hover:text-secondary transition-colors duration-300">
                         {item.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-white/75 leading-relaxed mb-2 sm:mb-3 group-hover:text-white transition-colors duration-300">
+                      <p className="text-xs sm:text-sm text-white/75 leading-relaxed mb-2 sm:mb-3 group-hover:text-white transition-colors duration-300 flex-1">
                         {item.desc}
                       </p>
                       <p className="text-[10px] sm:text-xs text-white/60 group-hover:text-white/80 transition-colors duration-300">
                         Contenus rédigés par notre agence, inspirés des actualités rénovation 2025–2026.
                       </p>
+                      <div className="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-accent/15 to-transparent rounded-tl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                     </div>
-                    
-                    {/* Corner decoration */}
-                    <div className="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-accent/15 to-transparent rounded-tl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </article>
                 </MagneticHover>
               ))}

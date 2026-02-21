@@ -12,24 +12,6 @@ export function RenovationHero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
-      {/* Background Image with overlay */}
-      <div className="absolute inset-0">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
-          style={{ 
-            backgroundImage: 'url(/Banqueimages/M7_01321.jpg)',
-          }}
-        />
-        {/* Multi-layer gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90" />
-        <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-accent/20" />
-        
-        {/* Animated particles effect */}
-        <div className="absolute inset-0 opacity-30" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-        }} />
-      </div>
-
       {/* Geometric accents */}
       <div className="absolute left-8 top-1/3 w-px h-40 bg-gradient-to-b from-transparent via-accent to-transparent opacity-60" />
       <div className="absolute right-8 bottom-1/3 w-px h-40 bg-gradient-to-b from-transparent via-secondary to-transparent opacity-60" />

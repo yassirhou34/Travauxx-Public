@@ -1,6 +1,7 @@
 'use client'
 
 import { ScrollReveal } from '@/components/scroll-reveal'
+import AgencyGrid from '@/components/AgencyGrid'
 import { TrendingUp, Heart, Shield, Sparkles, Home, Users, Award, Clock } from 'lucide-react'
 
 const benefits = [
@@ -127,6 +128,16 @@ export function WhyExtension() {
             )
           })}
         </div>
+
+        {/* Galerie extension – AgencyGrid (5 images + titres) */}
+        <ScrollReveal direction="up" delay={0.35}>
+          <div className="mt-16 lg:mt-20 -mx-4 sm:-mx-6 lg:-mx-8">
+            <AgencyGrid
+              backgroundColor="#050308"
+              projectPrefix="Extension"
+            />
+          </div>
+        </ScrollReveal>
 
         {/* Activ Travaux approach */}
         <ScrollReveal direction="up" delay={0.4}>

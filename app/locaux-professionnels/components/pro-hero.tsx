@@ -12,36 +12,6 @@ export function ProHero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a12]">
-      {/* Background with geometric pattern */}
-      <div className="absolute inset-0">
-        {/* Base gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a12] via-primary/20 to-[#0a0a12]" />
-        
-        {/* Animated gradient orbs */}
-        <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-accent/15 rounded-full blur-[150px] animate-pulse" />
-        <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-accent/8 rounded-full blur-[180px] animate-pulse" style={{ animationDelay: '2s' }} />
-        
-        {/* Isometric grid pattern */}
-        <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: `
-            linear-gradient(30deg, rgba(232,50,99,0.1) 12%, transparent 12.5%, transparent 87%, rgba(232,50,99,0.1) 87.5%, rgba(232,50,99,0.1)),
-            linear-gradient(150deg, rgba(232,50,99,0.1) 12%, transparent 12.5%, transparent 87%, rgba(232,50,99,0.1) 87.5%, rgba(232,50,99,0.1)),
-            linear-gradient(30deg, rgba(232,50,99,0.1) 12%, transparent 12.5%, transparent 87%, rgba(232,50,99,0.1) 87.5%, rgba(232,50,99,0.1)),
-            linear-gradient(150deg, rgba(232,50,99,0.1) 12%, transparent 12.5%, transparent 87%, rgba(232,50,99,0.1) 87.5%, rgba(232,50,99,0.1)),
-            linear-gradient(60deg, rgba(232,50,99,0.05) 25%, transparent 25.5%, transparent 75%, rgba(232,50,99,0.05) 75%, rgba(232,50,99,0.05)),
-            linear-gradient(60deg, rgba(232,50,99,0.05) 25%, transparent 25.5%, transparent 75%, rgba(232,50,99,0.05) 75%, rgba(232,50,99,0.05))
-          `,
-          backgroundSize: '80px 140px',
-          backgroundPosition: '0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px',
-        }} />
-
-        {/* Noise texture */}
-        <div className="absolute inset-0 opacity-20" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-        }} />
-      </div>
-
       {/* Floating sector icons */}
       <div className="absolute top-24 left-[12%] opacity-15 animate-float">
         <Store className="w-16 h-16 text-accent" />
@@ -61,12 +31,7 @@ export function ProHero() {
         {/* Badge */}
         <ScrollReveal direction="fade" delay={0.1}>
           <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/5 backdrop-blur-md border border-white/10 mb-8">
-            <Building2 className="w-4 h-4 text-accent" />
             <span className="text-white/80 text-sm font-medium tracking-wide">Locaux Professionnels</span>
-            <span className="flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-accent opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
-            </span>
           </div>
         </ScrollReveal>
 

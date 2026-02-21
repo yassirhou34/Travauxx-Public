@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/scroll-reveal'
 import { ArrowRight } from 'lucide-react'
@@ -29,7 +30,8 @@ export function HomeCTA() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-3xl">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="max-w-3xl">
           <ScrollReveal direction="up">
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6">
@@ -64,6 +66,20 @@ export function HomeCTA() {
                   </Button>
                 </Link>
               </div>
+            </div>
+          </ScrollReveal>
+          </div>
+          <ScrollReveal direction="left" delay={0.2}>
+            <div className="relative aspect-[4/3] lg:aspect-[3/4] max-h-[420px] lg:max-h-none rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+              <Image
+                src="/Banqueimages/DJI_0087.jpg"
+                alt="Projet de rénovation Activ Travaux"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority={false}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
             </div>
           </ScrollReveal>
         </div>

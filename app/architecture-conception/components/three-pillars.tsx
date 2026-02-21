@@ -2,10 +2,19 @@
 
 import { useState } from 'react'
 import { ScrollReveal } from '@/components/scroll-reveal'
+import ElasticGrid from '@/components/ElasticGrid'
 import { 
   PenTool, Palette, Users, Lightbulb, Home, Maximize,
   Compass, Calculator, FileCheck, Ruler, ClipboardCheck, Shield
 } from 'lucide-react'
+
+const elasticGridFeatures = [
+  { title: 'Innovation', desc: 'Convergence de l\'innovation. Des solutions créatives pour sublimer votre habitat.', img: '/Banqueimages/M7_01335.jpg' },
+  { title: 'Maîtrise architecturale', desc: 'Volumes, ouvertures, matériaux. Une conception sur-mesure qui s\'intègre à l\'existant.', img: '/Banqueimages/IMG_1718.JPG' },
+  { title: 'Rigueur d\'exécution', desc: 'Rigueur d\'exécution sans concession. Planning tenu, qualité des finitions.', img: '/Banqueimages/M7_01319.jpg' },
+  { title: 'Conception sur-mesure', desc: 'Plans techniques, bureau d\'études. Le socle de la réussite de votre projet.', img: '/Banqueimages/M7_01323.jpg' },
+  { title: 'Projet clé en main', desc: 'De l\'esquisse à la remise des clés. Un interlocuteur unique pour tout piloter.', img: '/Banqueimages/M7_01325.jpg' },
+]
 
 const pillars = [
   {
@@ -67,6 +76,16 @@ export function ThreePillars() {
             Convergence de l'innovation prédictive, de la maîtrise architecturale et d'une rigueur d'exécution sans concession.
 
             </p>
+          </div>
+        </ScrollReveal>
+
+        {/* Grille élastique – 5 photos + textes (innovation, maîtrise, rigueur, conception, clé en main) */}
+        <ScrollReveal direction="up" delay={0.08}>
+          <div className="mb-14">
+            <ElasticGrid
+              features={elasticGridFeatures}
+              backgroundColor="#050308"
+            />
           </div>
         </ScrollReveal>
 

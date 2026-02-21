@@ -53,7 +53,7 @@ export function HeroVideo() {
       <video
         ref={videoRef}
         className="absolute inset-0 h-full w-full object-cover"
-        src="/Banquevideos/206315_medium.mp4"
+        src={`/Banquevideos/${encodeURIComponent('Reveal-Signature-v2 (1) compressed.mp4')}`}
         autoPlay
         loop
         muted

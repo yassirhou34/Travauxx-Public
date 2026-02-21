@@ -2,6 +2,9 @@ import { Metadata } from 'next'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import GalleryEditorial from '@/components/GalleryEditorial'
+import GalleryFilmStrip from '@/components/GalleryFilmStrip'
+import { HeroSwiper } from './components/hero-swiper'
+import { VideoBlock } from './components/video-block'
 
 export const metadata: Metadata = {
   title: 'Réalisations — Activ Travaux 37',
@@ -69,23 +72,38 @@ export default function RealisationsPage() {
           </div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="max-w-3xl space-y-6 animate-in fade-in slide-in-from-bottom-8 duration-700">
-              <p className="text-xs uppercase tracking-[0.25em] text-accent">
-                Réalisations
-              </p>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary leading-tight">
-                Des projets concrets,
-                <br />
-                des chantiers suivis de bout en bout.
-              </h1>
-              <p className="text-base sm:text-lg text-black leading-relaxed">
-              Consultez notre sélection de projets réalisés : réhabilitations lourdes, extensions structurelles et optimisation de parcs tertiaires. Chaque intervention reflète la rigueur et les standards d'excellence du réseau Activ Travaux 37.
-
-              </p>
-             
+            <div className="grid lg:grid-cols-[auto_1fr] gap-10 lg:gap-14 items-center">
+              <div className="max-w-3xl space-y-6 animate-in fade-in slide-in-from-bottom-8 duration-700">
+                <p className="text-xs uppercase tracking-[0.25em] text-accent">
+                  Réalisations
+                </p>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary leading-tight">
+                  Des projets concrets,
+                  <br />
+                  des chantiers suivis de bout en bout.
+                </h1>
+                <p className="text-base sm:text-lg text-black leading-relaxed">
+                  Consultez notre sélection de projets réalisés : réhabilitations lourdes, extensions structurelles et optimisation de parcs tertiaires. Chaque intervention reflète la rigueur et les standards d'excellence du réseau Activ Travaux 37.
+                </p>
+              </div>
+              <div className="w-full min-w-0 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-150">
+                <HeroSwiper />
+              </div>
             </div>
           </div>
         </section>
+
+        <GalleryFilmStrip
+          images={[
+            '/Banqueimages/M7_01325.jpg',
+            '/Banqueimages/M7_01321.jpg',
+            '/Banqueimages/M7_01323.jpg',
+            '/Banqueimages/M7_01330.jpg',
+            '/Banqueimages/DSC09109.jpg',
+          ]}
+          backgroundColor="#111"
+          borderColor="#222"
+        />
 
         {/* Liste des projets – présentation éditoriale */}
         <section className="py-0 bg-background">
@@ -102,6 +120,8 @@ export default function RealisationsPage() {
             accentColor="#e83263"
           />
         </section>
+
+        <VideoBlock />
       </main>
       <Footer />
     </>

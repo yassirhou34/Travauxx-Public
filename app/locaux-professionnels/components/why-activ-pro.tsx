@@ -1,7 +1,15 @@
 'use client'
 
 import { ScrollReveal } from '@/components/scroll-reveal'
+import CinematicGrid from '@/components/CinematicGrid'
 import { Users, FileCheck, Clock, Shield, Award, Handshake, Target, Zap } from 'lucide-react'
+
+const cinematicFeatures = [
+  { title: 'Un seul interlocuteur', desc: 'De l\'étude à la remise des clés, un seul contact pilote tout. Plus de sérénité au quotidien.', img: '/Banqueimages/DSC09109.jpg' },
+  { title: 'Un seul contrat', desc: 'Prix ferme, responsabilité globale. Nous assumons votre chantier professionnel de A à Z.', img: '/Banqueimages/DJI_0087.jpg' },
+  { title: 'Sérénité', desc: 'Nous neutralisons vos contraintes techniques et administratives. Vous sécurisez votre investissement.', img: '/Banqueimages/DJI_0081.jpg' },
+  { title: 'Efficacité', desc: 'Dates d\'ouverture garanties, pilotage précis des délais. Vous reprenez la main dans les temps.', img: '/Banqueimages/IMG_1718.JPG' },
+]
 
 const advantages = [
   { icon: Users, title: 'Interlocuteur unique', highlight: '1 contact' },
@@ -21,7 +29,7 @@ const services = [
 
 export function WhyActivPro() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-[#050308]">
+    <section className="relative py-20 sm:py-28 lg:py-36 overflow-x-hidden bg-[#050308]">
       {/* Fond dans la charte sombre/beige */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#121212] via-[#050308] to-[#050308]" />
 
@@ -83,6 +91,18 @@ export function WhyActivPro() {
           })}
         </div>
 
+        {/* Grille cinématique – pleine largeur, effet sticky « une carte pousse l’autre » */}
+      </div>
+
+      <div className="w-full relative z-10">
+        <CinematicGrid
+          features={cinematicFeatures}
+          backgroundColor="#050308"
+          stickyTop="top-24"
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Services assurés */}
         <ScrollReveal direction="up" delay={0.4}>
           <div className="p-8 lg:p-12 rounded-3xl bg-gradient-to-br from-[#121212] via-[#050308] to-[#121212] backdrop-blur-sm border border-white/10">
