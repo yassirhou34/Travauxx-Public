@@ -28,7 +28,7 @@ export function HeroSwiper() {
   const goTo = (i: number) => setIndex(i)
 
   return (
-    <div className="relative aspect-[4/3] lg:aspect-[3/4] max-h-[380px] lg:max-h-[560px] w-full min-w-0 rounded-2xl overflow-hidden border border-black/5 shadow-2xl group">
+    <div className="relative aspect-square max-h-[380px] lg:max-h-[500px] w-full min-w-0 rounded-2xl overflow-hidden border border-black/5 shadow-2xl group">
       <div className="absolute inset-0 rounded-2xl">
         {HERO_IMAGES.map((img, i) => (
           <div

@@ -45,10 +45,6 @@ const StickyCard = ({ item, index, stickyTop = "top-24" }: { item: FeatureItem; 
           <h2 className="text-6xl md:text-8xl font-medium tracking-tighter text-white mb-4 mix-blend-overlay">{item.title}</h2>
           <p className="text-xl text-neutral-400 max-w-md">{item.desc}</p>
         </div>
-
-        <div className="absolute top-6 right-6 font-mono text-sm text-white/30">
-          0{index + 1} — FEATURE
-        </div>
       </motion.div>
     </div>
   );

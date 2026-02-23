@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { SectionHero } from '@/components/section-hero'
-import { HeroVideo } from '@/components/hero-video'
+import { HeroVideo, HeroContentBlock } from '@/components/hero-video'
 import { SectionContent } from '@/components/section-content'
 import { HomeCTA } from '@/components/home-cta'
 import StatsLuxury from '@/components/StatsLuxury'
@@ -24,8 +24,11 @@ export default function Home() {
     <>
       <Header variant="transparent" />
       <main>
-        {/* Hero Video avec contenu animé */}
+        {/* Hero : vidéo seule + indicateur « DÉFILEZ POUR EXPLORER » */}
         <HeroVideo />
+
+        {/* Bloc dédié sous la vidéo : Indre-et-Loire, titre, texte, pills, boutons */}
+        <HeroContentBlock />
 
         {/* Statistiques clés – comme sur le site national (fond blanc) */}
         <StatsLuxury
@@ -77,15 +80,13 @@ export default function Home() {
                     </AdvancedReveal>
                   </div>
                 </AdvancedReveal>
-                {/* Liste typographique – titres seuls, un par ligne, lisible */}
+                {/* Liste typographique – 4 items (capture 2 : suppression Garanties contractuelles et Conception augmentée) */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 sm:gap-y-10">
                   {[
                     'Un interlocuteur unique',
                     'Un prix ferme et définitif',
                     'Respect des délais',
-                    'Garanties contractuelles',
                     'Responsabilité unique',
-                    'Conception augmentée',
                   ].map((title, idx) => (
                     <AdvancedReveal key={title} direction="up" delay={0.3 + idx * 0.06}>
                       <div className="group flex items-baseline gap-4 min-w-0">
@@ -100,18 +101,18 @@ export default function Home() {
                   ))}
                 </div>
               </div>
-              {/* Colonne visuelle – 2 images dynamiques */}
-              <AdvancedReveal direction="left" delay={0.3}>
-                <div className="relative space-y-4 lg:space-y-5">
-                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+              {/* Colonne visuelle – 3 images, les 2 du bas centrées et même position (capture 1) */}
+              <AdvancedReveal direction="scale" delay={0.25} duration={0.9}>
+                <div className="relative space-y-4 lg:space-y-5 flex flex-col items-center">
+                  <div className="relative aspect-[4/3] w-full max-w-lg rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                     <Image src="/Banqueimages/M7_01321.jpg" alt="Projet rénovation clé en main" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-4 w-full max-w-lg">
                     <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-white/10 shadow-xl">
                       <Image src="/Banqueimages/M7_01323.jpg" alt="Chantier Activ Travaux" fill className="object-cover" sizes="(max-width: 1024px) 50vw, 25vw" />
                     </div>
-                    <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-white/10 shadow-xl mt-6">
+                    <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-white/10 shadow-xl">
                       <Image src="/Banqueimages/DSC09109.jpg" alt="Réalisation extension" fill className="object-cover" sizes="(max-width: 1024px) 50vw, 25vw" />
                     </div>
                   </div>
@@ -168,9 +169,9 @@ export default function Home() {
                 ].map((item, idx) => (
                   <MagneticHover key={item.title} strength={0.15}>
                     <div className="group relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur-lg overflow-hidden shadow-lg hover:shadow-[0_30px_90px_rgba(0,0,0,0.9)] transition-all duration-500 hover:-translate-y-1 hover:border-accent/60">
-                      {/* Image bandeau en haut de la carte */}
+                      {/* Image bandeau – occupe tout le bloc (capture 3 et 4) */}
                       <div className="relative aspect-[16/9] w-full overflow-hidden bg-white/5">
-                        <Image src={item.img} alt="" fill className="object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-500" sizes="(max-width: 768px) 100vw, 33vw" />
+                        <Image src={item.img} alt="" fill className="object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500" sizes="(max-width: 768px) 100vw, 33vw" />
                         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-transparent pointer-events-none" />
                         <div className="absolute top-3 right-3 w-10 h-10 rounded-full bg-accent/90 flex items-center justify-center shadow-lg">
                           <span className="text-sm font-bold text-white">{idx + 1}</span>
@@ -314,20 +315,20 @@ export default function Home() {
                 },
               ].map((item, idx) => (
                 <MagneticHover key={item.title} strength={0.2} className="h-full">
-                  <article className="group relative h-full flex flex-col rounded-3xl border border-white/10 bg-white/5 backdrop-blur-lg overflow-hidden shadow-lg hover:shadow-[0_30px_90px_rgba(0,0,0,0.9)] transition-all duration-500 hover:-translate-y-2 hover:border-secondary">
-                    {/* Image en en-tête de l'article */}
-                    <div className="relative h-36 sm:h-44 w-full overflow-hidden flex-shrink-0">
+                  <article className="group relative h-full flex flex-col rounded-3xl border border-white/10 bg-white/5 backdrop-blur-lg overflow-hidden shadow-lg hover:shadow-[0_30px_90px_rgba(0,0,0,0.9)] transition-all duration-500 hover:-translate-y-2 hover:border-secondary min-h-[420px]">
+                    {/* Image en en-tête – filtre pour lisibilité date/titre */}
+                    <div className="relative h-40 sm:h-48 w-full overflow-hidden flex-shrink-0">
                       <Image src={item.img} alt="" fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 33vw" />
-                      <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-b from-black/55 to-black/25" />
                       <div className="absolute top-3 left-3 z-10">
                         <span className="inline-block px-3 py-1 rounded-full bg-secondary/90 text-white text-[10px] sm:text-xs font-semibold">
                           {item.date}
                         </span>
                       </div>
                     </div>
-                    <div className="relative flex flex-col flex-1 p-4 sm:p-5 md:p-6">
+                    <div className="relative flex flex-col flex-1 min-h-[220px] p-5 sm:p-6 md:p-7">
                       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent/40 to-transparent group-hover:via-accent/70 transition-all duration-500" />
-                      <h3 className="text-base sm:text-lg font-semibold text-white mb-2 group-hover:text-secondary transition-colors duration-300">
+                      <h3 className="text-base sm:text-lg font-semibold text-white mb-2 group-hover:text-secondary transition-colors duration-300 min-h-[4.5rem] sm:min-h-[5rem]">
                         {item.title}
                       </h3>
                       <p className="text-xs sm:text-sm text-white/75 leading-relaxed mb-2 sm:mb-3 group-hover:text-white transition-colors duration-300 flex-1">

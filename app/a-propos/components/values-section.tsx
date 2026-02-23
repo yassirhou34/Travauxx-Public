@@ -41,14 +41,14 @@ const values = [
 
 export function ValuesSection() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 bg-[#050308] overflow-hidden">
+    <section className="relative py-12 sm:py-16 lg:py-20 bg-[#050308] overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <ScrollReveal direction="up">
-          <div className="text-center mb-16 lg:mb-20">
+          <div className="text-center mb-10 lg:mb-14">
             <span className="inline-block text-accent text-sm font-semibold tracking-wider uppercase mb-4">
               Nos valeurs
             </span>
@@ -62,8 +62,20 @@ export function ValuesSection() {
           </div>
         </ScrollReveal>
 
+        {/* Image d'ambiance — image entière, sans encarts latéraux */}
+        <ScrollReveal direction="up" delay={0.08} className="mb-12 lg:mb-14">
+          <div className="relative w-full max-w-md mx-auto rounded-2xl overflow-hidden border border-white/10">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/Banqueimages/photo-1604159848821-104723525eb4.avif"
+              alt="Confiance, transparence, exigence — nos réalisations"
+              className="w-full h-auto block"
+            />
+          </div>
+        </ScrollReveal>
+
         {/* Values grid */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
           {values.map((value, i) => {
             const Icon = value.icon
             return (

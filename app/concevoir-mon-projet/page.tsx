@@ -377,7 +377,7 @@ export default function DevisPage() {
         />
 
         {/* Content Section */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-background">
+        <section className="py-10 sm:py-12 lg:py-16 bg-background">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Info */}
@@ -591,7 +591,7 @@ export default function DevisPage() {
         </section>
 
         {/* FAQ avec navigation en onglets (comme l'exemple), contenu identique */}
-        <section className="py-12 sm:py-16 md:py-20 bg-muted/30 border-t border-border/60">
+        <section className="py-12 sm:py-16 md:py-20 bg-white border-t border-border/40">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <AdvancedReveal direction="up" delay={0.1}>
               <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
@@ -606,7 +606,7 @@ export default function DevisPage() {
 
             {/* Onglets de navigation – un onglet par page, comme la capture */}
             <div className="flex justify-center mb-8 sm:mb-10">
-              <div className="inline-flex items-center gap-1 sm:gap-2 rounded-full bg-muted px-1 sm:px-2 py-1 shadow-sm border border-border/60">
+              <div className="inline-flex items-center gap-1 sm:gap-2 rounded-full bg-[#ebe6e0] px-1 sm:px-2 py-1 shadow-sm border border-[#d4cdc4]">
                 {faqCategories.map((category) => {
                   const isActive = activeTab === category.id
                   return (
@@ -618,7 +618,7 @@ export default function DevisPage() {
                       }}
                       className={`px-3 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm md:text-base font-medium transition-all duration-300 ${
                         isActive
-                          ? 'bg-white text-primary shadow-sm'
+                          ? 'bg-[#d4cdc4] text-primary shadow-sm'
                           : 'bg-transparent text-primary/80 hover:text-primary'
                       }`}
                     >
@@ -629,7 +629,7 @@ export default function DevisPage() {
               </div>
             </div>
 
-            {/* Liste des questions – contenu propre à chaque page */}
+            {/* Liste des questions – cadres beige */}
             <div className="max-w-3xl mx-auto space-y-3 sm:space-y-4">
               {(faqCategories.find((cat) => cat.id === activeTab) ?? faqCategories[0]).questions.map(
                 (item, idx) => (
@@ -637,7 +637,7 @@ export default function DevisPage() {
                   <div className="group">
                     <button
                       onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-                      className="w-full px-4 sm:px-5 md:px-6 lg:px-8 py-4 sm:py-5 md:py-6 text-left flex items-center justify-between bg-white border border-border/60 rounded-xl hover:border-accent/50 hover:shadow-md hover:shadow-accent/10 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-accent/2"
+                      className="w-full px-4 sm:px-5 md:px-6 lg:px-8 py-4 sm:py-5 md:py-6 text-left flex items-center justify-between bg-[#ebe6e0] border border-[#d4cdc4] rounded-xl hover:border-accent/50 hover:shadow-md hover:shadow-accent/10 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#ebe6e0] group-hover:to-[#e0d9d1]"
                     >
                       <h3 className="font-semibold text-primary text-sm sm:text-base md:text-lg transition-colors duration-300 pr-3 sm:pr-4 flex-1">
                         {item.question}
@@ -651,7 +651,7 @@ export default function DevisPage() {
                     </button>
 
                     {openIndex === idx && (
-                      <div className="px-4 sm:px-5 md:px-6 lg:px-8 py-4 sm:py-5 md:py-6 bg-gradient-to-b from-muted/40 to-muted/20 border-x border-b border-border/40 rounded-b-xl animate-in fade-in slide-in-from-top-2 duration-300">
+                      <div className="px-4 sm:px-5 md:px-6 lg:px-8 py-4 sm:py-5 md:py-6 bg-gradient-to-b from-[#e5dfd8] to-[#e0d9d1] border-x border-b border-[#d4cdc4] rounded-b-xl animate-in fade-in slide-in-from-top-2 duration-300">
                         <p className="text-primary/80 leading-relaxed text-xs sm:text-sm md:text-base font-light">
                           {item.answer}
                         </p>

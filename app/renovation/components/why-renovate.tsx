@@ -155,7 +155,7 @@ export function WhyRenovate() {
             
             <div className="grid md:grid-cols-3 gap-6">
               {forWho.map((item, i) => (
-                <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/10">
+                <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
                   <h4 className="font-bold text-white text-lg mb-2">{item.title}</h4>
                   <p className="text-white/60 text-sm mb-0">{item.description}</p>
                 </div>

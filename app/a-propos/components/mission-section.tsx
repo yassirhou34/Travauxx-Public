@@ -1,7 +1,14 @@
 'use client'
 
+import Image from 'next/image'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { Target, Lightbulb, FileCheck, Users, HardHat, CheckCircle2 } from 'lucide-react'
+import { Lightbulb, FileCheck, Users, HardHat, CheckCircle2 } from 'lucide-react'
+
+const missionImages = [
+  { src: '/Banqueimages/M7_01330.jpg', alt: 'Étude et conception projet' },
+  { src: '/Banqueimages/M7_01321.jpg', alt: 'Chantier coordonné' },
+  { src: '/Banqueimages/DSC09109.jpg', alt: 'Réalisation clé en main' },
+]
 
 const missionSteps = [
   {
@@ -44,7 +51,7 @@ const missionSteps = [
 
 export function MissionSection() {
   return (
-    <section id="mission" className="relative py-20 sm:py-28 lg:py-36 overflow-hidden bg-[#050308]">
+    <section id="mission" className="relative py-12 sm:py-16 lg:py-20 overflow-hidden bg-[#050308]">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-[#050308] via-[#050308] to-[#050308]" />
@@ -55,9 +62,8 @@ export function MissionSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <ScrollReveal direction="up">
-          <div className="text-center mb-16 lg:mb-24">
+          <div className="text-center mb-10 lg:mb-14">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/15 border border-accent/40 mb-6">
-              <Target className="w-4 h-4 text-accent" />
               <span className="text-accent text-sm font-medium">Notre mission</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -66,6 +72,24 @@ export function MissionSection() {
             <p className="text-white/70 text-lg max-w-3xl mx-auto">
               Particulier, professionnel ou investisseur en Indre-et-Loire : nous pilotons votre chantier de A à Z. De la conception à la remise des clés, nous gérons l&apos;intégralité de vos travaux pour vous garantir un résultat sans imprévus.
             </p>
+          </div>
+        </ScrollReveal>
+
+        {/* Galerie visuelle — projets / chantiers */}
+        <ScrollReveal direction="up" delay={0.15} className="mb-12 lg:mb-16">
+          <div className="grid grid-cols-3 gap-3 sm:gap-4">
+            {missionImages.map((img, i) => (
+              <div key={i} className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-xl">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 33vw, 280px"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity pointer-events-none" />
+              </div>
+            ))}
           </div>
         </ScrollReveal>
 

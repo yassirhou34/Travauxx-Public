@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { ArrowRight, Home, Building2, Sun, GlassWater } from 'lucide-react'
+import { Home, Building2, Sun, GlassWater } from 'lucide-react'
 
 const extensionTypes = [
   {
@@ -115,7 +115,7 @@ export function ExtensionTypes() {
   return (
     <section
       id="extension-types"
-      className="relative pt-10 sm:pt-12 lg:pt-14 pb-12 sm:pb-16 lg:pb-20 bg-[#050308] overflow-hidden"
+      className="relative pt-6 sm:pt-8 lg:pt-10 pb-10 sm:pb-12 lg:pb-16 bg-[#050308] overflow-hidden"
     >
       {/* Background decorations façon accueil/rénovation */}
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-radial from-accent/15 to-transparent opacity-70" />
@@ -124,11 +124,11 @@ export function ExtensionTypes() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section header */}
         <ScrollReveal direction="up">
-          <div className="text-center mb-16 lg:mb-20">
-            <span className="inline-block text-accent text-sm font-semibold tracking-wider uppercase mb-4">
+          <div className="text-center mb-10 lg:mb-12">
+            <span className="inline-block text-accent text-sm font-semibold tracking-wider uppercase mb-3">
               Nos solutions
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
               4 façons d&apos;agrandir votre habitat 
             </h2>
             <p className="text-white/70 text-lg max-w-2xl mx-auto">
@@ -204,11 +204,11 @@ export function ExtensionTypes() {
           </div>
         </ScrollReveal>
 
-        {/* Main content area */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        {/* Main content area – image carrée, bas aligné sur le CTA (4 sections) */}
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-end">
           {/* Image side */}
           <ScrollReveal direction="left" delay={0.2}>
-            <div className="relative aspect-[4/3] lg:aspect-[3/4] rounded-3xl overflow-hidden group shadow-[0_30px_90px_rgba(0,0,0,0.8)] border border-white/10">
+            <div className="relative aspect-[4/3] lg:aspect-square rounded-3xl overflow-hidden group shadow-[0_30px_90px_rgba(0,0,0,0.8)] border border-white/10 w-full">
               <div 
                 className={`absolute inset-0 transition-opacity duration-500 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}
               >
@@ -282,7 +282,6 @@ export function ExtensionTypes() {
                 style={{ backgroundColor: activeType.color }}
               >
                Estimer mon projet
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </ScrollReveal>
           </div>

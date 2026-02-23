@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ScrollReveal } from '@/components/scroll-reveal'
 import { 
-  ArrowRight, Store, Building2, Coffee, Home,
+  Store, Building2, Coffee, Home,
   ShoppingBag, Users, Utensils, Heart,
   Sparkles, Shield, Clock, CheckCircle2
 } from 'lucide-react'
@@ -107,7 +107,7 @@ export function ProSectors() {
   }
 
   return (
-    <section id="pro-sectors" className="relative py-20 sm:py-28 lg:py-36 bg-[#050308] overflow-hidden">
+    <section id="pro-sectors" className="relative pt-6 sm:pt-8 lg:pt-12 pb-8 sm:pb-10 lg:pb-14 bg-[#050308] overflow-hidden">
       {/* Fond sombre inspiré de la page Architecture */}
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/10 via-[#050308] to-[#050308]" />
 
@@ -258,7 +258,6 @@ export function ProSectors() {
                 style={{ backgroundColor: activeSector.color }}
               >
                 {activeSector.ctaLabel}
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </ScrollReveal>

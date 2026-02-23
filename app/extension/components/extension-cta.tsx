@@ -3,11 +3,10 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { ArrowRight } from 'lucide-react'
 
 export function ExtensionCTA() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 overflow-hidden">
+    <section className="relative pt-4 sm:pt-6 lg:pt-8 pb-6 sm:pb-8 lg:pb-10 overflow-hidden">
       {/* Background noir */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#050308] via-[#050308] to-[#050308]" />
       
@@ -26,49 +25,38 @@ export function ExtensionCTA() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left side - Text */}
-          <ScrollReveal direction="right">
+        <div className="max-w-xl mx-auto text-center">
+          <ScrollReveal direction="up">
             <div>
               <span className="inline-block text-white/80 text-sm font-semibold tracking-wider uppercase mb-4">
-              Prêt à agrandir votre bien ? 
-
+                Prêt à agrandir votre bien ?
               </span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Concrétisons<br />votre extension<span className="text-white/60">.</span>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+                Concrétisons votre extension<span className="text-white/60">.</span>
               </h2>
-              <p className="text-white/80 text-lg mb-8 max-w-lg">
-              Sollicitez une étude de faisabilité gratuite et sans engagement. Notre expertise permet d'analyser vos besoins et de définir la solution technique idéale pour votre habitat.
-
+              <p className="text-white/80 text-sm sm:text-base mb-6 max-w-md mx-auto">
+                Sollicitez une étude de faisabilité gratuite et sans engagement. Notre expertise permet d&apos;analyser vos besoins et de définir la solution technique idéale pour votre habitat.
               </p>
 
-              {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link href="/concevoir-mon-projet">
-                  <Button className="w-full sm:w-auto group bg-white text-accent hover:bg-white/90 font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105">
-                    <span className="inline-flex items-center justify-center gap-2 w-full">
-                      Concevoir mon projet
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </span>
+                  <Button className="w-full sm:w-auto group bg-white text-accent hover:bg-white/90 font-semibold px-6 py-5 text-sm rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105">
+                    Concevoir mon projet
                   </Button>
                 </Link>
                 <Link href="/realisations">
-                  <Button
-                    className="w-full sm:w-auto bg-[#a39383] hover:bg-[#8b8276] text-white font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105 border-0"
-                  >
+                  <Button className="w-full sm:w-auto bg-[#a39383] hover:bg-[#8b8276] text-white font-semibold px-6 py-5 text-sm rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105 border-0">
                     Voir nos réalisations
                   </Button>
                 </Link>
               </div>
             </div>
           </ScrollReveal>
-
-          {/* Right side - plus de coordonnées : colonne supprimée */}
         </div>
 
         {/* Bottom trust badges */}
         <ScrollReveal direction="up" delay={0.4}>
-          <div className="mt-16 pt-12 border-t border-white/20">
+          <div className="mt-6 pt-6 border-t border-white/20">
             <div className="flex flex-wrap justify-center items-center gap-8 text-white/60 text-sm">
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-green-400" />

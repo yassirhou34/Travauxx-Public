@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { ScrollReveal } from '@/components/scroll-reveal'
 import { Users, Network, Shield, Award } from 'lucide-react'
 
@@ -25,7 +26,7 @@ const advantages = [
 
 export function NetworkSection() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 bg-[#050308] overflow-hidden">
+    <section className="relative py-12 sm:py-16 lg:py-20 bg-[#050308] overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-radial from-accent/10 to-transparent opacity-70" />
@@ -35,7 +36,7 @@ export function NetworkSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <ScrollReveal direction="up">
-          <div className="text-center mb-16 lg:mb-20">
+          <div className="text-center mb-10 lg:mb-14">
             <span className="inline-block text-accent text-sm font-semibold tracking-wider uppercase mb-4">
               VOTRE EXPERT DE PROXIMITÉ 
             </span>
@@ -65,7 +66,7 @@ export function NetworkSection() {
           })}
         </div>
 
-        {/* Best of both worlds */}
+        {/* Best of both worlds — avec visuels */}
         <ScrollReveal direction="up" delay={0.4}>
           <div className="p-8 lg:p-12 rounded-3xl bg-gradient-to-br from-[#372f2d] to-[#1a1413] text-white border border-white/10 shadow-[0_32px_100px_rgba(0,0,0,0.9)]">
             <div className="text-center mb-10">
@@ -77,10 +78,29 @@ export function NetworkSection() {
                 et la force d&apos;un réseau national structuré.
               </p>
             </div>
+
+            {/* Image unique sous "Le meilleur des deux mondes" — image entière, sans encarts latéraux */}
+            <div className="relative w-full max-w-md mx-auto rounded-2xl overflow-hidden border border-white/10 mb-8">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/Banqueimages/tile-merchant-ireland-mJNtQr4fSXw-unsplash.jpg"
+                alt="Proximité et réseau — réalisation Activ Travaux"
+                className="w-full h-auto block"
+              />
+            </div>
             
             <div className="grid md:grid-cols-2 gap-8">
               {advantages.map((adv, i) => (
-                <div key={i} className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/15">
+                <div key={i} className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/15 text-center">
+                  <div className="relative aspect-video rounded-xl overflow-hidden mb-4 border border-white/10">
+                    <Image
+                      src={i === 0 ? '/Banqueimages/tile-merchant-ireland-L525hiR2XeI-unsplash.jpg' : '/Banqueimages/point3d-commercial-imaging-ltd-Tb4bUf6z9gI-unsplash.jpg'}
+                      alt={adv.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
                   <h4 className="text-xl font-bold mb-2">{adv.title}</h4>
                   <p className="text-accent text-sm font-medium mb-3">{adv.subtitle}</p>
                   <p className="text-white/70 text-sm">{adv.description}</p>

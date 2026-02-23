@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { ChevronDown, ArrowRight, Building2, Store, Coffee, Home } from 'lucide-react'
+import { ChevronDown, Building2, Store, Coffee, Home } from 'lucide-react'
 
 export function ProHero() {
   const scrollToSectors = () => {
@@ -11,21 +11,7 @@ export function ProHero() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a12]">
-      {/* Floating sector icons */}
-      <div className="absolute top-24 left-[12%] opacity-15 animate-float">
-        <Store className="w-16 h-16 text-accent" />
-      </div>
-      <div className="absolute bottom-32 right-[12%] opacity-15 animate-float" style={{ animationDelay: '0.5s' }}>
-        <Building2 className="w-20 h-20 text-secondary" />
-      </div>
-      <div className="absolute top-1/3 right-[8%] opacity-15 animate-float" style={{ animationDelay: '1s' }}>
-        <Coffee className="w-14 h-14 text-accent" />
-      </div>
-      <div className="absolute bottom-1/3 left-[8%] opacity-15 animate-float" style={{ animationDelay: '1.5s' }}>
-        <Home className="w-12 h-12 text-secondary" />
-      </div>
-
+    <section className="relative min-h-0 flex items-start justify-center pt-8 sm:pt-10 md:pt-12 pb-12 sm:pb-16 overflow-hidden bg-[#0a0a12]">
       {/* Main content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
@@ -86,7 +72,6 @@ export function ProHero() {
               <Button className="group inline-flex items-center justify-center gap-2 w-[260px] h-[56px] bg-accent hover:bg-accent/90 text-white font-semibold rounded-full text-base sm:text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-accent/30 hover:scale-105 border-0">
                 <span className="flex items-center justify-center gap-2 whitespace-nowrap">
                   Concevoir mon projet pro
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Button>
             </Link>
@@ -102,13 +87,6 @@ export function ProHero() {
             </button>
           </div>
         </ScrollReveal>
-      </div>
-      
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-        <div className="w-6 h-10 rounded-full border-2 border-white/20 flex items-start justify-center p-2">
-          <div className="w-1 h-2 bg-accent/60 rounded-full animate-bounce" />
-        </div>
       </div>
     </section>
   )

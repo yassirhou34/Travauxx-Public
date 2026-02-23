@@ -4,11 +4,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { ArrowRight } from 'lucide-react'
 
 export function HomeCTA() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 overflow-hidden">
+    <section className="relative py-12 sm:py-20 lg:py-28 overflow-hidden">
       {/* Fond dans la charte noire */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#121212] via-[#050308] to-[#121212]" />
 
@@ -34,16 +33,16 @@ export function HomeCTA() {
           <div className="max-w-3xl">
           <ScrollReveal direction="up">
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-4">
                 <span className="text-white/80 text-sm">Prêt à transformer votre habitat ?</span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
                 Parlons de votre projet<span className="text-[#a39383]">.</span>
               </h2>
 
               {/* Quick benefits */}
-              <div className="flex flex-wrap gap-4 mb-10">
+              <div className="flex flex-wrap gap-4 mb-8">
                 {['Devis gratuit', 'Sans engagement', 'Réponse 48h'].map((item, i) => (
                   <span key={i} className="flex items-center gap-2 text-white/70 text-sm">
                     <span className="w-2 h-2 rounded-full bg-[#a39383]" />
@@ -57,7 +56,6 @@ export function HomeCTA() {
                 <Link href="/concevoir-mon-projet">
                   <Button className="w-full sm:w-auto group bg-[#a39383] hover:bg-[#8b8276] text-white font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105">
                     Démarrer mon projet
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
                 <Link href="/realisations">
@@ -70,7 +68,7 @@ export function HomeCTA() {
           </ScrollReveal>
           </div>
           <ScrollReveal direction="left" delay={0.2}>
-            <div className="relative aspect-[4/3] lg:aspect-[3/4] max-h-[420px] lg:max-h-none rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+            <div className="relative aspect-[4/3] max-h-[380px] lg:max-h-[420px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
               <Image
                 src="/Banqueimages/DJI_0087.jpg"
                 alt="Projet de rénovation Activ Travaux"

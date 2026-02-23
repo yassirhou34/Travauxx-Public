@@ -3,11 +3,10 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { ArrowRight, Sparkles } from 'lucide-react'
 
 export function ArchitectureCTA() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 overflow-hidden">
+    <section className="relative py-8 sm:py-10 lg:py-14 overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary" />
       
@@ -27,16 +26,15 @@ export function ArchitectureCTA() {
         <div className="flex justify-center">
           <ScrollReveal direction="up">
             <div className="text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6">
-                <Sparkles className="w-4 h-4 text-white" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-4">
                 <span className="text-white/80 text-sm">Concrétisez votre vision</span>
               </div>
               
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
                 Donnez vie à<br />vos idées<span className="text-white/60">.</span>
               </h2>
               
-              <p className="text-white/70 text-lg mb-10 max-w-lg mx-auto">
+              <p className="text-white/70 text-lg mb-6 max-w-lg mx-auto">
                 Un premier rendez-vous gratuit pour explorer vos envies, analyser votre projet 
                 et découvrir nos outils de conception innovants.
               </p>
@@ -45,10 +43,7 @@ export function ArchitectureCTA() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/concevoir-mon-projet">
                   <Button className="w-full sm:w-auto group bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105">
-                    <span className="flex items-center justify-center gap-2">
-                      Concevoir mon projet
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </span>
+                    Concevoir mon projet
                   </Button>
                 </Link>
                 <Link href="/realisations">
@@ -65,7 +60,7 @@ export function ArchitectureCTA() {
 
         {/* Trust indicators */}
         <ScrollReveal direction="up" delay={0.4}>
-          <div className="mt-16 pt-12 border-t border-white/20">
+          <div className="mt-6 pt-6 border-t border-white/20">
             <div className="flex flex-wrap justify-center items-center gap-8 text-white/50 text-sm">
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-white" />

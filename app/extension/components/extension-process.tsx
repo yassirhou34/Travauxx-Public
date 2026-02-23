@@ -43,7 +43,7 @@ const steps = [
 
 export function ExtensionProcess() {
   return (
-    <section className="relative pt-10 sm:pt-12 lg:pt-14 pb-20 sm:pb-28 lg:pb-36 bg-[#050308] overflow-hidden">
+    <section className="relative pt-6 sm:pt-8 lg:pt-10 pb-4 sm:pb-6 lg:pb-8 bg-[#050308] overflow-hidden">
       {/* Subtle background sombre */}
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/10 via-[#050308] to-[#050308]" />
 

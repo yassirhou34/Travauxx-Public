@@ -1,12 +1,12 @@
 'use client'
 
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { MapPin, Building2, Users, ArrowRight, Globe, CheckCircle2, Store } from 'lucide-react'
+import { MapPin, Building2, Users, Globe, CheckCircle2, Store } from 'lucide-react'
 import Link from 'next/link'
 
 export function MultiSite() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 bg-[#050308] overflow-hidden">
+    <section className="relative pt-10 sm:pt-14 lg:pt-20 pb-6 sm:pb-8 lg:pb-12 bg-[#050308] overflow-hidden">
       {/* Ligne de séparation */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#a39383]/40 to-transparent" />
 
@@ -16,7 +16,6 @@ export function MultiSite() {
           <ScrollReveal direction="right">
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/15 mb-6">
-                <Globe className="w-4 h-4 text-[#a39383]" />
                 <span className="text-white/80 text-sm">Multi-sites & déploiements</span>
               </div>
 
@@ -59,7 +58,6 @@ export function MultiSite() {
                 className="inline-flex items-center gap-3 px-7 py-4 rounded-full bg-[#a39383] hover:bg-[#8b8276] text-white font-semibold text-sm sm:text-base transition-all duration-300 hover:shadow-xl hover:shadow-[#a39383]/30 hover:scale-105"
               >
                 Étudier un déploiement multi-sites
-                <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
           </ScrollReveal>

@@ -21,7 +21,7 @@ export function SectionHero({
   ctaSecondary,
 }: SectionHeroProps) {
   return (
-    <section className="relative bg-[#050308] py-12 sm:py-16 md:py-20 lg:py-28 xl:py-40 overflow-hidden">
+    <section className="relative bg-[#050308] py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 overflow-hidden">
       {/* Animated background elements sur fond sombre */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-1/4 w-96 h-96 bg-accent/15 rounded-full blur-3xl opacity-60 animate-float" />
@@ -59,7 +59,7 @@ export function SectionHero({
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 animate-in fade-in slide-in-from-bottom-4 duration-700" style={{ animationDelay: '300ms' }}>
               {ctaPrimary && (
                 <Link href={ctaPrimary.href} className="group">
-                  <Button className="w-full sm:w-auto bg-[#a39383] hover:bg-[#8b8276] text-white font-semibold px-6 sm:px-8 lg:px-10 py-2.5 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-[#a39383]/30 group-hover:scale-105 border-0">
+                  <Button className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full transition-all duration-300 hover:shadow-2xl hover:shadow-accent/30 group-hover:scale-105 border-0">
                     {ctaPrimary.label}
                   </Button>
                 </Link>
@@ -68,7 +68,7 @@ export function SectionHero({
                 <Link href={ctaSecondary.href} className="group">
                   <Button
                     variant="outline"
-                    className="w-full sm:w-auto border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-6 sm:px-8 lg:px-10 py-2.5 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg transition-all duration-300 group-hover:shadow-lg bg-transparent"
+                    className="w-full sm:w-auto border-2 border-white/70 text-white hover:bg-white/20 font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full transition-all duration-300 bg-white/10 backdrop-blur-md hover:border-white group-hover:scale-105"
                   >
                     {ctaSecondary.label}
                   </Button>

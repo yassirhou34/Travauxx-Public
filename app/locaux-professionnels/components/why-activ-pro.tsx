@@ -29,7 +29,7 @@ const services = [
 
 export function WhyActivPro() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 overflow-x-hidden bg-[#050308]">
+    <section className="relative pt-10 sm:pt-14 lg:pt-20 pb-16 sm:pb-20 lg:pb-28 overflow-x-hidden bg-[#050308]">
       {/* Fond dans la charte sombre/beige */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#121212] via-[#050308] to-[#050308]" />
 
@@ -72,9 +72,9 @@ export function WhyActivPro() {
             const Icon = adv.icon
             return (
               <ScrollReveal key={i} direction="up" delay={i * 0.1}>
-                <div className="group relative h-full p-6 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#a39383]/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-black/60">
+                <div className="group relative h-full p-6 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#a39383]/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-black/60 text-center">
                   {/* Icon */}
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#a39383] to-[#8b8276] flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#a39383] to-[#8b8276] flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform mx-auto">
                     <Icon className="w-7 h-7 text-white" />
                   </div>
 

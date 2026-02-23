@@ -13,22 +13,20 @@ export function Footer() {
         <div className="absolute -bottom-20 left-1/4 w-80 h-80 bg-secondary/10 rounded-full blur-3xl opacity-20" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 sm:gap-10 md:gap-12 mb-8 sm:mb-10 md:mb-12">
-          {/* Company Info */}
-          <div className="md:col-span-1 animate-in fade-in slide-in-from-left-8 duration-700">
-            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Activ Travaux</h3>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-5 md:pt-6 pb-6 sm:pb-8 md:pb-10 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-nowrap mb-4 sm:mb-5 md:mb-6 gap-8 sm:gap-10 md:gap-12 lg:gap-x-[2.5rem]">
+          {/* Company Info - flex-1 basis-0 = même largeur que les 3 autres, gap identique entre chaque bloc */}
+          <div className="animate-in fade-in slide-in-from-left-8 duration-700 min-w-0 lg:flex-1 lg:min-w-0 lg:basis-0">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 text-accent">Activ Travaux</h3>
             <p className="text-xs sm:text-sm opacity-85 leading-relaxed font-light">
               Contractant général, rénovation premium, extension, rénovation énergétique, aménagement intérieur.
             </p>
           </div>
 
-          {/* Navigation and Ressources - Side by side, aligned to the right */}
-          <div className="md:col-span-2 grid grid-cols-2 gap-6 sm:gap-8 md:gap-12">
-            {/* Navigation */}
-          <div className="animate-in fade-in slide-in-from-left-6 duration-700" style={{ animationDelay: '100ms' }}>
-            <h4 className="font-bold text-xs sm:text-sm mb-4 sm:mb-6 text-accent">Navigation</h4>
-            <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
+          {/* Navigation */}
+          <div className="animate-in fade-in slide-in-from-left-6 duration-700 min-w-0 lg:flex-1 lg:min-w-0 lg:basis-0" style={{ animationDelay: '100ms' }}>
+            <h4 className="font-bold text-xs sm:text-sm mb-4 text-accent">Navigation</h4>
+            <ul className="space-y-2 text-xs sm:text-sm">
               <li>
                 <Link href="/" className="opacity-80 hover:opacity-100 transition-opacity">
                   Accueil
@@ -57,10 +55,10 @@ export function Footer() {
             </ul>
           </div>
 
-            {/* Ressources */}
-          <div className="animate-in fade-in slide-in-from-left-4 duration-700" style={{ animationDelay: '200ms' }}>
-            <h4 className="font-bold text-xs sm:text-sm mb-4 sm:mb-6 text-accent">Ressources</h4>
-            <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
+          {/* Ressources */}
+          <div className="animate-in fade-in slide-in-from-left-4 duration-700 min-w-0 lg:flex-1 lg:min-w-0 lg:basis-0" style={{ animationDelay: '200ms' }}>
+            <h4 className="font-bold text-xs sm:text-sm mb-4 text-accent">Ressources</h4>
+            <ul className="space-y-2 text-xs sm:text-sm">
               <li>
                 <Link href="/a-propos" className="opacity-80 hover:opacity-100 transition-opacity">
                   À propos
@@ -77,13 +75,12 @@ export function Footer() {
                 </Link>
               </li>
             </ul>
-            </div>
           </div>
 
           {/* Contact CTA */}
-          <div className="md:col-span-1 animate-in fade-in slide-in-from-right-8 duration-700" style={{ animationDelay: '300ms' }}>
-            <h4 className="font-bold text-xs sm:text-sm mb-4 sm:mb-6 text-accent">Contact</h4>
-            <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm mb-4 sm:mb-6">
+          <div className="animate-in fade-in slide-in-from-right-8 duration-700 min-w-0 lg:flex-1 lg:min-w-0 lg:basis-0" style={{ animationDelay: '300ms' }}>
+            <h4 className="font-bold text-xs sm:text-sm mb-4 text-accent">Contact</h4>
+            <ul className="space-y-2 text-xs sm:text-sm mb-4">
               <li>
                 <a href="tel:+33247000000" className="flex items-center gap-2 opacity-85 hover:opacity-100 transition-opacity font-light">
                   <Phone className="w-4 h-4 flex-shrink-0" />
@@ -103,8 +100,8 @@ export function Footer() {
             </ul>
             
             {/* Social Networks */}
-            <div className="mb-4 sm:mb-6">
-              <h5 className="text-xs sm:text-sm font-semibold mb-3 opacity-90">Suivez-nous</h5>
+            <div className="mb-4">
+              <h5 className="text-xs sm:text-sm font-semibold mb-2 opacity-90">Suivez-nous</h5>
               <div className="flex items-center gap-3">
                 <Link
                   href="https://www.linkedin.com/company/activtravaux/"
@@ -145,7 +142,7 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-primary-foreground/20 pt-6 sm:pt-8 animate-in fade-in duration-700" style={{ animationDelay: '400ms' }}>
+        <div className="border-t border-primary-foreground/20 pt-4 sm:pt-5 animate-in fade-in duration-700" style={{ animationDelay: '400ms' }}>
           <div className="flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 text-[10px] sm:text-xs opacity-75 font-light">
             <p>&copy; {new Date().getFullYear()} Activ Travaux. Tous droits réservés.</p>
             <div className="flex flex-wrap gap-4 sm:gap-6 md:gap-8 justify-center md:justify-end">

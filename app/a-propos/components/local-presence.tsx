@@ -1,7 +1,7 @@
 'use client'
 
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { MapPin, Building2, Users, CheckCircle2, ArrowRight } from 'lucide-react'
+import { MapPin, Building2, Users } from 'lucide-react'
 import Link from 'next/link'
 
 const localFeatures = [
@@ -24,7 +24,7 @@ const localFeatures = [
 
 export function LocalPresence() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 bg-[#050308] overflow-hidden">
+    <section className="relative py-8 sm:py-10 lg:py-12 bg-[#050308] overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#050308] via-[#050308] to-[#050308]" />
 
@@ -68,61 +68,58 @@ export function LocalPresence() {
                 className="group inline-flex items-center gap-3 px-6 py-4 rounded-xl bg-secondary hover:bg-secondary/90 text-white font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-secondary/40 hover:scale-105"
               >
                 Démarrer mon projet en Indre-et-Loire
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </ScrollReveal>
 
-          {/* Right: Visual */}
+          {/* Right: Visual — carte */}
           <ScrollReveal direction="left" delay={0.2}>
             <div className="relative">
-              {/* Map-like visualization */}
-            <div className="relative aspect-square rounded-3xl bg-gradient-to-br from-[#372f2d] to-[#1a1413] overflow-hidden border border-white/10 shadow-[0_28px_90px_rgba(0,0,0,0.9)]">
-                {/* Grid pattern */}
-                <div className="absolute inset-0 opacity-10" style={{
-                  backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-                  backgroundSize: '30px 30px',
-                }} />
+                <div className="relative aspect-[4/3] lg:aspect-square rounded-3xl bg-gradient-to-br from-[#372f2d] to-[#1a1413] overflow-hidden border border-white/10 shadow-[0_28px_90px_rgba(0,0,0,0.9)]">
+                  {/* Grid pattern */}
+                  <div className="absolute inset-0 opacity-10" style={{
+                    backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+                    backgroundSize: '30px 30px',
+                  }} />
 
-                {/* Center point for Indre-et-Loire */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                  <div className="relative">
-                    <div className="w-16 h-16 rounded-full bg-secondary shadow-lg shadow-secondary/50 flex items-center justify-center animate-pulse">
-                      <MapPin className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full bg-white text-primary text-sm font-semibold whitespace-nowrap shadow-lg">
-                      Indre-et-Loire
+                  {/* Center point for Indre-et-Loire */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <div className="relative">
+                      <div className="w-16 h-16 rounded-full bg-secondary shadow-lg shadow-secondary/50 flex items-center justify-center animate-pulse">
+                        <MapPin className="w-8 h-8 text-white" />
+                      </div>
+                      <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full bg-white text-primary text-sm font-semibold whitespace-nowrap shadow-lg">
+                        Indre-et-Loire
+                      </div>
                     </div>
                   </div>
+
+                  {/* Surrounding points */}
+                  {[
+                    { top: '20%', left: '30%', label: 'Tours' },
+                    { top: '40%', left: '60%', label: 'Amboise' },
+                    { top: '60%', left: '25%', label: 'Chinon' },
+                    { top: '70%', left: '70%', label: 'Loches' },
+                  ].map((point, i) => (
+                    <div
+                      key={i}
+                      className="absolute transform -translate-x-1/2 -translate-y-1/2"
+                      style={{ top: point.top, left: point.left }}
+                    >
+                      <div className="w-3 h-3 rounded-full bg-white/40 animate-pulse" style={{ animationDelay: `${i * 0.2}s` }} />
+                    </div>
+                  ))}
+
+                  {/* Connection lines */}
+                  <svg className="absolute inset-0 w-full h-full opacity-20" preserveAspectRatio="none">
+                    <line x1="50%" y1="50%" x2="30%" y2="20%" stroke="white" strokeWidth="1" strokeDasharray="4" />
+                    <line x1="50%" y1="50%" x2="60%" y2="40%" stroke="white" strokeWidth="1" strokeDasharray="4" />
+                    <line x1="50%" y1="50%" x2="25%" y2="60%" stroke="white" strokeWidth="1" strokeDasharray="4" />
+                    <line x1="50%" y1="50%" x2="70%" y2="70%" stroke="white" strokeWidth="1" strokeDasharray="4" />
+                  </svg>
                 </div>
-
-                {/* Surrounding points */}
-                {[
-                  { top: '20%', left: '30%', label: 'Tours' },
-                  { top: '40%', left: '60%', label: 'Amboise' },
-                  { top: '60%', left: '25%', label: 'Chinon' },
-                  { top: '70%', left: '70%', label: 'Loches' },
-                ].map((point, i) => (
-                  <div
-                    key={i}
-                    className="absolute transform -translate-x-1/2 -translate-y-1/2"
-                    style={{ top: point.top, left: point.left }}
-                  >
-                    <div className="w-3 h-3 rounded-full bg-white/40 animate-pulse" style={{ animationDelay: `${i * 0.2}s` }} />
-                  </div>
-                ))}
-
-                {/* Connection lines */}
-                <svg className="absolute inset-0 w-full h-full opacity-20" preserveAspectRatio="none">
-                  <line x1="50%" y1="50%" x2="30%" y2="20%" stroke="white" strokeWidth="1" strokeDasharray="4" />
-                  <line x1="50%" y1="50%" x2="60%" y2="40%" stroke="white" strokeWidth="1" strokeDasharray="4" />
-                  <line x1="50%" y1="50%" x2="25%" y2="60%" stroke="white" strokeWidth="1" strokeDasharray="4" />
-                  <line x1="50%" y1="50%" x2="70%" y2="70%" stroke="white" strokeWidth="1" strokeDasharray="4" />
-                </svg>
-              </div>
-
               {/* Stats overlay */}
-              <div className="absolute -bottom-6 -right-6 p-6 rounded-2xl bg-white/5 border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.9)] backdrop-blur-lg">
+              <div className="absolute -bottom-4 -right-4 lg:-bottom-6 lg:-right-6 p-4 lg:p-6 rounded-2xl bg-white/5 border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.9)] backdrop-blur-lg">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-xl bg-secondary/25 flex items-center justify-center">
                     <Building2 className="w-6 h-6 text-secondary" />

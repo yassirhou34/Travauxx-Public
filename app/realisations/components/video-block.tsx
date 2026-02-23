@@ -1,12 +1,34 @@
 'use client'
 
+import { useRef, useEffect } from 'react'
+
 const VIDEO_FILENAME = 'HD ST AT - DELPHINE PORTEU compressed.mp4'
 
 export function VideoBlock() {
   const videoSrc = `/Banquevideos/${encodeURIComponent(VIDEO_FILENAME)}`
+  const sectionRef = useRef<HTMLElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const section = sectionRef.current
+    const video = videoRef.current
+    if (!section || !video) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries
+        if (!entry.isIntersecting) return
+        video.play().catch(() => {})
+        video.muted = false
+      },
+      { threshold: 0.25, rootMargin: '0px' }
+    )
+    observer.observe(section)
+    return () => observer.disconnect()
+  }, [])
 
   return (
-    <section className="relative py-24 sm:py-28 md:py-36 lg:py-44 overflow-hidden">
+    <section ref={sectionRef} className="relative py-16 sm:py-20 md:py-24 lg:py-28 overflow-hidden">
       <div className="absolute inset-0 bg-black" />
       <div
         className="absolute inset-0 opacity-60"
@@ -90,10 +112,13 @@ export function VideoBlock() {
             />
             <div className="aspect-video w-full relative">
               <video
+                ref={videoRef}
                 className="w-full h-full object-cover"
                 src={videoSrc}
                 controls
                 playsInline
+                muted
+                loop
                 preload="metadata"
                 aria-label="Témoignage client - Activ Travaux"
               >

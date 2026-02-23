@@ -33,10 +33,10 @@ const GalleryFilmStrip: React.FC<GalleryFilmStripProps> = ({
   return (
     <div
       ref={sectionRef}
-      className="overflow-hidden relative flex flex-col justify-center gap-12 min-h-screen"
-      style={{ backgroundColor, height: "150vh" }}
+      className="overflow-hidden relative flex flex-col justify-center gap-8 min-h-0"
+      style={{ backgroundColor, height: "100vh" }}
     >
-      <div className="sticky top-0 h-screen flex flex-col justify-center gap-16">
+      <div className="sticky top-0 h-screen flex flex-col justify-center gap-10">
         {/* Strip 1 */}
         <div
           className="w-full -rotate-3 bg-black py-4 shadow-2xl"
@@ -52,7 +52,7 @@ const GalleryFilmStrip: React.FC<GalleryFilmStripProps> = ({
             {[...images, ...images].map((src, i) => (
               <div
                 key={`s1-${i}`}
-                className="w-96 aspect-video bg-neutral-800 rounded-sm relative shrink-0"
+                className="w-96 aspect-square bg-neutral-800 rounded-sm relative shrink-0"
               >
                 <img
                   src={src}
@@ -104,7 +104,7 @@ const GalleryFilmStrip: React.FC<GalleryFilmStripProps> = ({
               .map((src, i) => (
                 <div
                   key={`s2-${i}`}
-                  className="w-96 aspect-video bg-neutral-800 rounded-sm relative shrink-0"
+                  className="w-96 aspect-square bg-neutral-800 rounded-sm relative shrink-0"
                 >
                   <img
                     src={src}

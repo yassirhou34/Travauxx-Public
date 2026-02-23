@@ -1,9 +1,10 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { ChevronDown, ArrowRight, Compass, PenTool } from 'lucide-react'
+import { ChevronDown, Compass, PenTool } from 'lucide-react'
 
 export function ArchitectureHero() {
   const scrollToContent = () => {
@@ -11,18 +12,7 @@ export function ArchitectureHero() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#050510]">
-      {/* Floating 3D elements */}
-      <div className="absolute top-20 left-[10%] opacity-20 animate-float">
-        <Compass className="w-20 h-20 text-accent" />
-      </div>
-      <div className="absolute bottom-32 right-[15%] opacity-20 animate-float" style={{ animationDelay: '1s' }}>
-        <Compass className="w-16 h-16 text-secondary" />
-      </div>
-      <div className="absolute top-1/3 right-[10%] opacity-20 animate-float" style={{ animationDelay: '2s' }}>
-        <PenTool className="w-14 h-14 text-accent" />
-      </div>
-
+    <section className="relative min-h-0 flex items-start justify-center pt-8 sm:pt-10 md:pt-12 pb-16 sm:pb-20 overflow-hidden bg-[#050510]">
       {/* Main content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
@@ -79,7 +69,6 @@ export function ArchitectureHero() {
               <Button className="group inline-flex items-center justify-center gap-2 w-[260px] h-[56px] bg-accent hover:bg-accent/90 text-white font-semibold rounded-full text-base sm:text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-accent/30 hover:scale-105 border-0">
                 <span className="flex items-center justify-center gap-2 whitespace-nowrap">
                   Concevoir mon projet
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Button>
             </Link>
@@ -93,6 +82,19 @@ export function ArchitectureHero() {
               </span>
               <div className="absolute -inset-2 bg-white/15 rounded-full blur-2xl opacity-50" />
             </button>
+          </div>
+        </ScrollReveal>
+
+        {/* Emplacement dédié visuel — une seule image, sous les CTA */}
+        <ScrollReveal direction="up" delay={0.55} className="mt-12 sm:mt-14 max-w-4xl mx-auto">
+          <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-white/10">
+            <Image
+              src="/Banqueimages/point3d-commercial-imaging-ltd-Tb4bUf6z9gI-unsplash.jpg"
+              alt="Conception architecturale sur-mesure"
+              fill
+              className="object-cover"
+              sizes="(max-width: 896px) 100vw, 896px"
+            />
           </div>
         </ScrollReveal>
       </div>

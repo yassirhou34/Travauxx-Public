@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { ChevronDown, ArrowRight, Leaf, Zap, Home } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 
 export function RenovationHero() {
   const scrollToTypes = () => {
@@ -11,19 +11,11 @@ export function RenovationHero() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
+    <section className="relative min-h-0 flex items-start justify-center pt-8 sm:pt-10 md:pt-12 pb-12 sm:pb-16 overflow-hidden bg-[#0a0a0a]">
       {/* Geometric accents */}
       <div className="absolute left-8 top-1/3 w-px h-40 bg-gradient-to-b from-transparent via-accent to-transparent opacity-60" />
       <div className="absolute right-8 bottom-1/3 w-px h-40 bg-gradient-to-b from-transparent via-secondary to-transparent opacity-60" />
       
-      {/* Floating icons */}
-      <div className="absolute top-1/4 left-[15%] animate-float opacity-20">
-        <Leaf className="w-16 h-16 text-accent" />
-      </div>
-      <div className="absolute bottom-1/3 right-[15%] animate-float opacity-20" style={{ animationDelay: '1s' }}>
-        <Zap className="w-12 h-12 text-secondary" />
-      </div>
-
       {/* Main content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
@@ -51,33 +43,13 @@ export function RenovationHero() {
          
         </ScrollReveal>
 
-        {/* Key benefits – ordre : Économie d'énergie / Confort optimal / Éco-responsable */}
-        <ScrollReveal direction="up" delay={0.4}>
-          <div className="flex flex-wrap justify-center gap-6 sm:gap-10 mb-12">
-            {[
-              { icon: Zap, label: 'Économie d\'énergie', color: 'text-secondary' },
-              { icon: Home, label: 'Confort optimal', color: 'text-accent' },
-              { icon: Leaf, label: 'Éco-responsable', color: 'text-accent' },
-            ].map((item, i) => {
-              const Icon = item.icon
-              return (
-                <div key={i} className="flex items-center gap-2 text-white/70">
-                  <Icon className={`w-5 h-5 ${item.color}`} />
-                  <span className="text-sm font-medium">{item.label}</span>
-                </div>
-              )
-            })}
-          </div>
-        </ScrollReveal>
-
         {/* CTAs */}
         <ScrollReveal direction="up" delay={0.5}>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-2 justify-center items-center">
             <Link href="/concevoir-mon-projet">
               <Button className="group inline-flex items-center justify-center gap-2 w-[260px] h-[56px] bg-[#a39383] hover:bg-[#8b8276] text-white font-semibold rounded-full text-base sm:text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-[#a39383]/30 hover:scale-105 border-0">
                 <span className="flex items-center justify-center gap-2 whitespace-nowrap">
                   Concevoir mon projet
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Button>
             </Link>

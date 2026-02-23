@@ -34,6 +34,7 @@ const SpotlightRow = ({ item, index }: { item: FeatureItem; index: number; hover
             {item.img && (
                 <div className="absolute inset-0 pointer-events-none z-10 overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <img src={item.img} className="w-full h-full object-cover object-center" alt={item.title} loading="lazy" />
+                    <div className="absolute inset-0 bg-black/55" aria-hidden />
                 </div>
             )}
 

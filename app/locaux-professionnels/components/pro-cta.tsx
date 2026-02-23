@@ -3,11 +3,11 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { ArrowRight, Building2, Store, Coffee, Home } from 'lucide-react'
+import { Building2, Store, Coffee, Home } from 'lucide-react'
 
 export function ProCTA() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 overflow-hidden">
+    <section className="relative pt-10 sm:pt-14 lg:pt-20 pb-8 sm:pb-10 lg:pb-14 overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary" />
       
@@ -28,7 +28,6 @@ export function ProCTA() {
           <ScrollReveal direction="up">
             <div className="text-center max-w-2xl">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6">
-                <Building2 className="w-4 h-4 text-white" />
                 <span className="text-white/80 text-sm">Projet professionnel ?</span>
               </div>
               
@@ -64,7 +63,6 @@ export function ProCTA() {
                   <Button className="w-full sm:w-auto group bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105 inline-flex items-center justify-center">
                     <span className="inline-flex items-center justify-center gap-2">
                       Lancer mon projet
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </span>
                   </Button>
                 </Link>
@@ -83,7 +81,7 @@ export function ProCTA() {
 
         {/* Trust indicators */}
         <ScrollReveal direction="up" delay={0.4}>
-          <div className="mt-16 pt-12 border-t border-white/20">
+          <div className="mt-6 pt-6 border-t border-white/20">
             <div className="flex flex-wrap justify-center items-center gap-8 text-white/50 text-sm">
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-accent" />

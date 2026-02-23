@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { ChevronDown, ArrowRight } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 
 export function ExtensionHero() {
   const scrollToTypes = () => {
@@ -11,7 +11,7 @@ export function ExtensionHero() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
+    <section className="relative min-h-0 flex items-start justify-center pt-8 sm:pt-10 md:pt-12 pb-12 sm:pb-16 overflow-hidden bg-[#0a0a0a]">
       {/* Geometric accent lines */}
       <div className="absolute left-8 top-1/4 w-px h-32 bg-gradient-to-b from-transparent via-accent to-transparent opacity-60" />
       <div className="absolute right-8 bottom-1/4 w-px h-32 bg-gradient-to-b from-transparent via-accent to-transparent opacity-60" />
@@ -20,14 +20,14 @@ export function ExtensionHero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
         <ScrollReveal direction="fade" delay={0.1}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 mb-5">
             <span className="text-white/80 text-sm font-medium tracking-wide uppercase">Extension de maison</span>
           </div>
         </ScrollReveal>
 
         {/* Main title */}
         <ScrollReveal direction="up" delay={0.2}>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-[0.95] mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-[0.95] mb-4">
             <span className="block">Gagnez de</span>
             <span className="block mt-2">l&apos;espace sans changer d'adresse
             <span className="text-accent">.</span></span>
@@ -40,7 +40,7 @@ export function ExtensionHero() {
           Extension bois, maçonnerie ou véranda thermique : nous créons la pièce en plus qui valorise votre maison.
 
           </p>
-          <p className="text-base sm:text-lg text-white/50 max-w-xl mx-auto mb-10">
+          <p className="text-base sm:text-lg text-white/50 max-w-xl mx-auto mb-6">
             Agrandissement · Surélévation · Pergola · Véranda
           </p>
         </ScrollReveal>
@@ -52,7 +52,6 @@ export function ExtensionHero() {
               <Button className="group inline-flex items-center justify-center gap-2 w-[260px] h-[56px] bg-accent hover:bg-accent/90 text-white font-semibold rounded-full text-base sm:text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-accent/30 hover:scale-105">
                 <span className="flex items-center justify-center gap-2 whitespace-nowrap">
                   Concevoir mon projet
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Button>
             </Link>

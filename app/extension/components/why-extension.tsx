@@ -65,7 +65,7 @@ const accompagnement = [
 
 export function WhyExtension() {
   return (
-    <section className="relative py-12 sm:py-16 lg:py-20 bg-[#050308] overflow-hidden">
+    <section className="relative py-8 sm:py-10 lg:py-12 bg-[#050308] overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -81,11 +81,11 @@ export function WhyExtension() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <ScrollReveal direction="up">
-          <div className="text-center mb-16 lg:mb-20">
-            <span className="inline-block text-accent text-sm font-semibold tracking-wider uppercase mb-4">
+          <div className="text-center mb-10 lg:mb-12">
+            <span className="inline-block text-accent text-sm font-semibold tracking-wider uppercase mb-3">
               Pourquoi agrandir ?
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
               L&apos;extension:<br /> un investissement pour votre patrimoine
 
             </h2>
@@ -131,7 +131,7 @@ export function WhyExtension() {
 
         {/* Galerie extension – AgencyGrid (5 images + titres) */}
         <ScrollReveal direction="up" delay={0.35}>
-          <div className="mt-16 lg:mt-20 -mx-4 sm:-mx-6 lg:-mx-8">
+          <div className="mt-10 lg:mt-12 -mx-4 sm:-mx-6 lg:-mx-8">
             <AgencyGrid
               backgroundColor="#050308"
               projectPrefix="Extension"
@@ -141,8 +141,8 @@ export function WhyExtension() {
 
         {/* Activ Travaux approach */}
         <ScrollReveal direction="up" delay={0.4}>
-          <div className="mt-16 lg:mt-20 p-8 lg:p-12 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10">
-            <div className="text-center mb-10">
+          <div className="mt-10 lg:mt-12 p-8 lg:p-12 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10">
+            <div className="text-center mb-6">
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
               Activ Travaux 37 : la maîtrise du Contractant Général
 
@@ -171,7 +171,7 @@ export function WhyExtension() {
 
         {/* Bottom quote */}
         <ScrollReveal direction="up" delay={0.5}>
-          <div className="mt-16 lg:mt-20 text-center">
+          <div className="mt-10 lg:mt-12 text-center">
             <blockquote className="text-xl sm:text-2xl lg:text-3xl text-white/80 font-light italic max-w-3xl mx-auto">
               &ldquo;Agrandir sans dénaturer l&apos;existant, c&apos;est tout l&apos;art d&apos;une extension réussie.&rdquo;
             </blockquote>

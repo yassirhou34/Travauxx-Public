@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { ScrollReveal } from '@/components/scroll-reveal'
 import { Users, Eye, TrendingUp, Shield, Sparkles, CheckCircle2 } from 'lucide-react'
 
@@ -39,7 +40,7 @@ const deliverables = [
 
 export function ValueProposition() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-36 bg-[#050308] overflow-hidden">
+    <section className="relative pt-10 sm:pt-14 lg:pt-20 pb-16 sm:pb-20 lg:pb-28 bg-[#050308] overflow-hidden">
       {/* Background dans la charte sombre/beige */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#a39383]/40 to-transparent" />
 
@@ -56,6 +57,19 @@ export function ValueProposition() {
             <p className="text-white/70 text-lg max-w-2xl mx-auto">
               Conjuguer créativité architecturale, rigueur technique et tranquillité d&apos;esprit pour vous.
             </p>
+          </div>
+        </ScrollReveal>
+
+        {/* Emplacement dédié visuel — une image avant la grille valeurs */}
+        <ScrollReveal direction="up" delay={0.03} className="mb-14">
+          <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-white/10">
+            <Image
+              src="/Banqueimages/franco-debartolo-K1bknPVHGkQ-unsplash.jpg"
+              alt="Esthétique, technique & sérénité"
+              fill
+              className="object-cover"
+              sizes="100vw"
+            />
           </div>
         </ScrollReveal>
 

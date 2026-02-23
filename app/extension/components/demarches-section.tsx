@@ -1,7 +1,7 @@
 'use client'
 
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { FileText, Scale, MapPin, Clock, CheckCircle2, AlertTriangle } from 'lucide-react'
+import { FileText, Scale, MapPin, Clock } from 'lucide-react'
 
 const demarchesInfo = [
   {
@@ -36,18 +36,18 @@ const demarchesInfo = [
 
 export function DemarchesSection() {
   return (
-    <section className="relative pt-20 sm:pt-28 lg:pt-36 pb-8 sm:pb-10 lg:pb-12 bg-[#050308] overflow-hidden">
+    <section className="relative pt-10 sm:pt-14 lg:pt-16 pb-6 sm:pb-8 lg:pb-10 bg-[#050308] overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <ScrollReveal direction="up">
-          <div className="text-center mb-16 lg:mb-20">
-            <span className="inline-block text-accent text-sm font-semibold tracking-wider uppercase mb-4">
+          <div className="text-center mb-10 lg:mb-12">
+            <span className="inline-block text-accent text-sm font-semibold tracking-wider uppercase mb-3">
               Démarches administratives
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
               On s&apos;occupe de tout
             </h2>
             <p className="text-white/70 text-lg max-w-3xl mx-auto">
@@ -77,53 +77,6 @@ export function DemarchesSection() {
             )
           })}
         </div>
-
-        {/* Promise box */}
-        <ScrollReveal direction="up" delay={0.3}>
-          <div className="relative p-8 lg:p-12 rounded-3xl bg-white/5 border border-white/10 overflow-hidden">
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
-                  Notre engagement
-                </h3>
-                <p className="text-white/80 text-lg mb-6">
-                  De l&apos;étude réglementaire à l&apos;obtention des autorisations, nous gérons l&apos;intégralité 
-                  du dossier administratif pour que vous puissiez agrandir en toute tranquillité.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <div className="flex items-center gap-2 text-white/90">
-                    <CheckCircle2 className="w-5 h-5 text-accent" />
-                    <span>Étude PLU incluse</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-white/90">
-                    <CheckCircle2 className="w-5 h-5 text-accent" />
-                    <span>Montage du dossier</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-white/90">
-                    <CheckCircle2 className="w-5 h-5 text-accent" />
-                    <span>Suivi en mairie</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <div className="flex items-start gap-4 mb-4">
-                  <AlertTriangle className="w-6 h-6 text-amber-400 flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-bold text-white mb-2">À savoir</h4>
-                    <p className="text-white/70 text-sm">
-                      Commencer des travaux sans autorisation peut entraîner des sanctions : 
-                      amende, obligation de démolir, refus de raccordement aux réseaux.
-                    </p>
-                  </div>
-                </div>
-                <p className="text-white/60 text-sm">
-                  Avec Activ Travaux 37, vous êtes sûr d&apos;être en conformité à chaque étape.
-                </p>
-              </div>
-            </div>
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   )

@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { ScrollReveal } from '@/components/scroll-reveal'
 import { MessageSquare, Search, PenTool, Box, FileCheck, Rocket } from 'lucide-react'
 
@@ -83,6 +84,19 @@ export function ConceptionProcess() {
           </div>
         </ScrollReveal>
 
+        {/* Emplacement dédié visuel — une image avant les étapes */}
+        <ScrollReveal direction="up" delay={0.05} className="mb-14">
+          <div className="relative aspect-[2/1] rounded-2xl overflow-hidden border border-white/10">
+            <Image
+              src="/Banqueimages/M7_01323.jpg"
+              alt="De l'idée à l'esquisse, processus de conception"
+              fill
+              className="object-cover"
+              sizes="100vw"
+            />
+          </div>
+        </ScrollReveal>
+
         {/* Process steps */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {steps.map((step, i) => {
@@ -120,36 +134,6 @@ export function ConceptionProcess() {
             )
           })}
         </div>
-
-        {/* Bottom callout */}
-        <ScrollReveal direction="up" delay={0.5}>
-          <div className="mt-16 lg:mt-20 p-8 lg:p-12 rounded-3xl bg-gradient-to-r from-[#a39883]/15 to-[#a39883]/5 backdrop-blur-sm border border-[#a39883]/30">
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-                  Un projet bien conçu, c&apos;est un chantier bien maîtrisé
-                </h3>
-                <p className="text-white/70">
-                  La phase de conception est le socle de la réussite technique. Elle permet d&apos;anticiper 
-                  les contraintes, de prévenir les imprévus et de garantir des délais plus précis.
-                </p>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { value: '90%', label: 'des imprévus évités' },
-                  { value: '+30%', label: 'de précision budget' },
-                  { value: '100%', label: 'conformité réglementaire' },
-                  
-                ].map((stat, i) => (
-                  <div key={i} className="text-center p-4 rounded-xl bg-white/5">
-                    <div className="text-2xl font-bold text-[#a39883] mb-1">{stat.value}</div>
-                    <div className="text-white/50 text-xs">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   )

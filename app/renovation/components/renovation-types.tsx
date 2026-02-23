@@ -78,7 +78,7 @@ export function RenovationTypes() {
   return (
     <section
       id="renovation-types"
-      className="relative pt-10 sm:pt-12 lg:pt-14 pb-20 sm:pb-28 lg:pb-36 bg-[#050308] overflow-hidden"
+      className="relative pt-6 sm:pt-8 lg:pt-10 pb-20 sm:pb-28 lg:pb-36 bg-[#050308] overflow-hidden"
     >
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-radial from-secondary/20 to-transparent opacity-60" />
@@ -142,11 +142,11 @@ export function RenovationTypes() {
           </div>
         </ScrollReveal>
 
-        {/* Detailed content */}
-        <div className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-start transition-all duration-500 ${isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}>
+        {/* Detailed content – image carrée sur desktop, bas aligné sur le CTA */}
+        <div className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-end transition-all duration-500 ${isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}>
           {/* Image side */}
           <ScrollReveal direction="left" delay={0.2}>
-            <div className="relative aspect-[4/3] lg:aspect-square rounded-3xl overflow-hidden group">
+            <div className="relative aspect-[4/3] lg:aspect-square rounded-3xl overflow-hidden group w-full">
               <Image
                 src={activeType.image}
                 alt={activeType.title}
@@ -211,8 +211,7 @@ export function RenovationTypes() {
                 className="group inline-flex items-center gap-3 px-6 py-4 rounded-full font-semibold text-white transition-all duration-300 hover:shadow-xl hover:scale-105"
                 style={{ backgroundColor: activeType.color }}
               >
-                Démarrer mon projet 
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                Démarrer mon projet
               </Link>
             </div>
           </ScrollReveal>

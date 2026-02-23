@@ -1,24 +1,23 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { ArrowRight, ChevronDown } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 
 export function AboutHero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
-      {/* Background with animated gradient */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-primary" />
+    <section className="relative min-h-0 flex flex-col items-center justify-center py-12 sm:py-16 md:py-20 overflow-hidden bg-black">
+      {/* Background noir */}
+      <div className="absolute inset-0 bg-black">
+        {/* Légères lueurs pour la profondeur */}
+        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[150px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-white/5 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '1s' }} />
         
-        {/* Animated orbs */}
-        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-accent/20 rounded-full blur-[150px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-secondary/15 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '1s' }} />
-        
-        {/* Grid pattern */}
-        <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+        {/* Grille très discrète */}
+        <div className="absolute inset-0 opacity-5" style={{
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)`,
           backgroundSize: '60px 60px',
         }} />
       </div>
@@ -42,7 +41,7 @@ export function AboutHero() {
             Depuis plus de 20 ans, Activ Travaux accompagne les particuliers et les professionnels 
             dans leurs projets de rénovation, d&apos;agrandissement et de transformation.
           </p>
-          <p className="text-base sm:text-lg text-white/50 max-w-xl mx-auto mb-10">
+          <p className="text-base sm:text-lg text-white/50 max-w-xl mx-auto mb-6">
             La force d&apos;un réseau national, la proximité d&apos;un interlocuteur local.
           </p>
         </ScrollReveal>
@@ -54,7 +53,6 @@ export function AboutHero() {
               <Button className="group bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-6 text-base sm:text-lg rounded-full transition-all duration-300 hover:shadow-2xl hover:shadow-accent/30 hover:scale-105 inline-flex items-center justify-center">
                 <span className="inline-flex items-center justify-center gap-2">
                   Concevoir mon projet
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Button>
             </Link>
@@ -68,6 +66,21 @@ export function AboutHero() {
               </span>
               <div className="absolute -inset-2 bg-white/15 rounded-full blur-2xl opacity-50 pointer-events-none" />
             </Link>
+          </div>
+        </ScrollReveal>
+
+        {/* Bandeau visuel — image de chantier / réseau */}
+        <ScrollReveal direction="up" delay={0.6} className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 sm:mt-12">
+          <div className="relative aspect-[21/9] sm:aspect-[3/1] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+            <Image
+              src="/Banqueimages/tile-merchant-ireland-ujfcn8vQpUY-unsplash.jpg"
+              alt="Réseau Activ Travaux — chantier et expertise"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 1280px"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
           </div>
         </ScrollReveal>
       </div>

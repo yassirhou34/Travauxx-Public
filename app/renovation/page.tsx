@@ -3,7 +3,6 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { RenovationHero } from './components/renovation-hero'
 import { RenovationTypes } from './components/renovation-types'
-import { EcoBenefits } from './components/eco-benefits'
 import { WhyRenovate } from './components/why-renovate'
 import { RenovationProcess } from './components/renovation-process'
 import { RenovationCTA } from './components/renovation-cta'
@@ -21,7 +20,6 @@ export default function RenovationPage() {
       <main className="overflow-x-hidden">
         <RenovationHero />
         <RenovationTypes />
-        <EcoBenefits />
         <WhyRenovate />
         <RenovationProcess />
         <RenovationCTA />
