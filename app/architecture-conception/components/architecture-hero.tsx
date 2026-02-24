@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { ChevronDown, Compass, PenTool } from 'lucide-react'
+import { Compass, PenTool } from 'lucide-react'
 
 export function ArchitectureHero() {
   const scrollToContent = () => {
@@ -78,22 +78,21 @@ export function ArchitectureHero() {
             >
               <span className="relative z-10 flex items-center gap-2 whitespace-nowrap">
                 Découvrir notre approche
-                <ChevronDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
               </span>
               <div className="absolute -inset-2 bg-white/15 rounded-full blur-2xl opacity-50" />
             </button>
           </div>
         </ScrollReveal>
 
-        {/* Emplacement dédié visuel — une seule image, sous les CTA */}
-        <ScrollReveal direction="up" delay={0.55} className="mt-12 sm:mt-14 max-w-4xl mx-auto">
-          <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-white/10">
+        {/* Image sous les deux boutons — légèrement plus large */}
+        <ScrollReveal direction="up" delay={0.55} className="mt-12 sm:mt-14 -mx-24 sm:-mx-32 lg:-mx-48 w-[calc(100%+12rem)] sm:w-[calc(100%+16rem)] lg:w-[calc(100%+24rem)]">
+          <div className="relative aspect-[2/1] rounded-2xl overflow-hidden border border-white/10">
             <Image
               src="/Banqueimages/point3d-commercial-imaging-ltd-Tb4bUf6z9gI-unsplash.jpg"
               alt="Conception architecturale sur-mesure"
               fill
               className="object-cover"
-              sizes="(max-width: 896px) 100vw, 896px"
+              sizes="100vw"
             />
           </div>
         </ScrollReveal>

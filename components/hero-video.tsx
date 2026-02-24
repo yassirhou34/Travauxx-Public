@@ -3,12 +3,14 @@
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import { Volume2, VolumeX } from 'lucide-react'
 
 export function HeroVideo() {
   const [scrollY, setScrollY] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const [isMuted, setIsMuted] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
   const particlePositions = [
@@ -48,7 +50,7 @@ export function HeroVideo() {
         src={`/Banquevideos/${encodeURIComponent('Reveal-Signature-v2 (1) compressed.mp4')}`}
         autoPlay
         loop
-        muted
+        muted={isMuted}
         playsInline
         style={{
           transform: `translateY(${videoParallax}px) scale(${isMobile ? 1 : 1.1})`,
@@ -75,6 +77,26 @@ export function HeroVideo() {
           ))}
         </div>
       )}
+
+      {/* Bouton Activer / Désactiver le son */}
+      <button
+        type="button"
+        onClick={() => setIsMuted((m) => !m)}
+        className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 z-20 flex items-center gap-2 px-3 py-2 rounded-lg bg-black/50 hover:bg-black/70 text-white/90 hover:text-white text-xs sm:text-sm transition-colors border border-white/20"
+        aria-label={isMuted ? 'Activer le son' : 'Désactiver le son'}
+      >
+        {isMuted ? (
+          <>
+            <Volume2 className="w-4 h-4" />
+            <span>Activer le son</span>
+          </>
+        ) : (
+          <>
+            <VolumeX className="w-4 h-4" />
+            <span>Désactiver le son</span>
+          </>
+        )}
+      </button>
 
       {/* Indicateur de scroll uniquement sur la vidéo – reste dans cette partie */}
       <div

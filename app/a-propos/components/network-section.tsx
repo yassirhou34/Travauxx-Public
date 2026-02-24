@@ -55,8 +55,8 @@ export function NetworkSection() {
             const Icon = feature.icon
             return (
               <ScrollReveal key={i} direction="up" delay={i * 0.1}>
-                <div className="group h-full p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-accent/50 hover:shadow-[0_24px_80px_rgba(0,0,0,0.9)] transition-all duration-300 hover:-translate-y-2 backdrop-blur-lg">
-                  <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-3 shadow-lg group-hover:scale-110 transition-transform`}>
+                <div className="group h-full p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-accent/50 hover:shadow-[0_24px_80px_rgba(0,0,0,0.9)] transition-all duration-300 hover:-translate-y-2 backdrop-blur-lg text-center">
+                  <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-3 shadow-lg group-hover:scale-110 transition-transform mx-auto`}>
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-lg font-bold text-white">{feature.title}</h3>
@@ -80,12 +80,12 @@ export function NetworkSection() {
             </div>
 
             {/* Image unique sous "Le meilleur des deux mondes" — image entière, sans encarts latéraux */}
-            <div className="relative w-full max-w-md mx-auto rounded-2xl overflow-hidden border border-white/10 mb-8">
+            <div className="relative w-full max-w-xl mx-auto aspect-square rounded-2xl overflow-hidden border border-white/10 mb-8">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/Banqueimages/tile-merchant-ireland-mJNtQr4fSXw-unsplash.jpg"
                 alt="Proximité et réseau — réalisation Activ Travaux"
-                className="w-full h-auto block"
+                className="w-full h-full object-cover"
               />
             </div>
             

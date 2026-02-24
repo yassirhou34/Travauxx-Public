@@ -13,11 +13,11 @@ export function Footer() {
         <div className="absolute -bottom-20 left-1/4 w-80 h-80 bg-secondary/10 rounded-full blur-3xl opacity-20" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-5 md:pt-6 pb-6 sm:pb-8 md:pb-10 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 sm:pt-3 md:pt-4 pb-6 sm:pb-8 md:pb-10 relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-nowrap mb-4 sm:mb-5 md:mb-6 gap-8 sm:gap-10 md:gap-12 lg:gap-x-[2.5rem]">
           {/* Company Info - flex-1 basis-0 = même largeur que les 3 autres, gap identique entre chaque bloc */}
           <div className="animate-in fade-in slide-in-from-left-8 duration-700 min-w-0 lg:flex-1 lg:min-w-0 lg:basis-0">
-            <h3 className="text-xl sm:text-2xl font-bold mb-4 text-accent">Activ Travaux</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 text-secondary">Activ Travaux 37</h3>
             <p className="text-xs sm:text-sm opacity-85 leading-relaxed font-light">
               Contractant général, rénovation premium, extension, rénovation énergétique, aménagement intérieur.
             </p>
@@ -144,7 +144,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="border-t border-primary-foreground/20 pt-4 sm:pt-5 animate-in fade-in duration-700" style={{ animationDelay: '400ms' }}>
           <div className="flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 text-[10px] sm:text-xs opacity-75 font-light">
-            <p>&copy; {new Date().getFullYear()} Activ Travaux. Tous droits réservés.</p>
+            <p>&copy; {new Date().getFullYear()} Activ Travaux 37. Tous droits réservés.</p>
             <div className="flex flex-wrap gap-4 sm:gap-6 md:gap-8 justify-center md:justify-end">
               <Link href="#" className="hover:opacity-100 hover:text-accent transition-all duration-300">
                 Mentions légales

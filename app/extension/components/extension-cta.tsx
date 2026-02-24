@@ -6,7 +6,7 @@ import { ScrollReveal } from '@/components/scroll-reveal'
 
 export function ExtensionCTA() {
   return (
-    <section className="relative pt-4 sm:pt-6 lg:pt-8 pb-6 sm:pb-8 lg:pb-10 overflow-hidden">
+    <section className="relative pt-10 sm:pt-12 lg:pt-16 pb-2 sm:pb-3 lg:pb-4 overflow-hidden">
       {/* Background noir */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#050308] via-[#050308] to-[#050308]" />
       
@@ -25,7 +25,7 @@ export function ExtensionCTA() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal direction="up">
             <div>
               <span className="inline-block text-white/80 text-sm font-semibold tracking-wider uppercase mb-4">
@@ -34,7 +34,7 @@ export function ExtensionCTA() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
                 Concrétisons votre extension<span className="text-white/60">.</span>
               </h2>
-              <p className="text-white/80 text-sm sm:text-base mb-6 max-w-md mx-auto">
+              <p className="text-white/80 text-sm sm:text-base mb-6 max-w-2xl mx-auto">
                 Sollicitez une étude de faisabilité gratuite et sans engagement. Notre expertise permet d&apos;analyser vos besoins et de définir la solution technique idéale pour votre habitat.
               </p>
 

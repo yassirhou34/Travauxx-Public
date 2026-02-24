@@ -6,7 +6,7 @@ import { ScrollReveal } from '@/components/scroll-reveal'
 
 export function ArchitectureCTA() {
   return (
-    <section className="relative py-8 sm:py-10 lg:py-14 overflow-hidden">
+    <section className="relative pt-2 sm:pt-3 lg:pt-4 pb-1 sm:pb-2 lg:pb-3 overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary" />
       
@@ -25,7 +25,7 @@ export function ArchitectureCTA() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex justify-center">
           <ScrollReveal direction="up">
-            <div className="text-center">
+            <div className="text-center max-w-4xl w-full">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-4">
                 <span className="text-white/80 text-sm">Concrétisez votre vision</span>
               </div>
@@ -34,7 +34,7 @@ export function ArchitectureCTA() {
                 Donnez vie à<br />vos idées<span className="text-white/60">.</span>
               </h2>
               
-              <p className="text-white/70 text-lg mb-6 max-w-lg mx-auto">
+              <p className="text-white/70 text-lg mb-6 max-w-2xl mx-auto">
                 Un premier rendez-vous gratuit pour explorer vos envies, analyser votre projet 
                 et découvrir nos outils de conception innovants.
               </p>

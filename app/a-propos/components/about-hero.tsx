@@ -4,7 +4,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { ChevronDown } from 'lucide-react'
 
 export function AboutHero() {
   return (
@@ -50,7 +49,7 @@ export function AboutHero() {
         <ScrollReveal direction="up" delay={0.5}>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link href="/concevoir-mon-projet">
-              <Button className="group bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-6 text-base sm:text-lg rounded-full transition-all duration-300 hover:shadow-2xl hover:shadow-accent/30 hover:scale-105 inline-flex items-center justify-center">
+              <Button className="group w-full sm:w-auto min-w-[260px] h-[56px] bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-6 text-base sm:text-lg rounded-full transition-all duration-300 hover:shadow-2xl hover:shadow-accent/30 hover:scale-105 inline-flex items-center justify-center">
                 <span className="inline-flex items-center justify-center gap-2">
                   Concevoir mon projet
                 </span>
@@ -60,9 +59,8 @@ export function AboutHero() {
               href="#mission"
               className="group inline-flex items-center justify-center gap-2 min-w-[260px] h-[56px] px-8 relative border-2 border-white/70 text-white hover:bg-white/20 font-bold rounded-full text-base sm:text-lg transition-all duration-300 bg-white/10 backdrop-blur-md hover:border-white hover:scale-105 shadow-xl shadow-white/20 whitespace-nowrap"
             >
-              <span className="relative z-10 inline-flex items-center justify-center gap-2 whitespace-nowrap">
+              <span className="relative z-10 inline-flex items-center justify-center whitespace-nowrap">
                 Découvrir notre mission
-                <ChevronDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
               </span>
               <div className="absolute -inset-2 bg-white/15 rounded-full blur-2xl opacity-50 pointer-events-none" />
             </Link>
@@ -70,17 +68,19 @@ export function AboutHero() {
         </ScrollReveal>
 
         {/* Bandeau visuel — image de chantier / réseau */}
-        <ScrollReveal direction="up" delay={0.6} className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 sm:mt-12">
-          <div className="relative aspect-[21/9] sm:aspect-[3/1] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-            <Image
-              src="/Banqueimages/tile-merchant-ireland-ujfcn8vQpUY-unsplash.jpg"
-              alt="Réseau Activ Travaux — chantier et expertise"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 1280px"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+        <ScrollReveal direction="up" delay={0.6} className="w-full flex justify-center mt-14 sm:mt-16 mb-10 sm:mb-12">
+          <div className="w-[92vw] sm:w-[95vw] max-w-[1400px]">
+            <div className="relative aspect-[16/9] sm:aspect-[2/1] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+              <Image
+                src="/Banqueimages/tile-merchant-ireland-ujfcn8vQpUY-unsplash.jpg"
+                alt="Réseau Activ Travaux — chantier et expertise"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 92vw, 1400px"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+            </div>
           </div>
         </ScrollReveal>
       </div>

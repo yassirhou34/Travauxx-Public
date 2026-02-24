@@ -7,7 +7,7 @@ import { Building2, Store, Coffee, Home } from 'lucide-react'
 
 export function ProCTA() {
   return (
-    <section className="relative pt-10 sm:pt-14 lg:pt-20 pb-8 sm:pb-10 lg:pb-14 overflow-hidden">
+    <section className="relative pt-3 sm:pt-4 lg:pt-5 pb-1 sm:pb-2 lg:pb-3 overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary" />
       
@@ -26,21 +26,21 @@ export function ProCTA() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex justify-center">
           <ScrollReveal direction="up">
-            <div className="text-center max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6">
+            <div className="text-center max-w-4xl w-full">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-4">
                 <span className="text-white/80 text-sm">Projet professionnel ?</span>
               </div>
               
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
                 Parlons de vos<br />locaux<span className="text-accent">.</span>
               </h2>
               
-              <p className="text-white/70 text-lg mb-8 mx-auto">
+              <p className="text-white/70 text-lg mb-5 mx-auto">
                 Audit technique et diagnostic de faisabilité pour aligner vos surfaces sur vos impératifs d'exploitation. Nous structurons une réponse globale adaptée à vos flux métiers.
               </p>
 
               {/* Sectors reminder */}
-              <div className="flex flex-wrap gap-3 mb-10 justify-center">
+              <div className="flex flex-wrap gap-3 mb-6 justify-center">
                 {[
                   { icon: Store, label: 'Commerce' },
                   { icon: Building2, label: 'Bureau' },
@@ -58,7 +58,7 @@ export function ProCTA() {
               </div>
 
               {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link href="/concevoir-mon-projet">
                   <Button className="w-full sm:w-auto group bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105 inline-flex items-center justify-center">
                     <span className="inline-flex items-center justify-center gap-2">
@@ -81,7 +81,7 @@ export function ProCTA() {
 
         {/* Trust indicators */}
         <ScrollReveal direction="up" delay={0.4}>
-          <div className="mt-6 pt-6 border-t border-white/20">
+          <div className="mt-4 pt-4 border-t border-white/20">
             <div className="flex flex-wrap justify-center items-center gap-8 text-white/50 text-sm">
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-accent" />

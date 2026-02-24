@@ -64,12 +64,12 @@ export function ValuesSection() {
 
         {/* Image d'ambiance — image entière, sans encarts latéraux */}
         <ScrollReveal direction="up" delay={0.08} className="mb-12 lg:mb-14">
-          <div className="relative w-full max-w-md mx-auto rounded-2xl overflow-hidden border border-white/10">
+          <div className="relative w-full max-w-xl mx-auto aspect-square rounded-2xl overflow-hidden border border-white/10">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/Banqueimages/photo-1604159848821-104723525eb4.avif"
               alt="Confiance, transparence, exigence — nos réalisations"
-              className="w-full h-auto block"
+              className="w-full h-full object-cover"
             />
           </div>
         </ScrollReveal>

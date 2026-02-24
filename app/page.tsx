@@ -13,6 +13,7 @@ import StatsLuxury from '@/components/StatsLuxury'
 import SpotlightGrid from '@/components/SpotlightGrid'
 import { Marquee } from '@/components/MagazineComponents'
 import { AdvancedReveal, StaggerContainer, ParallaxWrapper, TextSplitReveal, MagneticHover } from '@/components/animations'
+import { ContractantCarousel } from '@/components/contractant-carousel'
 
 export const metadata: Metadata = {
   title: 'Activ Travaux 37 — Rénovation premium clé en main en Indre-et-Loire',
@@ -101,21 +102,10 @@ export default function Home() {
                   ))}
                 </div>
               </div>
-              {/* Colonne visuelle – 3 images, les 2 du bas centrées et même position (capture 1) */}
+              {/* Colonne visuelle – carrousel automatique */}
               <AdvancedReveal direction="scale" delay={0.25} duration={0.9}>
-                <div className="relative space-y-4 lg:space-y-5 flex flex-col items-center">
-                  <div className="relative aspect-[4/3] w-full max-w-lg rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-                    <Image src="/Banqueimages/M7_01321.jpg" alt="Projet rénovation clé en main" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                  </div>
-                  <div className="grid grid-cols-2 gap-4 w-full max-w-lg">
-                    <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-white/10 shadow-xl">
-                      <Image src="/Banqueimages/M7_01323.jpg" alt="Chantier Activ Travaux" fill className="object-cover" sizes="(max-width: 1024px) 50vw, 25vw" />
-                    </div>
-                    <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-white/10 shadow-xl">
-                      <Image src="/Banqueimages/DSC09109.jpg" alt="Réalisation extension" fill className="object-cover" sizes="(max-width: 1024px) 50vw, 25vw" />
-                    </div>
-                  </div>
+                <div className="relative flex flex-col items-center">
+                  <ContractantCarousel />
                 </div>
               </AdvancedReveal>
             </div>
@@ -134,11 +124,7 @@ export default function Home() {
                   <div className="inline-block px-4 py-2 rounded-full bg-secondary/20 border border-secondary/40 mb-4">
                     <span className="text-secondary-foreground text-sm font-semibold">Notre processus</span>
                   </div>
-                  <TextSplitReveal splitBy="word" delay={0.3}>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white">
-                      3 étapes claires
-                    </h2>
-                  </TextSplitReveal>
+                 
                 </div>
               </AdvancedReveal>
               <StaggerContainer 
@@ -201,7 +187,7 @@ export default function Home() {
         </section>
 
         {/* Marquee */}
-        <Marquee text="Nos Réalisations • Projets Premium • Rénovation Clé en Main • " />
+        <Marquee text="Nos Réalisations      Projets Premium      Rénovation Clé en Main      " />
 
         {/* Réalisations – aperçu sur fond sombre */}
         <ParallaxWrapper speed={0.2}>

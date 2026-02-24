@@ -6,7 +6,7 @@ import { ScrollReveal } from '@/components/scroll-reveal'
 
 export function RenovationCTA() {
   return (
-    <section className="relative pt-10 sm:pt-14 lg:pt-20 pb-6 sm:pb-8 lg:pb-10 overflow-hidden">
+    <section className="relative pt-3 sm:pt-4 lg:pt-5 pb-1 sm:pb-2 lg:pb-3 overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary" />
       

@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import { ScrollReveal } from '@/components/scroll-reveal'
 import ElasticGrid from '@/components/ElasticGrid'
 import { 
@@ -86,19 +85,6 @@ export function ThreePillars() {
             <ElasticGrid
               features={elasticGridFeatures}
               backgroundColor="#050308"
-            />
-          </div>
-        </ScrollReveal>
-
-        {/* Emplacement dédié visuel — une bande entre grille et onglets */}
-        <ScrollReveal direction="up" delay={0.09} className="mb-14">
-          <div className="relative aspect-[21/9] sm:aspect-[3/1] rounded-2xl overflow-hidden border border-white/10">
-            <Image
-              src="/Banqueimages/IMG_1718.JPG"
-              alt="Notre approche architecture et bureau d'études"
-              fill
-              className="object-cover"
-              sizes="100vw"
             />
           </div>
         </ScrollReveal>

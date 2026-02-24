@@ -37,7 +37,7 @@ export function RenovationHero() {
 
         {/* Subtitle */}
         <ScrollReveal direction="up" delay={0.3}>
-          <p className="text-lg sm:text-xl md:text-2xl text-white/70 max-w-2xl mx-auto mb-4 font-light">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/70 max-w-2xl mx-auto mb-10 font-light">
             Plus sain, plus confortable, plus économe.
           </p>
          
@@ -45,7 +45,7 @@ export function RenovationHero() {
 
         {/* CTAs */}
         <ScrollReveal direction="up" delay={0.5}>
-          <div className="flex flex-col sm:flex-row gap-2 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
             <Link href="/concevoir-mon-projet">
               <Button className="group inline-flex items-center justify-center gap-2 w-[260px] h-[56px] bg-[#a39383] hover:bg-[#8b8276] text-white font-semibold rounded-full text-base sm:text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-[#a39383]/30 hover:scale-105 border-0">
                 <span className="flex items-center justify-center gap-2 whitespace-nowrap">

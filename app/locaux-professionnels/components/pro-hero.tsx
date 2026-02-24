@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { ChevronDown, Building2, Store, Coffee, Home } from 'lucide-react'
+import { Building2, Store, Coffee, Home } from 'lucide-react'
 
 export function ProHero() {
   const scrollToSectors = () => {
@@ -81,7 +81,6 @@ export function ProHero() {
             >
               <span className="relative z-10 flex items-center gap-2 whitespace-nowrap">
                 Découvrir nos secteurs
-                <ChevronDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
               </span>
               <div className="absolute -inset-2 bg-white/15 rounded-full blur-2xl opacity-50" />
             </button>

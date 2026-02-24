@@ -254,7 +254,7 @@ export function ProSectors() {
               {/* CTA */}
               <Link
                 href="/concevoir-mon-projet"
-                className="group inline-flex items-center gap-3 px-6 py-4 rounded-xl font-semibold text-white transition-all duration-300 hover:shadow-xl hover:scale-105"
+                className="group inline-flex items-center gap-3 px-6 py-4 rounded-full font-semibold text-white transition-all duration-300 hover:shadow-xl hover:scale-105"
                 style={{ backgroundColor: activeSector.color }}
               >
                 {activeSector.ctaLabel}

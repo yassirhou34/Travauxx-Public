@@ -78,7 +78,7 @@ export function RenovationTypes() {
   return (
     <section
       id="renovation-types"
-      className="relative pt-6 sm:pt-8 lg:pt-10 pb-20 sm:pb-28 lg:pb-36 bg-[#050308] overflow-hidden"
+      className="relative pt-[35vh] sm:pt-[40vh] lg:pt-[45vh] pb-20 sm:pb-28 lg:pb-36 bg-[#050308] overflow-hidden"
     >
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-radial from-secondary/20 to-transparent opacity-60" />

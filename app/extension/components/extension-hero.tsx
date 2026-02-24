@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { ChevronDown } from 'lucide-react'
 
 export function ExtensionHero() {
   const scrollToTypes = () => {
@@ -61,7 +60,6 @@ export function ExtensionHero() {
             >
               <span className="relative z-10 flex items-center gap-2 whitespace-nowrap">
                 Découvrir nos solutions
-                <ChevronDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
               </span>
               <div className="absolute -inset-2 bg-white/15 rounded-full blur-2xl opacity-50" />
             </button>

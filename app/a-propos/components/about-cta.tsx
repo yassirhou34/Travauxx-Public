@@ -7,7 +7,7 @@ import { Home, Briefcase } from 'lucide-react'
 
 export function AboutCTA() {
   return (
-    <section className="relative py-12 sm:py-16 lg:py-20 overflow-hidden">
+    <section className="relative pt-2 sm:pt-3 lg:pt-4 pb-1 sm:pb-2 lg:pb-3 overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/95" />
       
@@ -26,7 +26,7 @@ export function AboutCTA() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex justify-center">
           <ScrollReveal direction="up">
-            <div className="text-center max-w-2xl">
+            <div className="text-center max-w-4xl w-full">
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
                 Parlons de<br />votre projet<span className="text-accent">.</span>
               </h2>

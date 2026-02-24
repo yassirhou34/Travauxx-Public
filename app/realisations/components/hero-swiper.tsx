@@ -28,12 +28,12 @@ export function HeroSwiper() {
   const goTo = (i: number) => setIndex(i)
 
   return (
-    <div className="relative aspect-square max-h-[380px] lg:max-h-[500px] w-full min-w-0 rounded-2xl overflow-hidden border border-black/5 shadow-2xl group">
+    <div className="relative w-[120%] -ml-[10%] min-w-0 rounded-2xl overflow-hidden border border-black/5 shadow-2xl group" style={{ aspectRatio: '1 / 1.15' }}>
       <div className="absolute inset-0 rounded-2xl">
         {HERO_IMAGES.map((img, i) => (
           <div
             key={img.src}
-            className="absolute inset-0 transition-opacity duration-300 ease-out"
+            className="absolute inset-0 overflow-hidden transition-opacity duration-300 ease-out"
             style={{
               opacity: i === index ? 1 : 0,
               transitionDuration: `${FADE_DURATION_MS}ms`,
@@ -43,8 +43,10 @@ export function HeroSwiper() {
             <Image
               src={img.src}
               alt={img.alt}
-              fill
-              className="object-cover select-none"
+              width={1100}
+              height={1100}
+              className="w-full h-full object-cover select-none"
+              style={{ transform: 'scale(1.35)' }}
               sizes="(max-width: 1024px) 100vw, 65vw"
               priority
               loading="eager"

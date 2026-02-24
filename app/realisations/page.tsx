@@ -86,10 +86,10 @@ export default function RealisationsPage() {
                   Consultez notre sélection de projets réalisés : réhabilitations lourdes, extensions structurelles et optimisation de parcs tertiaires. Chaque intervention reflète la rigueur et les standards d'excellence du réseau Activ Travaux 37.
                 </p>
               </div>
-              <div className="w-full min-w-0 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-150">
+              <div className="w-full min-w-0 overflow-visible animate-in fade-in slide-in-from-bottom-8 duration-700 delay-150">
                 <HeroSwiper />
               </div>
-            </div>
+                 </div>
           </div>
         </section>
 
