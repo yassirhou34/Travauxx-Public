@@ -10,7 +10,9 @@ export function HeroVideo() {
   const [isVisible, setIsVisible] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
-  const [isMuted, setIsMuted] = useState(false)
+  // Démarrer en muet : les navigateurs bloquent le son sans clic. Un clic = activer le son.
+  const [isMuted, setIsMuted] = useState(true)
+  const [hintHidden, setHintHidden] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
   const particlePositions = [
@@ -30,9 +32,18 @@ export function HeroVideo() {
     const checkMobile = () => setIsMobile(window.innerWidth < 640)
     checkMobile()
     window.addEventListener('resize', checkMobile)
+
+    // Lancer la vidéo dès que possible (au montage et après un court délai pour le premier chargement)
+    const tryPlay = () => {
+      const video = videoRef.current
+      if (video) video.play().catch(() => {})
+    }
+    tryPlay()
+    const t = setTimeout(tryPlay, 150)
     const handleScroll = () => setScrollY(window.scrollY)
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => {
+      clearTimeout(t)
       window.removeEventListener('resize', checkMobile)
       window.removeEventListener('scroll', handleScroll)
     }
@@ -52,6 +63,8 @@ export function HeroVideo() {
         loop
         muted={isMuted}
         playsInline
+        onCanPlay={() => videoRef.current?.play().catch(() => {})}
+        onLoadedData={() => videoRef.current?.play().catch(() => {})}
         style={{
           transform: `translateY(${videoParallax}px) scale(${isMobile ? 1 : 1.1})`,
           transition: 'transform 0.1s ease-out',
@@ -78,10 +91,24 @@ export function HeroVideo() {
         </div>
       )}
 
-      {/* Bouton Activer / Désactiver le son */}
+      {/* Message : le son est bloqué par le navigateur jusqu'à un clic */}
+      {isMuted && !hintHidden && (
+        <button
+          type="button"
+          onClick={() => { setIsMuted(false); setHintHidden(true) }}
+          className="absolute inset-0 z-20 flex items-center justify-center bg-black/25 hover:bg-black/15 transition-colors"
+          aria-label="Activer le son"
+        >
+          <span className="px-5 py-3 rounded-full bg-white/95 text-black text-sm font-semibold shadow-xl border border-white/30">
+            Cliquez pour activer le son
+          </span>
+        </button>
+      )}
+
+      {/* Bouton désactiver / activer le son */}
       <button
         type="button"
-        onClick={() => setIsMuted((m) => !m)}
+        onClick={() => { setIsMuted((m) => !m); if (isMuted) setHintHidden(true) }}
         className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 z-20 flex items-center gap-2 px-3 py-2 rounded-lg bg-black/50 hover:bg-black/70 text-white/90 hover:text-white text-xs sm:text-sm transition-colors border border-white/20"
         aria-label={isMuted ? 'Activer le son' : 'Désactiver le son'}
       >
