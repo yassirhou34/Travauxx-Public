@@ -8,7 +8,7 @@ const cinematicFeatures = [
   { title: 'Un seul interlocuteur', desc: 'De l\'étude à la remise des clés, un seul contact pilote tout. Plus de sérénité au quotidien.', img: '/Banqueimages/DSC09109.jpg' },
   { title: 'Un seul contrat', desc: 'Prix ferme, responsabilité globale. Nous assumons votre chantier professionnel de A à Z.', img: '/Banqueimages/DJI_0087.jpg' },
   { title: 'Sérénité', desc: 'Nous neutralisons vos contraintes techniques et administratives. Vous sécurisez votre investissement.', img: '/Banqueimages/DJI_0081.jpg' },
-  { title: 'Efficacité', desc: 'Dates d\'ouverture garanties, pilotage précis des délais. Vous reprenez la main dans les temps.', img: '/Banqueimages/IMG_1718.JPG' },
+  { title: 'Efficacité', desc: 'Dates d\'ouverture garanties, pilotage précis des délais. Vous reprenez la main dans les temps.', img: '/Banqueimages/Piscine.JPG' },
 ]
 
 const advantages = [

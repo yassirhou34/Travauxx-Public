@@ -53,11 +53,11 @@ export function HeroVideo() {
 
   return (
     <section
-      className="relative -mt-16 sm:-mt-20 pt-16 sm:pt-20 min-h-[100vh] sm:min-h-screen flex items-center justify-center overflow-hidden bg-black"
+      className="relative -mt-16 sm:-mt-20 pt-16 sm:pt-20 min-h-[100dvh] min-h-[100vh] sm:min-h-screen w-screen min-w-full max-w-[100vw] flex items-center justify-center overflow-hidden bg-black"
     >
       <video
         ref={videoRef}
-        className="absolute inset-0 h-full w-full object-contain sm:object-cover object-center"
+        className="absolute inset-0 h-full w-full min-h-full min-w-full object-cover object-center"
         src={`/Banquevideos/${encodeURIComponent('Reveal-Signature-v2 (1) compressed.mp4')}`}
         autoPlay
         loop

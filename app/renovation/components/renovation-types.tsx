@@ -29,7 +29,7 @@ const renovationTypes = [
       'Valorisation maximale du bien',
     ],
     forWho: ['Propriétaires occupants', 'Investisseurs locatifs', 'Acquisition à rénover', 'Maison ancienne'],
-    image: '/Banqueimages/M7_01325.jpg',
+    image: '/Banqueimages/taylor-flowe-sRxK8EP6oLo-unsplash.jpg',
     color: '#e83263',
     gradient: 'from-accent to-accent/80',
   },
@@ -205,14 +205,16 @@ export function RenovationTypes() {
                 })}
               </div>
 
-              {/* CTA */}
-              <Link 
-                href="/concevoir-mon-projet"
-                className="group inline-flex items-center gap-3 px-6 py-4 rounded-full font-semibold text-white transition-all duration-300 hover:shadow-xl hover:scale-105"
-                style={{ backgroundColor: activeType.color }}
-              >
-                Démarrer mon projet
-              </Link>
+              {/* CTA — centré en mobile uniquement */}
+              <div className="flex justify-center sm:justify-start">
+                <Link 
+                  href="/concevoir-mon-projet"
+                  className="group inline-flex items-center gap-3 px-6 py-4 rounded-full font-semibold text-white transition-all duration-300 hover:shadow-xl hover:scale-105"
+                  style={{ backgroundColor: activeType.color }}
+                >
+                  Démarrer mon projet
+                </Link>
+              </div>
             </div>
           </ScrollReveal>
         </div>

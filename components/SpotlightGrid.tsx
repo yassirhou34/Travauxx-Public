@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import { ArrowUpRight } from 'lucide-react'
 
 interface FeatureItem {
@@ -16,9 +16,27 @@ interface SpotlightGridProps {
     hoverGradientTo?: string;
 }
 
-const SpotlightRow = ({ item, index }: { item: FeatureItem; index: number; hoverGradientFrom?: string; hoverGradientTo?: string }) => {
+const SpotlightRow = ({
+    item,
+    index,
+    isActive,
+    onTap,
+}: {
+    item: FeatureItem
+    index: number
+    hoverGradientFrom?: string
+    hoverGradientTo?: string
+    isActive?: boolean
+    onTap?: () => void
+}) => {
     return (
-        <div className="relative border-t border-white/15 py-6 sm:py-8 md:py-10 lg:py-12 group cursor-pointer overflow-hidden transition-colors">
+        <div
+            role="button"
+            tabIndex={0}
+            onClick={onTap}
+            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') onTap?.() }}
+            className="relative border-t border-white/15 py-6 sm:py-8 md:py-10 lg:py-12 group cursor-pointer overflow-hidden transition-colors"
+        >
             <div className="flex items-center justify-between relative z-20 px-3 sm:px-4 md:px-6 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
                 <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-light text-white/60 group-hover:text-white transition-all duration-300 min-w-[40px] sm:min-w-[50px] md:min-w-[60px] tabular-nums">0{index + 1}</span>
 
@@ -32,13 +50,16 @@ const SpotlightRow = ({ item, index }: { item: FeatureItem; index: number; hover
             </div>
 
             {item.img && (
-                <div className="absolute inset-0 pointer-events-none z-10 overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div
+                    className={`absolute inset-0 pointer-events-none z-10 overflow-hidden transition-opacity duration-500 opacity-0 md:group-hover:opacity-100 ${isActive ? 'max-md:opacity-100' : ''}`}
+                    aria-hidden
+                >
                     <img src={item.img} className="w-full h-full object-cover object-center" alt={item.title} loading="lazy" />
                     <div className="absolute inset-0 bg-black/55" aria-hidden />
                 </div>
             )}
 
-            <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0" />
+            <div className={`absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20 blur-2xl transition-opacity duration-500 z-0 opacity-0 md:group-hover:opacity-100 ${isActive ? 'max-md:opacity-100' : ''}`} />
         </div>
     );
 };
@@ -54,6 +75,7 @@ const SpotlightGrid: React.FC<SpotlightGridProps> = ({
     hoverGradientFrom = "purple-900",
     hoverGradientTo = "blue-900",
 }) => {
+    const [activeIndex, setActiveIndex] = useState<number | null>(null)
     return (
         <div
             className="w-full rounded-2xl sm:rounded-3xl border border-white/10 bg-white/5/0 bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md overflow-hidden"
@@ -61,7 +83,15 @@ const SpotlightGrid: React.FC<SpotlightGridProps> = ({
         >
             <div className="w-full">
                 {features.map((item, i) => (
-                    <SpotlightRow key={i} item={item} index={i} hoverGradientFrom={hoverGradientFrom} hoverGradientTo={hoverGradientTo} />
+                    <SpotlightRow
+                        key={i}
+                        item={item}
+                        index={i}
+                        hoverGradientFrom={hoverGradientFrom}
+                        hoverGradientTo={hoverGradientTo}
+                        isActive={activeIndex === i}
+                        onTap={() => setActiveIndex(activeIndex === i ? null : i)}
+                    />
                 ))}
             </div>
         </div>

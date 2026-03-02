@@ -68,10 +68,10 @@ export function HomeCTA() {
           </ScrollReveal>
           </div>
           <ScrollReveal direction="left" delay={0.2}>
-            <div className="relative aspect-[4/3] max-h-[380px] lg:max-h-[420px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+            <div className="relative aspect-[4/3] max-h-[400px] lg:max-h-[440px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
               <Image
-                src="/Banqueimages/DJI_0087.jpg"
-                alt="Projet de rénovation Activ Travaux"
+                src="/Banqueimages/M7_01330.jpg"
+                alt="Projet de rénovation Activ Travaux — toiture et échafaudage"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

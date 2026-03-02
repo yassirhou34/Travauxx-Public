@@ -57,9 +57,8 @@ export function RenovationHero() {
               onClick={scrollToTypes}
               className="group inline-flex items-center justify-center gap-2 w-[260px] h-[56px] relative border-2 border-white/70 text-white hover:bg-white/20 font-bold rounded-full text-base sm:text-lg transition-all duration-300 bg-white/10 backdrop-blur-md hover:border-white hover:scale-110 shadow-xl shadow-white/20 whitespace-nowrap"
             >
-              <span className="relative z-10 flex items-center gap-2 whitespace-nowrap">
+              <span className="relative z-10 flex items-center justify-center whitespace-nowrap">
                 Découvrir nos solutions
-                <ChevronDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
               </span>
               <div className="absolute -inset-2 bg-white/15 rounded-full blur-2xl opacity-50" />
             </button>

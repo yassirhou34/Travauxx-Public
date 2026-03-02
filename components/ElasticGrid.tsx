@@ -44,7 +44,7 @@ const ElasticGrid: React.FC<ElasticGridProps> = ({
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4 md:p-12" style={{ backgroundColor }}>
-      <div className="flex flex-col md:flex-row gap-4 w-full max-w-6xl h-[600px]">
+      <div className="flex flex-col md:flex-row gap-4 w-full max-w-6xl h-[420px] md:h-[600px]">
         {features.map((item, i) => {
           const Icon = item.icon;
           return (
@@ -69,14 +69,16 @@ const ElasticGrid: React.FC<ElasticGridProps> = ({
                 {item.img && <img src={item.img} className="w-full h-full object-cover opacity-60" alt="" />}
               </motion.div>
 
-              {/* Vertical Label (Inactive) */}
+              {/* Label (Inactive) */}
               <motion.div
                 className="absolute inset-0 flex items-center justify-center pointer-events-none"
                 initial={false}
                 animate={{ opacity: active === i ? 0 : 1 }}
                 transition={{ duration: 0.25, ease: "easeOut" }}
               >
-                <h3 className="transform -rotate-90 text-xl font-bold text-neutral-400 whitespace-nowrap uppercase tracking-widest">{item.title}</h3>
+                <h3 className="transform rotate-0 md:-rotate-90 text-base md:text-xl font-bold text-neutral-400 whitespace-nowrap uppercase tracking-widest">
+                  {item.title}
+                </h3>
               </motion.div>
 
               {/* Expanded Content */}
@@ -91,7 +93,7 @@ const ElasticGrid: React.FC<ElasticGridProps> = ({
                     <Icon />
                   </div>
                 )}
-                <motion.h2 layout="position" className="text-4xl md:text-7xl font-bold text-white mb-4 leading-tight">
+                <motion.h2 layout="position" className="text-3xl md:text-7xl font-bold text-white mb-4 leading-tight">
                   {item.title}
                 </motion.h2>
                 <motion.p layout="position" className="text-lg text-white/80 max-w-lg">

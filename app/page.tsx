@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <>
       <Header variant="transparent" />
-      <main>
+      <main className="overflow-x-hidden">
         {/* Hero : vidéo seule + indicateur « DÉFILEZ POUR EXPLORER » */}
         <HeroVideo />
 
@@ -138,7 +138,7 @@ export default function Home() {
                     title: 'Analyse du besoin & conception du projet',
                     desc: 'Phase d\'écoute, visite sur site, relevé de l\'existant, études de faisabilité et coordination avec architectes ou bureaux d\'études partenaires si nécessaire.',
                     goal: 'Proposer un projet cohérent, conforme aux réglementations, prêt à être chiffré précisément.',
-                    img: '/Banqueimages/M7_01325.jpg',
+                    img: '/Banqueimages/charlesdeluvio-lkHNDf-oXTk-unsplash.jpg',
                   },
                   {
                     title: 'Chiffrage, contractualisation & planification',
@@ -150,7 +150,7 @@ export default function Home() {
                     title: 'Réalisation & suivi du chantier',
                     desc: 'Coordination des corps de métiers, suivi qualité, sécurité du chantier et échanges réguliers jusqu\'à la réception des travaux.',
                     goal: 'Livrer un projet clés en main, conforme, dans les temps, avec un haut niveau de satisfaction.',
-                    img: '/Banqueimages/M7_01330.jpg',
+                    img: '/Banqueimages/mat-kilkeary-vfFVFPHYeko-unsplash.jpg',
                   },
                 ].map((item, idx) => (
                   <MagneticHover key={item.title} strength={0.15}>
@@ -225,12 +225,12 @@ export default function Home() {
                         { 
                           title: 'Rénovation globale de maison', 
                           desc: 'Maison de famille près de Tours',
-                          img: '/Banqueimages/M7_01325.jpg'
+                          img: '/Banqueimages/im3rd-media-FJZtZldA-uE-unsplash.jpg'
                         },
                         { 
                           title: 'Extension bois & lumière', 
                           desc: 'Séjour agrandi avec grandes baies vitrées',
-                          img: '/Banqueimages/DJI_0081.jpg'
+                          img: '/Banqueimages/julius-christensen-JhqMorYPP6g-unsplash.jpg'
                         },
                         { 
                           title: 'Cuisine & pièce de vie', 
@@ -240,7 +240,7 @@ export default function Home() {
                         { 
                           title: 'Bureaux professionnels', 
                           desc: 'Mise aux normes et optimisation des espaces',
-                          img: '/Banqueimages/M7_01330.jpg'
+                          img: '/Banqueimages/petr-magera-Ugnm0F4e00U-unsplash.jpg'
                         },
                       ]}
                       backgroundColor="transparent"

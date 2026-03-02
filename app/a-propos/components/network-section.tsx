@@ -11,19 +11,6 @@ const networkFeatures = [
   { icon: Award, title: 'Méthodes éprouvées', color: 'from-secondary to-secondary/80' },
 ]
 
-const advantages = [
-  {
-    title: 'Proximité & Réactivité',
-    subtitle: 'Un interlocuteur local',
-    description: 'Écoute, réactivité et connaissance du terrain.',
-  },
-  {
-    title: 'Force & Structure',
-    subtitle: 'Un réseau national',
-    description: 'Organisation rigoureuse et fiabilité éprouvée.',
-  },
-]
-
 export function NetworkSection() {
   return (
     <section className="relative py-12 sm:py-16 lg:py-20 bg-[#050308] overflow-hidden">
@@ -80,32 +67,13 @@ export function NetworkSection() {
             </div>
 
             {/* Image unique sous "Le meilleur des deux mondes" — image entière, sans encarts latéraux */}
-            <div className="relative w-full max-w-xl mx-auto aspect-square rounded-2xl overflow-hidden border border-white/10 mb-8">
+            <div className="relative w-full max-w-xl mx-auto aspect-square rounded-2xl overflow-hidden border border-white/10">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/Banqueimages/tile-merchant-ireland-mJNtQr4fSXw-unsplash.jpg"
+                src="/Banqueimages/tile-merchant-ireland-L525hiR2XeI-unsplash.jpg"
                 alt="Proximité et réseau — réalisation Activ Travaux"
                 className="w-full h-full object-cover"
               />
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              {advantages.map((adv, i) => (
-                <div key={i} className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/15 text-center">
-                  <div className="relative aspect-video rounded-xl overflow-hidden mb-4 border border-white/10">
-                    <Image
-                      src={i === 0 ? '/Banqueimages/tile-merchant-ireland-L525hiR2XeI-unsplash.jpg' : '/Banqueimages/point3d-commercial-imaging-ltd-Tb4bUf6z9gI-unsplash.jpg'}
-                      alt={adv.title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                    />
-                  </div>
-                  <h4 className="text-xl font-bold mb-2">{adv.title}</h4>
-                  <p className="text-accent text-sm font-medium mb-3">{adv.subtitle}</p>
-                  <p className="text-white/70 text-sm">{adv.description}</p>
-                </div>
-              ))}
             </div>
           </div>
         </ScrollReveal>

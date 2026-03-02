@@ -26,7 +26,7 @@ const sectors = [
       'Éclairage commercial',
       'Mobilier adapté',
     ],
-    image: '/Banqueimages/M7_01330.jpg',
+    image: '/Banqueimages/kai-pilger-GQm9dBlUv4M-unsplash.jpg',
     color: '#e83263',
     gradient: 'from-accent to-accent/80',
     ctaLabel: 'Lancer mon étude retail',
@@ -46,7 +46,7 @@ const sectors = [
       'Performance énergétique',
       'Accueil & image',
     ],
-    image: '/Banqueimages/M7_01331.jpg',
+    image: '/Banqueimages/filip-rankovic-grobgaard-4cy720i6zks-unsplash.jpg',
     color: '#a39383',
     gradient: 'from-secondary to-secondary/80',
     ctaLabel: 'Lancer mon audit tertiaire',
@@ -66,7 +66,7 @@ const sectors = [
       'Accessibilité PMR',
       'Acoustique salle',
     ],
-    image: '/Banqueimages/M7_01335.jpg',
+    image: '/Banqueimages/bernd-dittrich-_MdxCY0eFSs-unsplash.jpg',
     color: '#e83263',
     gradient: 'from-accent/90 to-accent/70',
     ctaLabel: 'Solliciter un audit CHR',
@@ -86,7 +86,7 @@ const sectors = [
       'Sécurité renforcée',
       'Services intégrés',
     ],
-    image: '/Banqueimages/M7_01319.jpg',
+    image: '/Banqueimages/steffen-lemmerzahl-yJpvGn5goGc-unsplash.jpg',
     color: '#a39383',
     gradient: 'from-secondary to-secondary/80',
     ctaLabel: 'Lancer mon étude d\'actif',
@@ -251,14 +251,16 @@ export function ProSectors() {
                 ))}
               </div>
 
-              {/* CTA */}
-              <Link
-                href="/concevoir-mon-projet"
-                className="group inline-flex items-center gap-3 px-6 py-4 rounded-full font-semibold text-white transition-all duration-300 hover:shadow-xl hover:scale-105"
-                style={{ backgroundColor: activeSector.color }}
-              >
-                {activeSector.ctaLabel}
-              </Link>
+              {/* CTA — centré */}
+              <div className="flex justify-center">
+                <Link
+                  href="/concevoir-mon-projet"
+                  className="group inline-flex items-center gap-3 px-6 py-4 rounded-full font-semibold text-white transition-all duration-300 hover:shadow-xl hover:scale-105"
+                  style={{ backgroundColor: activeSector.color }}
+                >
+                  {activeSector.ctaLabel}
+                </Link>
+              </div>
             </div>
           </ScrollReveal>
         </div>

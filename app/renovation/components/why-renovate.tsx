@@ -85,8 +85,8 @@ export function WhyRenovate() {
             const Icon = reason.icon
             return (
               <ScrollReveal key={i} direction="up" delay={i * 0.1}>
-                <div className="group h-full p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#a39383]/60 hover:shadow-[0_30px_90px_rgba(0,0,0,0.9)] transition-all duration-300 hover:-translate-y-1">
-                  <div className="w-12 h-12 rounded-xl bg-[#a39383]/20 flex items-center justify-center mb-4 group-hover:bg-[#a39383]/30 transition-colors">
+                <div className="group h-full p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#a39383]/60 hover:shadow-[0_30px_90px_rgba(0,0,0,0.9)] transition-all duration-300 hover:-translate-y-1 text-center">
+                  <div className="w-12 h-12 rounded-xl bg-[#a39383]/20 flex items-center justify-center mb-4 mx-auto group-hover:bg-[#a39383]/30 transition-colors">
                     <Icon className="w-6 h-6 text-[#a39383]" />
                   </div>
                   <h3 className="text-lg font-bold text-white mb-0">{reason.title}</h3>

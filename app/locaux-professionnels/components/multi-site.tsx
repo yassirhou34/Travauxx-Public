@@ -53,12 +53,14 @@ export function MultiSite() {
                 </span>
               </div>
 
-              <Link
-                href="/concevoir-mon-projet"
-                className="inline-flex items-center gap-3 px-7 py-4 rounded-full bg-[#a39383] hover:bg-[#8b8276] text-white font-semibold text-sm sm:text-base transition-all duration-300 hover:shadow-xl hover:shadow-[#a39383]/30 hover:scale-105"
-              >
-                Étudier un déploiement multi-sites
-              </Link>
+              <div className="flex justify-center">
+                <Link
+                  href="/concevoir-mon-projet"
+                  className="inline-flex items-center gap-3 px-7 py-4 rounded-full bg-[#a39383] hover:bg-[#8b8276] text-white font-semibold text-sm sm:text-base transition-all duration-300 hover:shadow-xl hover:shadow-[#a39383]/30 hover:scale-105"
+                >
+                  Étudier un déploiement multi-sites
+                </Link>
+              </div>
             </div>
           </ScrollReveal>
 

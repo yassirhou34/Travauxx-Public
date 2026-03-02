@@ -4,9 +4,12 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 const IMAGES = [
-  { src: '/Banqueimages/M7_01321.jpg', alt: 'Projet rénovation clé en main' },
-  { src: '/Banqueimages/M7_01323.jpg', alt: 'Chantier Activ Travaux' },
-  { src: '/Banqueimages/DSC09109.jpg', alt: 'Réalisation extension' },
+  { src: '/Banqueimages/IMG.jpg', alt: 'Projet Activ Travaux' },
+  { src: '/Banqueimages/IMG_0482.jpg', alt: 'Espace de vie Activ Travaux' },
+  {
+    src: '/Banqueimages/photo-1604159848821-104723525eb4.avif',
+    alt: 'Projet de rénovation haut de gamme',
+  },
 ]
 
 const INTERVAL_MS = 4500

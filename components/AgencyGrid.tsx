@@ -23,7 +23,7 @@ const EXTENSION_IMAGES = [
   "/Banqueimages/DJI_0081.jpg",
   "/Banqueimages/DJI_0087.jpg",
   "/Banqueimages/DSC09109.jpg",
-  "/Banqueimages/IMG_1718.JPG",
+  "/Banqueimages/Piscine.JPG",
   "/Banqueimages/IMG_0482.jpg",
 ];
 

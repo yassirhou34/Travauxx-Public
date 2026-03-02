@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/scroll-reveal'
 import { Compass, PenTool } from 'lucide-react'
@@ -81,19 +80,6 @@ export function ArchitectureHero() {
               </span>
               <div className="absolute -inset-2 bg-white/15 rounded-full blur-2xl opacity-50" />
             </button>
-          </div>
-        </ScrollReveal>
-
-        {/* Image sous les deux boutons — légèrement plus large */}
-        <ScrollReveal direction="up" delay={0.55} className="mt-12 sm:mt-14 -mx-24 sm:-mx-32 lg:-mx-48 w-[calc(100%+12rem)] sm:w-[calc(100%+16rem)] lg:w-[calc(100%+24rem)]">
-          <div className="relative aspect-[2/1] rounded-2xl overflow-hidden border border-white/10">
-            <Image
-              src="/Banqueimages/point3d-commercial-imaging-ltd-Tb4bUf6z9gI-unsplash.jpg"
-              alt="Conception architecturale sur-mesure"
-              fill
-              className="object-cover"
-              sizes="100vw"
-            />
           </div>
         </ScrollReveal>
       </div>

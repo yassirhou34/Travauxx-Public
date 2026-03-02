@@ -79,8 +79,8 @@ export function ValueProposition() {
             const Icon = value.icon
             return (
               <ScrollReveal key={i} direction="up" delay={i * 0.1}>
-                <div className="group h-full p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#a39383]/70 hover:shadow-[0_24px_80px_rgba(0,0,0,0.85)] transition-all duration-300 hover:-translate-y-1">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#a39383] to-[#8b8276] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-lg">
+                <div className="group h-full p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#a39383]/70 hover:shadow-[0_24px_80px_rgba(0,0,0,0.85)] transition-all duration-300 hover:-translate-y-1 text-center">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#a39383] to-[#8b8276] flex items-center justify-center mb-5 mx-auto group-hover:scale-110 transition-transform shadow-lg">
                     <Icon className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-lg font-bold text-white">{value.title}</h3>

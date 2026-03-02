@@ -103,19 +103,19 @@ export function WhyExtension() {
               <ScrollReveal key={i} direction="up" delay={i * 0.1}>
                 <div className="group relative">
                   {/* Card – titres seuls, format compact */}
-                  <div className="relative p-4 lg:p-5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-500 hover:-translate-y-1">
-                    {/* Icon */}
-                    <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-white/10 mb-3 shadow-lg">
+                  <div className="relative p-4 lg:p-5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-500 hover:-translate-y-1 text-center">
+                    {/* Icon — centré */}
+                    <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-white/10 mb-3 shadow-lg mx-auto">
                       <Icon className="w-5 h-5 text-[#a39883]" />
                     </div>
 
-                    {/* Stat */}
-                    <div className="mb-2">
+                    {/* Stat — centré (chiffre + libellé) */}
+                    <div className="mb-2 flex flex-wrap justify-center items-baseline gap-x-1.5">
                       <span className="text-2xl lg:text-3xl font-bold text-white">{benefit.stat}</span>
-                      <span className="text-white/50 text-xs ml-1.5">{benefit.statLabel}</span>
+                      <span className="text-white/50 text-xs">{benefit.statLabel}</span>
                     </div>
 
-                    {/* Title */}
+                    {/* Title — centré */}
                     <h3 className="text-base font-bold text-white">
                       {benefit.title}
                     </h3>

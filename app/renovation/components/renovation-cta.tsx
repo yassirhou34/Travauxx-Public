@@ -63,7 +63,7 @@ export function RenovationCTA() {
         </div>
 
         <ScrollReveal direction="up" delay={0.4}>
-          <div className="mt-4 pt-4 border-t border-white/10">
+          <div className="mt-4 pt-4 border-t border-white/10 hidden sm:block">
             <div className="flex flex-wrap justify-center items-center gap-4 text-white/50 text-xs">
               <span>Garantie décennale</span>
               <span>Artisans qualifiés RGE</span>

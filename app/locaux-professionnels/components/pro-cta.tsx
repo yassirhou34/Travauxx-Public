@@ -79,9 +79,9 @@ export function ProCTA() {
           </ScrollReveal>
         </div>
 
-        {/* Trust indicators */}
+        {/* Trust indicators – masqués sur mobile */}
         <ScrollReveal direction="up" delay={0.4}>
-          <div className="mt-4 pt-4 border-t border-white/20">
+          <div className="mt-4 pt-4 border-t border-white/20 hidden sm:block">
             <div className="flex flex-wrap justify-center items-center gap-8 text-white/50 text-sm">
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-accent" />

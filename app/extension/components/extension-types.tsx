@@ -24,7 +24,7 @@ const extensionTypes = [
     ],
     advantages: ['Gain de surface au sol', 'Intégration harmonieuse', 'Valorisation du bien +25%'],
     materials: ['Parpaing traditionnel', 'Ossature bois', 'Structure acier', 'Mixte'],
-    image: '/Banqueimages/M7_01325.jpg',
+    image: '/Banqueimages/IMG_0377.jpg',
     color: '#a39883',
   },
   {
@@ -44,7 +44,7 @@ const extensionTypes = [
     ],
     advantages: ['Conservation du jardin', 'Surface doublée', 'Vue dégagée'],
     materials: ['Ossature bois légère', 'Structure métallique', 'Béton cellulaire', 'Mixte bois/acier'],
-    image: '/Banqueimages/DJI_0087.jpg',
+    image: '/Banqueimages/florian-schmidinger-Kwg6xKwBNGA-unsplash.jpg',
     color: '#a39883',
   },
   {
@@ -64,7 +64,7 @@ const extensionTypes = [
     ],
     advantages: ['Espace extérieur couvert', 'Protection soleil & pluie', 'Aucune formalité <20m²'],
     materials: ['Aluminium thermolaqué', 'Bois douglas ou pin', 'Acier galvanisé', 'Mixte alu/bois'],
-    image: '/Banqueimages/M7_01323.jpg',
+    image: '/Banqueimages/jason-grant-6h55ZVQJTtI-unsplash.jpg',
     color: '#a39883',
   },
   {
@@ -275,14 +275,16 @@ export function ExtensionTypes() {
                 <p className="text-sm text-white/80">{activeType.materials.join(' • ')}</p>
               </div>
 
-              {/* CTA */}
-              <Link 
-                href="/concevoir-mon-projet"
-                className="group inline-flex items-center gap-3 px-6 py-4 rounded-full font-semibold text-white transition-all duration-300 hover:shadow-xl hover:scale-105"
-                style={{ backgroundColor: activeType.color }}
-              >
-               Estimer mon projet
-              </Link>
+              {/* CTA — centré */}
+              <div className="flex justify-center">
+                <Link 
+                  href="/concevoir-mon-projet"
+                  className="group inline-flex items-center gap-3 px-6 py-4 rounded-full font-semibold text-white transition-all duration-300 hover:shadow-xl hover:scale-105"
+                  style={{ backgroundColor: activeType.color }}
+                >
+                  Estimer mon projet
+                </Link>
+              </div>
             </ScrollReveal>
           </div>
         </div>

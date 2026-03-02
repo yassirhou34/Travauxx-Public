@@ -604,9 +604,9 @@ export default function DevisPage() {
               </div>
             </AdvancedReveal>
 
-            {/* Onglets de navigation – un onglet par page, comme la capture */}
-            <div className="flex justify-center mb-8 sm:mb-10">
-              <div className="inline-flex items-center gap-1 sm:gap-2 rounded-full bg-[#ebe6e0] px-1 sm:px-2 py-1 shadow-sm border border-[#d4cdc4]">
+            {/* Onglets : alignés au début sur mobile (évite que gauche/droite soient coupés), centrés sur desktop */}
+            <div className="flex justify-start sm:justify-center mb-8 sm:mb-10 overflow-x-auto overflow-y-hidden -mx-4 pl-4 pr-4 sm:mx-0 sm:px-0 scroll-smooth">
+              <div className="inline-flex items-center gap-1 sm:gap-2 rounded-full bg-[#ebe6e0] px-1 sm:px-2 py-1 shadow-sm border border-[#d4cdc4] flex-nowrap min-w-max sm:pr-0 pr-4">
                 {faqCategories.map((category) => {
                   const isActive = activeTab === category.id
                   return (
@@ -616,7 +616,7 @@ export default function DevisPage() {
                         setActiveTab(category.id)
                         setOpenIndex(null)
                       }}
-                      className={`px-3 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm md:text-base font-medium transition-all duration-300 ${
+                      className={`flex-shrink-0 px-3 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm md:text-base font-medium transition-all duration-300 whitespace-nowrap ${
                         isActive
                           ? 'bg-[#d4cdc4] text-primary shadow-sm'
                           : 'bg-transparent text-primary/80 hover:text-primary'
@@ -629,8 +629,8 @@ export default function DevisPage() {
               </div>
             </div>
 
-            {/* Liste des questions – cadres beige */}
-            <div className="max-w-3xl mx-auto space-y-3 sm:space-y-4">
+            {/* Liste des questions – cadres beige, marges symétriques sur mobile */}
+            <div className="max-w-3xl mx-auto space-y-3 sm:space-y-4 w-full">
               {(faqCategories.find((cat) => cat.id === activeTab) ?? faqCategories[0]).questions.map(
                 (item, idx) => (
                 <AdvancedReveal key={idx} direction="up" delay={0.05 * idx}>
