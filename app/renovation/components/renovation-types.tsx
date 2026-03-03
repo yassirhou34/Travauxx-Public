@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { ArrowRight, Home, Leaf, Thermometer, Droplets, Wind, Sun, Lightbulb, PaintBucket } from 'lucide-react'
+import { Home, Leaf, Thermometer, Droplets, Wind, Sun, Lightbulb, PaintBucket } from 'lucide-react'
 
 const renovationTypes = [
   {
@@ -78,7 +78,7 @@ export function RenovationTypes() {
   return (
     <section
       id="renovation-types"
-      className="relative pt-[35vh] sm:pt-[40vh] lg:pt-[45vh] pb-20 sm:pb-28 lg:pb-36 bg-[#050308] overflow-hidden"
+      className="relative pt-16 sm:pt-[40vh] lg:pt-[45vh] pb-16 sm:pb-28 lg:pb-36 bg-[#050308] overflow-hidden"
     >
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-radial from-secondary/20 to-transparent opacity-60" />
@@ -129,12 +129,6 @@ export function RenovationTypes() {
                       {type.tagline}
                     </p>
 
-                    {/* Active indicator */}
-                    {isActive && (
-                      <div className="absolute bottom-4 right-4">
-                        <ArrowRight className="w-6 h-6 text-white/60" />
-                      </div>
-                    )}
                   </div>
                 </button>
               )

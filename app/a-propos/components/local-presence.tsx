@@ -65,9 +65,11 @@ export function LocalPresence() {
               {/* CTA */}
               <Link 
                 href="/concevoir-mon-projet"
-                className="group inline-flex items-center gap-3 px-6 py-4 rounded-full bg-secondary hover:bg-secondary/90 text-white font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-secondary/40 hover:scale-105"
+                className="group inline-flex items-center justify-center text-center gap-3 px-6 py-4 rounded-full bg-secondary hover:bg-secondary/90 text-white font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-secondary/40 hover:scale-105"
               >
-                Démarrer mon projet en Indre-et-Loire
+                <span className="text-center leading-snug">
+                  Démarrer mon projet en Indre‑et‑Loire
+                </span>
               </Link>
             </div>
           </ScrollReveal>

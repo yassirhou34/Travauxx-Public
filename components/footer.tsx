@@ -96,7 +96,7 @@ export function Footer() {
               </li>
               <li className="flex items-center justify-center sm:justify-start gap-2 opacity-85 font-light">
                 <MapPin className="w-4 h-4 flex-shrink-0" />
-                <span>Indre-et-Loire (37), autour de Tours</span>
+                <span>Indre-et-Loire (37)</span>
               </li>
             </ul>
             
@@ -134,8 +134,8 @@ export function Footer() {
               </div>
             </div>
 
-            <Link href="/concevoir-mon-projet" className="block group">
-              <Button className="w-full rounded-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-xs sm:text-sm transition-all duration-300 group-hover:shadow-lg group-hover:shadow-accent/30">
+            <Link href="/concevoir-mon-projet" className="inline-block group">
+              <Button className="w-auto rounded-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-xs sm:text-sm px-5 py-2.5 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-accent/30">
                 Demander un devis
               </Button>
             </Link>

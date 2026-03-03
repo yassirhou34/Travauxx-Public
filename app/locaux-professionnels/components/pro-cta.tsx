@@ -7,7 +7,7 @@ import { Building2, Store, Coffee, Home } from 'lucide-react'
 
 export function ProCTA() {
   return (
-    <section className="relative pt-3 sm:pt-4 lg:pt-5 pb-1 sm:pb-2 lg:pb-3 overflow-hidden">
+    <section className="relative pt-3 sm:pt-4 lg:pt-5 pb-10 sm:pb-2 lg:pb-3 overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary" />
       
@@ -57,19 +57,19 @@ export function ProCTA() {
                 })}
               </div>
 
-              {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link href="/concevoir-mon-projet">
-                  <Button className="w-full sm:w-auto group bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105 inline-flex items-center justify-center">
+              {/* CTAs – même taille sur mobile, plus compacts */}
+              <div className="inline-flex flex-col sm:flex-row gap-3 justify-center items-stretch sm:items-center">
+                <Link href="/concevoir-mon-projet" className="w-full sm:w-auto min-w-0">
+                  <Button className="w-full sm:w-auto group bg-accent hover:bg-accent/90 text-white font-semibold px-5 py-4 sm:px-8 sm:py-6 text-sm sm:text-base rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105 inline-flex items-center justify-center">
                     <span className="inline-flex items-center justify-center gap-2">
                       Lancer mon projet
                     </span>
                   </Button>
                 </Link>
-                <Link href="/realisations">
+                <Link href="/realisations" className="w-full sm:w-auto min-w-0">
                   <Button 
                     variant="outline" 
-                    className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 bg-transparent inline-flex items-center justify-center"
+                    className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-5 py-4 sm:px-8 sm:py-6 text-sm sm:text-base rounded-full transition-all duration-300 bg-transparent inline-flex items-center justify-center"
                   >
                     <span className="inline-flex items-center justify-center">Voir nos réalisations</span>
                   </Button>

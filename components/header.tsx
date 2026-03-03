@@ -50,7 +50,7 @@ export function Header({ variant = 'solid' }: HeaderProps) {
   const showSolidBg = !isTransparent || scrolled
 
   // Logo (fond transparent)
-  const logoSrc = `/Banqueimages/${encodeURIComponent('Nouveau logo fond transparent-Photoroom.png')}`
+  const logoSrc = `/Banqueimages/${encodeURIComponent('Logo_Activ_Travaux_final-removebg-preview.png')}`
 
   return (
     <header className="sticky top-0 z-50 w-full transition-all duration-300 bg-[#050308]/95 backdrop-blur-md shadow-sm border-b border-[#241a19]">

@@ -6,7 +6,7 @@ import { ScrollReveal } from '@/components/scroll-reveal'
 
 export function RenovationCTA() {
   return (
-    <section className="relative pt-3 sm:pt-4 lg:pt-5 pb-1 sm:pb-2 lg:pb-3 overflow-hidden">
+    <section className="relative pt-3 sm:pt-4 lg:pt-5 pb-12 sm:pb-16 lg:pb-20 overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary" />
       
@@ -46,13 +46,13 @@ export function RenovationCTA() {
                 ))}
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link href="/concevoir-mon-projet">
+              <div className="inline-flex flex-col sm:flex-row gap-3 justify-center items-stretch sm:items-center">
+                <Link href="/concevoir-mon-projet" className="w-full sm:w-auto min-w-0">
                   <Button className="w-full sm:w-auto group bg-[#a39383] hover:bg-[#8b8276] text-white font-semibold px-6 py-5 text-sm rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105 border-0">
                     Concevoir mon projet
                   </Button>
                 </Link>
-                <Link href="/realisations">
+                <Link href="/realisations" className="w-full sm:w-auto min-w-0">
                   <Button className="w-full sm:w-auto group bg-[#a39383] hover:bg-[#8b8276] text-white font-semibold px-6 py-5 text-sm rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105 border-0">
                     Voir nos réalisations
                   </Button>

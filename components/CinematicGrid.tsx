@@ -36,14 +36,14 @@ const StickyCard = ({ item, index, stickyTop = "top-24" }: { item: FeatureItem; 
           )}
         </div>
 
-        <div className="absolute inset-0 p-12 flex flex-col justify-end items-start z-10">
+        <div className="absolute inset-0 p-6 sm:p-8 md:p-12 flex flex-col justify-end items-start z-10">
           {Icon && (
             <div className="mb-6 p-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-white">
               <Icon />
             </div>
           )}
-          <h2 className="text-6xl md:text-8xl font-medium tracking-tighter text-white mb-4 mix-blend-overlay">{item.title}</h2>
-          <p className="text-xl text-neutral-400 max-w-md">{item.desc}</p>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-medium tracking-tighter text-white mb-4 mix-blend-overlay break-words max-w-full pr-2">{item.title}</h2>
+          <p className="text-base sm:text-lg md:text-xl text-neutral-400 max-w-md">{item.desc}</p>
         </div>
       </motion.div>
     </div>

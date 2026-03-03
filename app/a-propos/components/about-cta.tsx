@@ -3,11 +3,9 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { Home, Briefcase } from 'lucide-react'
-
 export function AboutCTA() {
   return (
-    <section className="relative pt-2 sm:pt-3 lg:pt-4 pb-1 sm:pb-2 lg:pb-3 overflow-hidden">
+    <section className="relative pt-12 sm:pt-14 lg:pt-16 pb-1 sm:pb-2 lg:pb-3 overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/95" />
       
@@ -42,22 +40,6 @@ export function AboutCTA() {
                   <Button className="w-full sm:w-auto group bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105 inline-flex items-center justify-center">
                     <span className="inline-flex items-center justify-center">Concevoir mon projet</span>
                   </Button>
-                </Link>
-              </div>
-
-              {/* Quick links */}
-              <div className="flex flex-wrap gap-4 justify-center">
-                <Link href="/renovation" className="flex items-center gap-2 text-white/70 hover:text-white text-sm transition-colors">
-                  <Home className="w-4 h-4" />
-                  Rénovation
-                </Link>
-                <Link href="/extension" className="flex items-center gap-2 text-white/70 hover:text-white text-sm transition-colors">
-                  <Home className="w-4 h-4" />
-                  Extension
-                </Link>
-                <Link href="/locaux-professionnels" className="flex items-center gap-2 text-white/70 hover:text-white text-sm transition-colors">
-                  <Briefcase className="w-4 h-4" />
-                  Locaux pro
                 </Link>
               </div>
             </div>

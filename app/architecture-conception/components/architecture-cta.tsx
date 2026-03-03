@@ -6,7 +6,7 @@ import { ScrollReveal } from '@/components/scroll-reveal'
 
 export function ArchitectureCTA() {
   return (
-    <section className="relative pt-2 sm:pt-3 lg:pt-4 pb-1 sm:pb-2 lg:pb-3 overflow-hidden">
+    <section className="relative pt-10 sm:pt-12 lg:pt-16 pb-12 sm:pb-16 lg:pb-20 overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary" />
       
@@ -40,13 +40,13 @@ export function ArchitectureCTA() {
               </p>
 
               {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/concevoir-mon-projet">
+              <div className="inline-flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center">
+                <Link href="/concevoir-mon-projet" className="w-full sm:w-auto min-w-0">
                   <Button className="w-full sm:w-auto group bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105">
                     Concevoir mon projet
                   </Button>
                 </Link>
-                <Link href="/realisations">
+                <Link href="/realisations" className="w-full sm:w-auto min-w-0">
                   <Button
                     className="w-full sm:w-auto bg-[#a39383] hover:bg-[#8b8276] text-white font-semibold px-8 py-6 text-base rounded-full transition-all duration-300 hover:shadow-2xl hover:scale-105 border-0"
                   >

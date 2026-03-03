@@ -12,11 +12,6 @@ export function RenovationHero() {
 
   return (
     <section className="relative min-h-0 flex items-start justify-center pt-8 sm:pt-10 md:pt-12 pb-12 sm:pb-16 overflow-hidden bg-[#0a0a0a]">
-      {/* Geometric accents */}
-      <div className="absolute left-8 top-1/3 w-px h-40 bg-gradient-to-b from-transparent via-accent to-transparent opacity-60" />
-      <div className="absolute right-8 bottom-1/3 w-px h-40 bg-gradient-to-b from-transparent via-secondary to-transparent opacity-60" />
-      
-      {/* Main content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
         <ScrollReveal direction="fade" delay={0.1}>

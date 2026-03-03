@@ -127,9 +127,11 @@ export function HeroVideo() {
 
       {/* Indicateur de scroll uniquement sur la vidéo – reste dans cette partie */}
       <div
-        className={`absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-10 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+        className={`absolute bottom-4 sm:bottom-6 inset-x-0 z-10 flex justify-center transition-all duration-1000 delay-500 ${
+          isVisible ? 'opacity-100' : 'opacity-0'
+        }`}
       >
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-2 text-center">
           <span className="text-white/60 text-xs uppercase tracking-[0.3em] font-light animate-pulse-subtle">
             DÉFILEZ POUR EXPLORER
           </span>
