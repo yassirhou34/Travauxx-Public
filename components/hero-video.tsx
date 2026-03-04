@@ -26,6 +26,9 @@ export function HeroVideo() {
     { left: '55%', top: '90%', delay: '1.8s', duration: '4s' },
   ]
 
+  const desktopVideoSrc = `/Banquevideos/${encodeURIComponent('Reveal-Signature-v2 (1) compressed.mp4')}`
+  const mobileVideoSrc = `/Banquevideos/${encodeURIComponent('0303(1) copie (1).mov')}`
+
   useEffect(() => {
     setIsMounted(true)
     setIsVisible(true)
@@ -58,7 +61,7 @@ export function HeroVideo() {
       <video
         ref={videoRef}
         className="absolute inset-0 h-full w-full min-h-full min-w-full object-cover object-center"
-        src={`/Banquevideos/${encodeURIComponent('Reveal-Signature-v2 (1) compressed.mp4')}`}
+        src={isMobile ? mobileVideoSrc : desktopVideoSrc}
         autoPlay
         loop
         muted={isMuted}
