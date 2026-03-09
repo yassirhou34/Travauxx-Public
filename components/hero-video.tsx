@@ -52,15 +52,21 @@ export function HeroVideo() {
     }
   }, [])
 
-  const videoParallax = scrollY * 0.5
+  const videoParallax = isMobile ? 0 : scrollY * 0.5
 
   return (
     <section
-      className="relative -mt-16 sm:-mt-20 pt-16 sm:pt-20 min-h-[100dvh] min-h-[100vh] sm:min-h-screen w-screen min-w-full max-w-[100vw] flex items-center justify-center overflow-hidden bg-black"
+      className="relative w-screen min-w-full max-w-[100vw] overflow-hidden bg-black flex sm:items-center sm:justify-center"
+      style={{
+        marginTop: isMobile ? '-9.2rem' : 0,
+        paddingTop: 0,
+        height: '100dvh',
+        minHeight: '100vh',
+      }}
     >
       <video
         ref={videoRef}
-        className="absolute inset-0 h-full w-full min-h-full min-w-full object-cover object-center"
+        className="absolute inset-0 w-full h-full object-cover object-center"
         src={isMobile ? mobileVideoSrc : desktopVideoSrc}
         autoPlay
         loop
@@ -69,13 +75,17 @@ export function HeroVideo() {
         onCanPlay={() => videoRef.current?.play().catch(() => {})}
         onLoadedData={() => videoRef.current?.play().catch(() => {})}
         style={{
-          transform: `translateY(${videoParallax}px) scale(${isMobile ? 1 : 1.1})`,
+          transform: isMobile
+            ? 'translateY(-60px) scale(1.5)'
+            : `translateY(${videoParallax}px) scale(1.1)`,
           transition: 'transform 0.1s ease-out',
         }}
       />
       <div
-        className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-black/40"
-        style={{ opacity: Math.min(1, 0.8 + scrollY * 0.001) }}
+        className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent"
+        style={{
+          opacity: isMobile ? 0 : Math.min(1, 0.8 + scrollY * 0.001),
+        }}
       />
       {isMounted && (
         <div className="absolute inset-0 overflow-hidden opacity-30">
@@ -112,7 +122,7 @@ export function HeroVideo() {
       <button
         type="button"
         onClick={() => { setIsMuted((m) => !m); if (isMuted) setHintHidden(true) }}
-        className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 z-20 flex items-center gap-2 px-3 py-2 rounded-lg bg-black/50 hover:bg-black/70 text-white/90 hover:text-white text-xs sm:text-sm transition-colors border border-white/20"
+        className="absolute right-4 z-20 flex items-center gap-2 px-3 py-2 rounded-lg bg-black/50 hover:bg-black/70 text-white/90 hover:text-white text-xs sm:text-sm transition-colors border border-white/20"
         aria-label={isMuted ? 'Activer le son' : 'Désactiver le son'}
       >
         {isMuted ? (
@@ -130,9 +140,12 @@ export function HeroVideo() {
 
       {/* Indicateur de scroll uniquement sur la vidéo – reste dans cette partie */}
       <div
-        className={`absolute bottom-4 sm:bottom-6 inset-x-0 z-10 flex justify-center transition-all duration-1000 delay-500 ${
+        className={`absolute inset-x-0 z-10 flex justify-center transition-all duration-1000 delay-500 ${
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}
+        style={{
+          bottom: isMobile ? '8.5rem' : '1.5rem',
+        }}
       >
         <div className="flex flex-col items-center gap-2 text-center">
           <span className="text-white/60 text-xs uppercase tracking-[0.3em] font-light animate-pulse-subtle">
@@ -155,7 +168,7 @@ export function HeroContentBlock() {
   }, [])
 
   return (
-    <section className="relative py-16 sm:py-20 md:py-24 bg-[#050308]">
+    <section className="relative pt-4 pb-14 sm:py-20 md:py-24 bg-[#050308] -mt-16 sm:mt-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className={`mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
