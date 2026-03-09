@@ -121,8 +121,15 @@ export function HeroVideo() {
       {/* Bouton désactiver / activer le son */}
       <button
         type="button"
-        onClick={() => { setIsMuted((m) => !m); if (isMuted) setHintHidden(true) }}
-        className="absolute right-4 z-20 flex items-center gap-2 px-3 py-2 rounded-lg bg-black/50 hover:bg-black/70 text-white/90 hover:text-white text-xs sm:text-sm transition-colors border border-white/20"
+        onClick={() => {
+          setIsMuted((m) => !m)
+          if (isMuted) setHintHidden(true)
+        }}
+        className={`absolute z-20 flex items-center gap-2 rounded-full bg-black/70 hover:bg-black/80 text-white/90 hover:text-white border border-white/25 shadow-lg transition-colors ${
+          isMobile
+            ? 'bottom-4 left-1/2 -translate-x-1/2 px-3 py-1.5 text-[11px]'
+            : 'bottom-4 right-4 sm:bottom-6 sm:right-6 px-3 py-2 text-xs sm:text-sm'
+        }`}
         aria-label={isMuted ? 'Activer le son' : 'Désactiver le son'}
       >
         {isMuted ? (
