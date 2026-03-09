@@ -144,15 +144,27 @@ export function HeroVideo() {
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}
         style={{
-          bottom: isMobile ? '8.5rem' : '1.5rem',
+          bottom: isMobile ? '7rem' : '1.5rem',
         }}
       >
-        <div className="flex flex-col items-center gap-2 text-center">
-          <span className="text-white/60 text-xs uppercase tracking-[0.3em] font-light animate-pulse-subtle">
+        <div className="flex flex-col items-center gap-1.5 text-center">
+          <span
+            className={`text-white/60 uppercase font-light animate-pulse-subtle ${
+              isMobile ? 'text-[9px] tracking-[0.22em]' : 'text-xs tracking-[0.3em]'
+            }`}
+          >
             DÉFILEZ POUR EXPLORER
           </span>
-          <div className="w-6 h-10 rounded-full border-2 border-white/40 flex items-start justify-center p-2">
-            <div className="w-1.5 h-3 bg-white/70 rounded-full animate-bounce" />
+          <div
+            className={`rounded-full border-2 border-white/40 flex items-start justify-center ${
+              isMobile ? 'w-4 h-7 p-1' : 'w-6 h-10 p-2'
+            }`}
+          >
+            <div
+              className={`bg-white/70 rounded-full animate-bounce ${
+                isMobile ? 'w-1 h-2.5' : 'w-1.5 h-3'
+              }`}
+            />
           </div>
         </div>
       </div>
