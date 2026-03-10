@@ -58,7 +58,7 @@ export function HeroVideo() {
     <section
       className="relative w-screen min-w-full max-w-[100vw] overflow-hidden bg-black flex sm:items-center sm:justify-center"
       style={{
-        marginTop: isMobile ? '-9.2rem' : 0,
+        marginTop: isMobile ? '-16rem' : 0,
         paddingTop: 0,
         height: '100dvh',
         minHeight: '100vh',
@@ -66,7 +66,9 @@ export function HeroVideo() {
     >
       <video
         ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover object-center"
+        className={`absolute inset-0 w-full h-full ${
+          isMobile ? 'object-contain object-top' : 'object-cover object-center'
+        }`}
         src={isMobile ? mobileVideoSrc : desktopVideoSrc}
         autoPlay
         loop
@@ -76,7 +78,7 @@ export function HeroVideo() {
         onLoadedData={() => videoRef.current?.play().catch(() => {})}
         style={{
           transform: isMobile
-            ? 'translateY(-60px) scale(1.5)'
+            ? 'scale(1)'
             : `translateY(${videoParallax}px) scale(1.1)`,
           transition: 'transform 0.1s ease-out',
         }}
@@ -108,11 +110,22 @@ export function HeroVideo() {
       {isMuted && !hintHidden && (
         <button
           type="button"
-          onClick={() => { setIsMuted(false); setHintHidden(true) }}
-          className="absolute inset-0 z-20 flex items-center justify-center bg-black/25 hover:bg-black/15 transition-colors"
+          onClick={() => {
+            setIsMuted(false)
+            setHintHidden(true)
+          }}
+          className={`absolute inset-0 z-20 flex bg-black/25 hover:bg-black/15 transition-colors ${
+            isMobile ? 'items-end justify-center pb-16' : 'items-center justify-center'
+          }`}
           aria-label="Activer le son"
         >
-          <span className="px-5 py-3 rounded-full bg-white/95 text-black text-sm font-semibold shadow-xl border border-white/30">
+          <span
+            className={`rounded-full bg-white/95 text-black font-semibold shadow-xl border border-white/30 ${
+              isMobile
+                ? 'px-3 py-2 text-[11px] leading-tight max-w-[80%] text-center'
+                : 'px-5 py-3 text-sm'
+            }`}
+          >
             Cliquez pour activer le son
           </span>
         </button>
@@ -127,7 +140,7 @@ export function HeroVideo() {
         }}
         className={`absolute z-20 flex items-center gap-2 rounded-full bg-black/70 hover:bg-black/80 text-white/90 hover:text-white border border-white/25 shadow-lg transition-colors ${
           isMobile
-            ? 'bottom-4 left-1/2 -translate-x-1/2 px-3 py-1.5 text-[11px]'
+            ? 'bottom-72 left-1/2 -translate-x-1/2 px-3 py-1.5 text-[11px]'
             : 'bottom-4 right-4 sm:bottom-6 sm:right-6 px-3 py-2 text-xs sm:text-sm'
         }`}
         aria-label={isMuted ? 'Activer le son' : 'Désactiver le son'}
@@ -145,36 +158,24 @@ export function HeroVideo() {
         )}
       </button>
 
-      {/* Indicateur de scroll uniquement sur la vidéo – reste dans cette partie */}
-      <div
-        className={`absolute inset-x-0 z-10 flex justify-center transition-all duration-1000 delay-500 ${
-          isVisible ? 'opacity-100' : 'opacity-0'
-        }`}
-        style={{
-          bottom: isMobile ? '7rem' : '1.5rem',
-        }}
-      >
-        <div className="flex flex-col items-center gap-1.5 text-center">
-          <span
-            className={`text-white/60 uppercase font-light animate-pulse-subtle ${
-              isMobile ? 'text-[9px] tracking-[0.22em]' : 'text-xs tracking-[0.3em]'
-            }`}
-          >
-            DÉFILEZ POUR EXPLORER
-          </span>
-          <div
-            className={`rounded-full border-2 border-white/40 flex items-start justify-center ${
-              isMobile ? 'w-4 h-7 p-1' : 'w-6 h-10 p-2'
-            }`}
-          >
-            <div
-              className={`bg-white/70 rounded-full animate-bounce ${
-                isMobile ? 'w-1 h-2.5' : 'w-1.5 h-3'
-              }`}
-            />
+      {/* Indicateur de scroll uniquement sur la vidéo – desktop / tablette */}
+      {!isMobile && (
+        <div
+          className={`absolute inset-x-0 z-10 flex justify-center transition-all duration-1000 delay-500 ${
+            isVisible ? 'opacity-100' : 'opacity-0'
+          }`}
+          style={{ bottom: '1.5rem' }}
+        >
+          <div className="flex flex-col items-center gap-1.5 text-center">
+            <span className="text-white/60 text-xs uppercase tracking-[0.3em] font-light animate-pulse-subtle">
+              DÉFILEZ POUR EXPLORER
+            </span>
+            <div className="w-6 h-10 rounded-full border-2 border-white/40 flex items-start justify-center p-2">
+              <div className="w-1.5 h-3 bg-white/70 rounded-full animate-bounce" />
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </section>
   )
 }
@@ -187,8 +188,19 @@ export function HeroContentBlock() {
   }, [])
 
   return (
-    <section className="relative pt-4 pb-14 sm:py-20 md:py-24 bg-[#050308] -mt-16 sm:mt-0">
+    <section className="relative pt-0 pb-14 sm:py-20 md:py-24 bg-[#050308] -mt-64 sm:mt-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Indicateur de scroll pour mobile – entre la vidéo et le bloc texte */}
+        <div className="block sm:hidden mb-3">
+          <div className="flex flex-col items-center gap-1 text-center">
+            <span className="text-[10px] uppercase tracking-[0.22em] text-white/60 font-light">
+              DÉFILEZ POUR EXPLORER
+            </span>
+            <div className="w-4 h-7 rounded-full border-2 border-white/40 flex items-start justify-center p-1">
+              <div className="w-1 h-2.5 bg-white/70 rounded-full animate-bounce" />
+            </div>
+          </div>
+        </div>
         <div className={`mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
             <span className="text-white/70 text-xs font-medium">Indre-et-Loire</span>
