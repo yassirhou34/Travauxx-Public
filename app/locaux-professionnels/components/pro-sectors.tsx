@@ -33,7 +33,7 @@ const sectors = [
   },
   {
     id: 'bureaux',
-    title: 'Bureaux & Tertiaire',
+    title: 'Bureaux & tertiaire',
     shortTitle: 'Bureaux',
     icon: Building2,
     tagline: 'Espaces de travail performants et inspirants',

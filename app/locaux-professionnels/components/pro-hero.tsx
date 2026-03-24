@@ -17,7 +17,7 @@ export function ProHero() {
         {/* Badge */}
         <ScrollReveal direction="fade" delay={0.1}>
           <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/5 backdrop-blur-md border border-white/10 mb-8">
-            <span className="text-white/80 text-sm font-medium tracking-wide">Locaux Professionnels</span>
+            <span className="text-white/80 text-sm font-medium tracking-wide">Locaux professionnels</span>
           </div>
         </ScrollReveal>
 

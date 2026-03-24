@@ -1,7 +1,8 @@
 import React from "react"
 import type { Metadata, Viewport } from 'next'
 import { Lexend_Deca } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
+import { ConsentAwareAnalytics } from '@/components/consent-aware-analytics'
+import { CookieConsentBanner } from '@/components/cookie-consent-banner'
 import './globals.css'
 
 const lexendDeca = Lexend_Deca({ subsets: ["latin"], variable: '--font-sans' })
@@ -49,7 +50,8 @@ export default function RootLayout({
     <html lang="fr" className={lexendDeca.variable}>
       <body className={`font-sans antialiased bg-background text-foreground`}>
         {children}
-        <Analytics />
+        <CookieConsentBanner />
+        <ConsentAwareAnalytics />
       </body>
     </html>
   )

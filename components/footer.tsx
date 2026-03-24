@@ -147,13 +147,13 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 text-[10px] sm:text-xs opacity-75 font-light">
             <p>&copy; {new Date().getFullYear()} Activ Travaux 37. Tous droits réservés.</p>
             <div className="flex flex-wrap gap-4 sm:gap-6 md:gap-8 justify-center md:justify-end">
-              <Link href="#" className="hover:opacity-100 hover:text-accent transition-all duration-300">
+              <Link href="/mentions-legales" className="hover:opacity-100 hover:text-accent transition-all duration-300">
                 Mentions légales
               </Link>
-              <Link href="#" className="hover:opacity-100 hover:text-accent transition-all duration-300">
+              <Link href="/politique-de-confidentialite" className="hover:opacity-100 hover:text-accent transition-all duration-300">
                 Politique de confidentialité
               </Link>
-              <Link href="#" className="hover:opacity-100 hover:text-accent transition-all duration-300">
+              <Link href="/cookies" className="hover:opacity-100 hover:text-accent transition-all duration-300">
                 Cookies
               </Link>
             </div>
