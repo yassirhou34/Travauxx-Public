@@ -84,7 +84,7 @@ const extensionTypes = [
     ],
     advantages: ['Lumière naturelle maximale', 'Liaison intérieur/extérieur', 'Confort 4 saisons'],
     materials: ['Aluminium design', 'PVC haute qualité', 'Bois noble', 'Acier/verre architectural'],
-    image: '/Banqueimages/M7_01319.jpg',
+    image: '/Banqueimages/immo-renovation-vO8be-tqHE4-unsplash.jpg',
     color: '#a39883',
   },
 ]

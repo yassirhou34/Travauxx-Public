@@ -88,7 +88,7 @@ export function ConceptionProcess() {
         <ScrollReveal direction="up" delay={0.05} className="mb-14">
           <div className="relative aspect-[2/1] rounded-2xl overflow-hidden border border-white/10">
             <Image
-              src="/Banqueimages/M7_01323.jpg"
+              src="/Banqueimages/filip-rankovic-grobgaard-4cy720i6zks-unsplash.jpg"
               alt="De l'idée à l'esquisse, processus de conception"
               fill
               className="object-cover"

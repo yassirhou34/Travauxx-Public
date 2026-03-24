@@ -102,40 +102,40 @@ export function WhyRenovate() {
             <div className="col-span-2 md:col-span-1">
               <LightboxGlass
                 embedded
-                image="/Banqueimages/M7_01321.jpg"
+                image="/Banqueimages/caroline-badran-5wQIuA7FunA-unsplash.jpg"
                 title="Rénovation habitat"
                 subtitle="Rénover avec méthode"
                 showLike={false}
                 showDownload={true}
               >
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 cursor-pointer">
-                  <Image src="/Banqueimages/M7_01321.jpg" alt="Rénovation habitat" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+                  <Image src="/Banqueimages/caroline-badran-5wQIuA7FunA-unsplash.jpg" alt="Rénovation habitat" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
                 </div>
               </LightboxGlass>
             </div>
             <LightboxGlass
               embedded
-              image="/Banqueimages/M7_01323.jpg"
+              image="/Banqueimages/bernd-dittrich-_MdxCY0eFSs-unsplash.jpg"
               title="Chantier rénovation"
               subtitle="Rénover avec méthode"
               showLike={false}
               showDownload={true}
             >
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 cursor-pointer">
-                <Image src="/Banqueimages/M7_01323.jpg" alt="Chantier rénovation" fill className="object-cover" sizes="(max-width: 768px) 50vw, 33vw" />
+                <Image src="/Banqueimages/bernd-dittrich-_MdxCY0eFSs-unsplash.jpg" alt="Chantier rénovation" fill className="object-cover" sizes="(max-width: 768px) 50vw, 33vw" />
               </div>
             </LightboxGlass>
             <LightboxGlass
               embedded
-              image="/Banqueimages/M7_01330.jpg"
+              image="/Banqueimages/immo-renovation-vO8be-tqHE4-unsplash.jpg"
               title="Réalisation Activ Travaux"
               subtitle="Rénover avec méthode"
               showLike={false}
               showDownload={true}
             >
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 cursor-pointer">
-                <Image src="/Banqueimages/M7_01330.jpg" alt="Réalisation Activ Travaux" fill className="object-cover" sizes="(max-width: 768px) 50vw, 33vw" />
+                <Image src="/Banqueimages/immo-renovation-vO8be-tqHE4-unsplash.jpg" alt="Réalisation Activ Travaux" fill className="object-cover" sizes="(max-width: 768px) 50vw, 33vw" />
               </div>
             </LightboxGlass>
           </div>

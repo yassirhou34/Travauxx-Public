@@ -5,8 +5,8 @@ import { ScrollReveal } from '@/components/scroll-reveal'
 import { Lightbulb, FileCheck, Users, HardHat, CheckCircle2 } from 'lucide-react'
 
 const missionImages = [
-  { src: '/Banqueimages/M7_01330.jpg', alt: 'Étude et conception projet' },
-  { src: '/Banqueimages/M7_01321.jpg', alt: 'Chantier coordonné' },
+  { src: '/Banqueimages/im3rd-media-FJZtZldA-uE-unsplash.jpg', alt: 'Étude et conception projet' },
+  { src: '/Banqueimages/IMG_0494.jpg', alt: 'Chantier coordonné' },
   { src: '/Banqueimages/DSC09109.jpg', alt: 'Réalisation clé en main' },
 ]
 

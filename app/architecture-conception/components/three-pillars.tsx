@@ -12,8 +12,8 @@ const elasticGridFeatures = [
   { title: 'Innovation', desc: 'Convergence de l\'innovation. Des solutions créatives pour sublimer votre habitat.', img: '/Banqueimages/alex-tyson-vVWxF_WepVE-unsplash.jpg' },
   { title: 'Maîtrise architecturale', desc: 'Volumes, ouvertures, matériaux. Une conception sur-mesure qui s\'intègre à l\'existant.', img: '/Banqueimages/mota-ehdaei-1tNlOud8In8-unsplash.jpg' },
   { title: 'Rigueur d\'exécution', desc: 'Rigueur d\'exécution sans concession. Planning tenu, qualité des finitions.', img: '/Banqueimages/sergej-karpow-vJlPP2qB1vI-unsplash.jpg' },
-  { title: 'Conception sur-mesure', desc: 'Plans techniques, bureau d\'études. Le socle de la réussite de votre projet.', img: '/Banqueimages/M7_01323.jpg' },
-  { title: 'Projet clé en main', desc: 'De l\'esquisse à la remise des clés. Un interlocuteur unique pour tout piloter.', img: '/Banqueimages/M7_01325.jpg' },
+  { title: 'Conception sur-mesure', desc: 'Plans techniques, bureau d\'études. Le socle de la réussite de votre projet.', img: '/Banqueimages/petr-magera-Ugnm0F4e00U-unsplash.jpg' },
+  { title: 'Projet clé en main', desc: 'De l\'esquisse à la remise des clés. Un interlocuteur unique pour tout piloter.', img: '/Banqueimages/mat-kilkeary-vfFVFPHYeko-unsplash.jpg' },
 ]
 
 const pillars = [
