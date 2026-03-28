@@ -47,7 +47,7 @@ export default function MentionsLegalesPage() {
         <p>
           Tous les éléments graphiques, photographies de chantiers, textes et logos sont la propriété
           exclusive d&apos;Activ Travaux ou de ses partenaires. Toute reproduction, même partielle, est
-          interdite sans accord écrit préalable.
+          interdite sans accord écrit préalable..
         </p>
       </LegalSection>
     </LegalPageLayout>

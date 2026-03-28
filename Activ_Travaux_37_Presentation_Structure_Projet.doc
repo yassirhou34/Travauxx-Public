@@ -1,0 +1,49 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1036{\fonttbl{\f0\froman\fcharset0 Cambria;}{\f1\fswiss\fcharset0 Calibri;}}
+{\colortbl;\red232\green50\blue99;\red26\green26\blue26;\red90\green90\blue90;}
+\paperw11906\paperh16838\margl1417\margr1417\margt1417\margb1417
+\pard\sa400\qc\f0\fs56\b\cf2 Activ Travaux 37\b0\par
+\fs36\b Vitrine web\b0  - Analyse de la structure du projet\par
+\fs24\cf3 Bas\'e9 sur le d\'e9p\'f4t ACTIVE TRAVAUX uniquement (structure du code, pas l\'92URL publique)\f1\par
+
+\pard\sa300\ql\brdrb\brdrs\brdrw15\brsp80\brdrcf1\fs34\b\cf1 En deux mots : pourquoi cette vitrine compte\b0\cf0\par
+\fs24\f0\par
+Ce projet est une \b vitrine professionnelle\b0  : premi\'e8re impression d\'92Activ Travaux 37 pour un prospect. Dans la r\'e9novation et l\'92am\'e9nagement, on ach\'e8te aussi la \b clart\'e9\b0 , la \b cr\'e9dibilit\'e9\b0  et la \b s\'e9r\'e9nit\'e9\b0 . Une architecture de contenu qui suit l\'92offre r\'e9elle (particuliers et professionnels), qui explique le r\'f4le de contractant g\'e9n\'e9ral et qui m\'e8ne vers un vrai contact n\'92est pas un d\'e9cor : c\'92est un \b levier commercial\b0  comparable au discours en rendez-vous ou sur chantier.\par
+
+\pard\sa300\brdrb\brdrs\brdrw15\brsp80\brdrcf1\fs34\b\cf1 Ce que les clients attendent (et \'e9vitent)\b0\cf0\par
+\fs24\par
+Ils veulent savoir \b qui pilote\b0 , \b ce qui est inclus\b0  et \b comment \'e7a se passe\b0 . Ils repoussent les sites flous, interchangeables ou r\'e9duits \'e0 un formulaire sans fil. La structure du projet va dans l\'92autre sens : accueil qui pose le cadre ; \b une rubrique par grande promesse\b0  (r\'e9novation, extension, architecture-conception, locaux professionnels) avec sc\'e9nario de page coh\'e9rent ; \b r\'e9alisations\b0  comme preuve ; \b \'e0 propos\b0  pour l\'92humain et le territoire ; \b concevoir mon projet\b0  comme point de conversion avec FAQ par univers ; pages \b l\'e9gales\b0  visibles. R\'e9sultat : une entreprise qui para\'eet \b structur\'e9e et s\'e9rieuse\b0 .\par
+
+\pard\sa300\brdrb\brdrs\brdrw15\brsp80\brdrcf1\fs34\b\cf1 Lecture de l\'92arborescence m\'e9tier\b0\cf0\par
+\fs24\par
+Chaque grande partie du site correspond \'e0 un dossier sous \b app/\b0 , avec des composants regroup\'e9s par th\'e8me : \b offre visible = dossier d\'e9di\'e9\b0 . Facile \'e0 faire \'e9voluer c\'f4t\'e9 message sans perdre le fil.\par
+\par
+\b Accueil\b0  (fichier racine de l\'92app) : impact, ancrage territorial, chiffres et messages sur le contractant g\'e9n\'e9ral, entr\'e9es vers les fili\'e8res.\par
+\par
+\b R\'e9novation\b0  (dossier renovation) : entr\'e9e d\'e9di\'e9e puis blocs sur les typologies, les b\'e9n\'e9fices, les raisons d\'92agir, le d\'e9roul\'e9, l\'92incitation \'e0 poursuivre le dialogue.\par
+\par
+\b Extension\b0  (dossier extension) : promesse, types de projet, arguments, d\'e9marches, chronologie des \'e9tapes, appel \'e0 l\'92action.\par
+\par
+\b Architecture et conception\b0  (dossier architecture-conception) : piliers, m\'e9thode, valeur ajout\'e9e, conversion : le projet vu d\'e8s la conception.\par
+\par
+\b Locaux professionnels\b0  (dossier locaux-professionnels) : univers pro \'e0 part (secteurs, arguments, multi-sites, CTA) sans m\'e9langer avec le r\'e9sidentiel.\par
+\par
+\b R\'e9alisations\b0  (dossier realisations) : mise en avant visuelle des chantiers : preuve pour le prospect.\par
+\par
+\b \'c0 propos\b0  (dossier a-propos) : r\'e9seau, mission, valeurs, ancrage local : la marque s\'92incarne.\par
+\par
+\b Concevoir mon projet\b0  (dossier concevoir-mon-projet) : hub de conversion et FAQ consolid\'e9e par rubrique pour lever les freins avant le premier contact.\par
+\par
+\b L\'e9gal et confiance\b0  : mentions-legales, politique-de-confidentialite, cookies.\par
+\par
+\b Transverse\b0  : mise en page globale, en-t\'eate et pied de page partag\'e9s, biblioth\'e8que de blocs sous components : une m\'eame identit\'e9 sur toutes les entr\'e9es.\par
+
+\pard\sa300\brdrb\brdrs\brdrw15\brsp80\brdrcf1\fs34\b\cf1 Parcours client implicite\b0\cf0\par
+\fs24\par
+D\'e9couverte sur l\'92accueil, choix de la fili\'e8re qui correspond au besoin, lecture des \'e9tapes et des engagements possibles, confirmation par les r\'e9alisations et l\'92\'e0-propos, puis prise de contact via la page projet. Le chemin est \b simple \'e0 expliquer\b0 , ce que les acheteurs exigeants appr\'e9cient.\par
+
+\pard\sa300\brdrb\brdrs\brdrw15\brsp80\brdrcf1\fs34\b\cf1 Synth\'e8se : importance strat\'e9gique du projet\b0\cf0\par
+\fs24\par
+Ce n\'92est pas une page vitrine minimale : c\'92est une \b carte de l\'92offre Activ Travaux 37\b0 , avec parcours r\'e9sidentiel et professionnel s\'e9par\'e9s, point de conversion central et socle l\'e9gal explicite. Pour l\'92entreprise, ce d\'e9p\'f4t repr\'e9sente la \b premi\'e8re preuve de professionnalisme\b0  : souvent avant le premier appel.\par
+\par
+\fs22\cf3 Ouverture recommand\'e9e avec Microsoft Word. Nom de fichier : pr\'e9sentation structure projet (nouvelle version si le fichier .doc pr\'e9c\'e9dent est verrouill\'e9).\par
+}
